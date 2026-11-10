@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight, PhoneCall } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 import Button from "@/components/ui/Button";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function Header() {
@@ -77,7 +78,7 @@ export default function Header() {
               className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-neutral-700 hover:text-[#111111] transition-colors"
               aria-label="Hablar por WhatsApp con un asesor"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-[#FF6801]" />
+              <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
               <span>{siteConfig.contact.whatsappDisplay}</span>
             </a>
 
@@ -157,7 +158,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-neutral-300 text-sm font-semibold text-neutral-800 hover:bg-neutral-50 transition-colors"
               >
-                <PhoneCall className="w-4 h-4 text-[#FF6801]" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                 <span>WhatsApp: {siteConfig.contact.whatsappDisplay}</span>
               </a>
             </div>

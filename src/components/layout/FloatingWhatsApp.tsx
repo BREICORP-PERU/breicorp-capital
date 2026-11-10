@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -35,15 +36,9 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a BREICORP CAPITAL por WhatsApp"
-        className="pointer-events-auto relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 group"
+        className="pointer-events-auto flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-md hover:shadow-lg transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111111]"
       >
-        <MessageCircle className="w-7 h-7" />
-        <span className="sr-only">Contactar por WhatsApp</span>
-        {/* Indicador de estado online */}
-        <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-white rounded-full flex items-center justify-center">
-          <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping opacity-75" />
-          <span className="absolute w-2.5 h-2.5 bg-emerald-500 rounded-full" />
-        </span>
+        <WhatsAppIcon className="w-7 h-7" />
       </a>
     </div>
   );

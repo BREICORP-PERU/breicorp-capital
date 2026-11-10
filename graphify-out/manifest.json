@@ -18,15 +18,15 @@
     "semantic_hash": ""
   },
   "src/app/inversionistas/InvestorForm.tsx": {
-    "mtime": 1794332023.6448028,
-    "seen": 1794332081.0001285,
-    "ast_hash": "2570e5d9873b9b41a5248d1cc7d03584",
+    "mtime": 1794335299.7781558,
+    "seen": 1794335364.0775335,
+    "ast_hash": "e2c8ef21f692cd8b3a0daf63f0512b21",
     "semantic_hash": ""
   },
   "src/app/inversionistas/page.tsx": {
-    "mtime": 1794331869.0835989,
-    "seen": 1794332081.0001347,
-    "ast_hash": "d2058a21398ed5d3cccd9a987b308689",
+    "mtime": 1794335183.5207884,
+    "seen": 1794335364.0775378,
+    "ast_hash": "40d8882f45ee71b51766916cc6eb6317",
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
@@ -66,27 +66,27 @@
     "semantic_hash": ""
   },
   "src/components/layout/FloatingWhatsApp.tsx": {
-    "mtime": 1794331866.894823,
-    "seen": 1794332081.000169,
-    "ast_hash": "a711e3e1bbc747d94eec27a009f4dfbb",
+    "mtime": 1794335209.757382,
+    "seen": 1794335364.0775611,
+    "ast_hash": "1a41dd9d73535448404151c0ca144422",
     "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1794331867.7413049,
-    "seen": 1794332081.000173,
-    "ast_hash": "74acce95045606918dcf0061c6ec9952",
+    "mtime": 1794335238.9818223,
+    "seen": 1794335364.077564,
+    "ast_hash": "e48b718cba1854879c07fc54c905f464",
     "semantic_hash": ""
   },
   "src/components/layout/Header.tsx": {
-    "mtime": 1794331884.3770618,
-    "seen": 1794332081.0001771,
-    "ast_hash": "cab5c0d7199dba52b937c7964eb21bbe",
+    "mtime": 1794335212.1402476,
+    "seen": 1794335364.0775669,
+    "ast_hash": "63ec84083f51a94a805bff56e434d0c9",
     "semantic_hash": ""
   },
   "src/components/sections/ContactFormSection.tsx": {
-    "mtime": 1794332021.953361,
-    "seen": 1794332081.0001814,
-    "ast_hash": "9ee7db2f130c7e6e5ba5f9177a9b82a9",
+    "mtime": 1794335300.5768633,
+    "seen": 1794335364.0775697,
+    "ast_hash": "0cb4419033fa8f55be61e442d45b4ca3",
     "semantic_hash": ""
   },
   "src/components/sections/FaqSection.tsx": {
@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "src/components/sections/HeroSection.tsx": {
-    "mtime": 1794331845.5844634,
-    "seen": 1794332081.0001945,
-    "ast_hash": "3e49b1533d54e2d656a5f77112770a2f",
+    "mtime": 1794335211.4012313,
+    "seen": 1794335364.0775793,
+    "ast_hash": "c9771bd397e6c96fb889494caa0ffa8a",
     "semantic_hash": ""
   },
   "src/components/sections/HowItWorksSection.tsx": {
@@ -219,6 +219,12 @@
     "mtime": 1794325796.6102366,
     "seen": 1794330508.3345315,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "src/components/ui/WhatsAppIcon.tsx": {
+    "mtime": 1794335137.1253006,
+    "seen": 1794335364.0776126,
+    "ast_hash": "e335b9986e254e5aff818774337b9ebc",
     "semantic_hash": ""
   },
   "package-lock.json": {

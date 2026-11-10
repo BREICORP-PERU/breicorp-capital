@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   MapPin,
   Mail,
-  Phone,
   ShieldCheck,
   FileCheck2,
   Clock,
@@ -11,6 +10,7 @@ import {
 } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function Footer() {
   const currentYear = 2026;
@@ -114,8 +114,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#FF6801] transition-colors group"
               >
-                <div className="w-8 h-8 rounded-md bg-[#FF6801]/10 flex items-center justify-center text-[#FF6801] group-hover:bg-[#FF6801] group-hover:text-white transition-colors">
-                  <Phone className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center text-[#25D366]">
+                  <WhatsAppIcon className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-400">

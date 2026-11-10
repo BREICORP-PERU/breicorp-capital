@@ -6,9 +6,9 @@ import {
   CheckCircle2,
   Building2,
   BadgeCheck,
-  PhoneCall,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function HeroSection() {
@@ -65,7 +65,7 @@ export default function HeroSection() {
                 isExternal
                 variant="outline"
                 size="lg"
-                icon={<PhoneCall className="w-4 h-4 text-[#FF6801]" />}
+                icon={<WhatsAppIcon className="w-4 h-4 text-[#25D366]" />}
                 iconPosition="left"
               >
                 CONSULTAR POR WHATSAPP

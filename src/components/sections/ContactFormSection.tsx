@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Building2, MessageCircle, PhoneCall, Send, ShieldCheck } from "lucide-react";
+import { Building2, ShieldCheck } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { creditWhatsAppMessage, siteConfig, whatsappHref } from "@/config/siteConfig";
 
 interface CreditForm {
@@ -83,7 +84,7 @@ export default function ContactFormSection() {
 
             <div className="space-y-4 pt-2">
               <div className="flex items-start gap-3.5 p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-                <MessageCircle className="w-5 h-5 text-[#FF6801] shrink-0" />
+                <WhatsAppIcon className="w-5 h-5 text-[#25D366] shrink-0" />
                 <div>
                   <div className="text-xs font-bold text-[#111111] uppercase tracking-wider">Atención por WhatsApp</div>
                   <p className="text-xs text-neutral-600 leading-relaxed mt-1">Un asesor podrá atenderte cuando envíes el mensaje desde WhatsApp.</p>
@@ -107,7 +108,7 @@ export default function ContactFormSection() {
 
             <div className="p-5 rounded-2xl bg-[#FFF5EE] border border-[#FF6801]/30 space-y-2">
               <div className="text-xs font-bold text-[#FF6801] uppercase tracking-wider flex items-center gap-1.5">
-                <PhoneCall className="w-4 h-4" /> ¿Prefieres escribir directamente?
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" /> ¿Prefieres escribir directamente?
               </div>
               <p className="text-xs text-neutral-700 leading-relaxed">También puedes abrir un chat sin completar este formulario.</p>
               <a
@@ -184,7 +185,7 @@ export default function ContactFormSection() {
                   Al continuar, el texto se incluirá en un enlace a WhatsApp y podrá llegar a ese servicio aunque no pulses Enviar. Podrás revisar el mensaje antes de enviarlo a BREICORP CAPITAL. Consulta nuestra{" "}
                   <Link href="/politica-de-privacidad" target="_blank" className="text-[#FF6801] font-semibold underline">Política de Privacidad</Link>.
                 </p>
-                <Button type="submit" variant="primary" size="lg" fullWidth icon={<Send className="w-5 h-5" />} className="shadow-orange-glow">
+                <Button type="submit" variant="primary" size="lg" fullWidth icon={<WhatsAppIcon className="w-6 h-6 rounded-full bg-white p-0.5 text-[#25D366]" />} iconPosition="left" className="shadow-orange-glow">
                   ABRIR WHATSAPP CON MI SOLICITUD
                 </Button>
                 {preparedUrl && (

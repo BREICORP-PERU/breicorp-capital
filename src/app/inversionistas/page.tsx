@@ -7,6 +7,7 @@ import {
   Scale,
   FileCheck2,
   ArrowLeft,
+  ArrowRight,
   Briefcase,
   AlertTriangle,
 } from "lucide-react";
@@ -85,6 +86,14 @@ export default function InversionistasPage() {
               Conoce nuestro modelo de participación en operaciones de financiamiento con garantía hipotecaria y las condiciones para formar parte de nuestra red de inversionistas en Tingo María y Huánuco.
             </p>
 
+            <a
+              href="#registro-inversionistas"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#FF6801] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#E55D00] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C6A15B]"
+            >
+              QUIERO RECIBIR INFORMACIÓN
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+
             <div className="pt-4 flex items-center gap-6 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
@@ -95,6 +104,30 @@ export default function InversionistasPage() {
                 <span>Escritura Pública Notarial</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consulta de inversión integrada en la página */}
+      <section id="registro-inversionistas" className="scroll-mt-24 bg-[#F5F5F5] py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
+          <div className="space-y-5 lg:col-span-5 lg:pt-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#C6A15B]/30 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#A77B30]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#C6A15B]" />
+              Contacto para inversionistas
+            </div>
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#111111] sm:text-4xl">
+              Haz crecer tus oportunidades de inversión
+            </h2>
+            <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+              Déjanos tus datos y nuestro equipo se comunicará contigo para brindarte información sobre las oportunidades de inversión de BREICORP CAPITAL.
+            </p>
+            <p className="text-sm leading-relaxed text-neutral-600">
+              El formulario prepara una consulta en WhatsApp. Podrás revisar el mensaje y decidir si lo envías.
+            </p>
+          </div>
+          <div className="min-w-0 lg:col-span-7">
+            <InvestorForm />
           </div>
         </div>
       </section>
@@ -198,20 +231,6 @@ export default function InversionistasPage() {
         </div>
       </section>
 
-      {/* Formulario de Contacto para Inversionistas */}
-      <section id="registro-inversionistas" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Contacto Institucional"
-            title="SOLICITAR INFORMACIÓN PARA INVERSIONISTAS."
-            description="Completa los datos básicos para abrir WhatsApp con una consulta preparada. Revisa el mensaje antes de enviarlo."
-            align="center"
-            className="mb-12"
-          />
-
-          <InvestorForm />
-        </div>
-      </section>
     </div>
   );
 }

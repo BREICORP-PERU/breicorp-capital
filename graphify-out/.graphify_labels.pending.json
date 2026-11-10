@@ -4,9 +4,8 @@
   "2": "compilerOptions",
   "3": "index.ts",
   "4": "FaqSection.tsx",
-  "5": "layout.tsx",
-  "6": "react",
-  "8": "next.config.ts",
+  "5": "InvestorForm.tsx",
+  "6": "siteConfig.ts",
   "10": "BREICORP CAPITAL",
   "11": "AGENTS.md"
 }

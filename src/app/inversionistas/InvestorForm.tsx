@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Send } from "lucide-react";
 import Button from "@/components/ui/Button";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { investorWhatsAppMessage, whatsappHref } from "@/config/siteConfig";
 
 interface InvestorFormData {
@@ -23,6 +23,7 @@ const initialForm: InvestorFormData = {
 export default function InvestorForm() {
   const [formData, setFormData] = useState<InvestorFormData>(initialForm);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [consent, setConsent] = useState(false);
   const [preparedUrl, setPreparedUrl] = useState<string | null>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +52,7 @@ export default function InvestorForm() {
     if (!Number.isSafeInteger(amount) || amount <= 0) {
       nextErrors.investmentAmount = "Ingresa un monto aproximado mayor a cero.";
     }
+    if (!consent) nextErrors.consent = "Debes autorizar el tratamiento de datos y el contacto.";
 
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) return;
@@ -68,6 +70,10 @@ export default function InvestorForm() {
   return (
     <div className="rounded-3xl bg-white border border-neutral-200 shadow-card p-6 sm:p-10">
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
+        <div className="space-y-1">
+          <h3 className="text-xl font-bold text-[#111111]">Prepara tu consulta</h3>
+          <p className="text-sm text-neutral-600">Los campos marcados con * son obligatorios.</p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div className="sm:col-span-2 space-y-1.5">
             <label htmlFor="inv_fullName" className="block text-xs font-bold uppercase tracking-wider text-neutral-700">Nombres y apellidos *</label>
@@ -91,12 +97,31 @@ export default function InvestorForm() {
           </div>
         </div>
 
+        <div className="space-y-2">
+          <label htmlFor="inv_consent" className="flex items-start gap-3 text-sm text-neutral-700 leading-relaxed cursor-pointer">
+            <input
+              id="inv_consent"
+              type="checkbox"
+              checked={consent}
+              onChange={(event) => {
+                setConsent(event.target.checked);
+                setErrors((current) => ({ ...current, consent: "" }));
+                setPreparedUrl(null);
+              }}
+              aria-invalid={!!errors.consent}
+              aria-describedby={errors.consent ? "inv_consent_error" : undefined}
+              className="mt-1 h-5 w-5 shrink-0 accent-[#C6A15B]"
+            />
+            <span>Autorizo el tratamiento de mis datos personales para preparar esta consulta y, si envío el mensaje, para que BREICORP CAPITAL me contacte sobre oportunidades de inversión. *</span>
+          </label>
+          {errors.consent && <p id="inv_consent_error" className="text-xs text-red-600">{errors.consent}</p>}
+        </div>
         <p className="text-xs text-neutral-600">
           Al continuar, el texto se incluirá en un enlace a WhatsApp y podrá llegar a ese servicio aunque no pulses Enviar. Podrás revisarlo antes de enviarlo a BREICORP CAPITAL. Consulta nuestra{" "}
           <Link href="/politica-de-privacidad" target="_blank" className="text-[#A77B30] font-semibold underline">Política de Privacidad</Link>.
         </p>
-        <Button type="submit" variant="gold" size="lg" fullWidth icon={<Send className="w-5 h-5" />}>
-          ABRIR WHATSAPP CON MI CONSULTA
+        <Button type="submit" variant="gold" size="lg" fullWidth icon={<WhatsAppIcon className="w-6 h-6 rounded-full bg-white p-0.5 text-[#25D366]" />} iconPosition="left" className="min-h-12">
+          QUIERO RECIBIR INFORMACIÓN
         </Button>
         {preparedUrl && (
           <div role="status" className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-sm text-neutral-700">
