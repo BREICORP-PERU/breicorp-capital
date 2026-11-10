@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
-import { siteConfig } from "@/config/siteConfig";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function Footer() {
   const currentYear = 2026;
@@ -25,13 +25,13 @@ export default function Footer() {
             <BrandLogo variant="light" size="lg" />
 
             <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">
-              Línea de negocio de <strong className="text-white">BREICORP E.I.R.L.</strong> especializada en la intermediación, estructuración y administración de operaciones de financiamiento con garantía hipotecaria. Conectamos necesidades de liquidez empresarial y personal con inversionistas privados bajo rigurosos estándares notariales y registrales.
+              Línea de negocio de <strong className="text-white">BREICORP E.I.R.L.</strong> orientada a la intermediación y gestión de posibles operaciones de financiamiento con garantía hipotecaria entre solicitantes e inversionistas privados.
             </p>
 
             <div className="space-y-3 pt-2 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#FF6801] shrink-0" />
-                <span>Cobertura inicial: Tingo María y Huánuco, Perú</span>
+                <span>Cobertura referencial: {siteConfig.locations.map((location) => location.city).join(" y ")}, Perú</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#C6A15B] shrink-0" />
@@ -109,9 +109,7 @@ export default function Footer() {
 
             <div className="space-y-3 pt-1">
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-                  siteConfig.contact.whatsappDefaultMessage
-                )}`}
+                href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#FF6801] transition-colors group"
@@ -121,7 +119,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-400">
-                    WhatsApp Comercial
+                    WhatsApp publicado (por confirmar)
                   </div>
                   <div className="text-sm font-semibold text-white">
                     {siteConfig.contact.whatsappDisplay}
@@ -138,7 +136,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-400">
-                    Correo Corporativo
+                    Correo publicado (por confirmar)
                   </div>
                   <div className="text-sm font-semibold text-white break-all">
                     {siteConfig.contact.email}
@@ -149,7 +147,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2 pt-2 text-[11px] text-neutral-400">
               <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
-              <span>Garantías constituidas por Escritura Pública en Notaría</span>
+              <span>Garantías sujetas a evaluación y formalización contractual</span>
             </div>
           </div>
         </div>
@@ -164,6 +162,7 @@ export default function Footer() {
             Aviso Legal e Institucional
           </div>
           <p>{siteConfig.legalDisclaimer}</p>
+          <p>{siteConfig.contact.verificationNotice}</p>
         </div>
 
         {/* Barra inferior de derechos y enlaces legales */}

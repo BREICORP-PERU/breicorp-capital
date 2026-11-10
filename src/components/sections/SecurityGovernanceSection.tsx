@@ -13,31 +13,31 @@ export default function SecurityGovernanceSection() {
   const pillars = [
     {
       icon: FileSpreadsheet,
-      title: "Evaluación documentada",
+      title: "Evaluación de documentación",
       subtitle: "Análisis patrimonial y de solvencia",
       description:
-        "Cada solicitud es sometida a un estudio de viabilidad cuantitativa y cualitativa. Evaluamos el flujo recurrente del solicitante para garantizar que las obligaciones asumidas sean realistas y sostenibles.",
+        "La evaluación prevista considera la actividad económica y la capacidad de pago del solicitante antes de definir condiciones de financiamiento.",
     },
     {
       icon: Building2,
-      title: "Verificación registral en SUNARP",
+      title: "Revisión registral prevista",
       subtitle: "Estudio de títulos y legalidad",
       description:
-        "Realizamos una revisión integral de la partida electrónica del bien ofrecido en garantía para constatar titularidad legítima, verificar antecedentes de dominio y descartar contingencias registrales.",
+        "La revisión registral prevista examinaría la titularidad y las cargas del inmueble antes de definir una posible garantía.",
     },
     {
       icon: Calculator,
-      title: "Tasación profesional del inmueble",
+      title: "Valoración del inmueble",
       subtitle: "Valorización técnica comercial",
       description:
-        "Se evalúa el inmueble bajo criterios técnicos de mercado, ubicación, estado de conservación y valor de realización rápida, garantizando una relación préstamo/garantía prudente.",
+        "Cuando corresponda, la evaluación del inmueble considerará su ubicación, estado y valoración técnica. La garantía no elimina los riesgos de la operación.",
     },
     {
       icon: Stamp,
       title: "Formalización contractual y notarial",
       subtitle: "Escritura Pública y fe notarial",
       description:
-        "Toda operación se eleva a Escritura Pública ante Notario Público colegiado y se inscribe como hipoteca en SUNARP, protegiendo con absoluta claridad los derechos y deberes de ambas partes.",
+        "La estructura notarial y registral que corresponda se definirá en los documentos de cada operación, conforme a la evaluación legal del inmueble.",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function SecurityGovernanceSection() {
         <SectionHeading
           kicker="Gobernanza y Estándares"
           title="UNA OPERACIÓN QUE REQUIERE EVALUACIÓN Y FORMALIDAD."
-          description="En BREICORP CAPITAL no promovemos atajos ni soluciones informales. Cada operación de financiamiento con garantía hipotecaria descansa sobre cuatro pilares técnicos y jurídicos que brindan certidumbre a todas las partes intervinientes."
+          description="Estos son los aspectos técnicos y legales que deberán revisarse al estructurar cada posible operación de financiamiento."
           align="center"
           className="mb-16"
         />

@@ -5,9 +5,10 @@ import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | BREICORP CAPITAL",
+  title: "Política de Privacidad",
   description:
-    "Política de tratamiento y protección de datos personales de BREICORP CAPITAL conforme a la Ley N° 29733 en Perú.",
+    "Información preliminar sobre el tratamiento de datos personales de BREICORP CAPITAL, pendiente de revisión jurídica.",
+  robots: { index: false, follow: false },
 };
 
 export default function PoliticaPrivacidadPage() {
@@ -33,65 +34,74 @@ export default function PoliticaPrivacidadPage() {
         <div className="space-y-4 border-b border-neutral-200 pb-8 mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF6801]/10 text-[#FF6801] text-xs font-semibold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
-            Cumplimiento Ley N° 29733 (Perú)
+            Información sobre datos personales
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#111111] tracking-tight">
             POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES
           </h1>
           <p className="text-sm text-neutral-500">
-            Última actualización: Enero de 2026 | Responsable: {siteConfig.legalEntity} (Marca comercial: {siteConfig.name})
+            Borrador pendiente de revisión jurídica | Responsable indicado: {siteConfig.legalEntity} (línea comercial: {siteConfig.name})
           </p>
         </div>
 
         <div className="prose prose-neutral max-w-none text-sm sm:text-base leading-relaxed space-y-6 text-neutral-700">
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">1. IDENTIFICACIÓN DEL TITULAR DEL BANCO DE DATOS</h2>
+            <h2 className="text-lg font-bold text-[#111111]">1. RESPONSABLE DEL TRATAMIENTO</h2>
             <p>
-              El titular del tratamiento de los datos personales recopilados a través de este portal web es <strong>{siteConfig.legalEntity}</strong>, empresa titular de la línea comercial <strong>{siteConfig.name}</strong>, con operaciones en las ciudades de Tingo María y Huánuco, Perú.
+              La empresa indicada para atender consultas comerciales es <strong>{siteConfig.legalEntity}</strong>, titular de la línea comercial <strong>{siteConfig.name}</strong>. Domicilio y demás datos de identificación: pendientes de confirmación empresarial.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">2. MARCO LEGAL APLICABLE</h2>
             <p>
-              Esta política se rige en estricto cumplimiento de la <strong>Ley N° 29733 — Ley de Protección de Datos Personales</strong>, su Reglamento aprobado mediante Decreto Supremo N° 003-2013-JUS, y las directivas emitidas por la Autoridad Nacional de Protección de Datos Personales del Ministerio de Justicia y Derechos Humanos del Perú.
+              La referencia normativa es la <strong>Ley N° 29733 — Ley de Protección de Datos Personales</strong> y su Reglamento aprobado por el <strong>Decreto Supremo N° 016-2024-JUS</strong>, vigente desde el 31 de marzo de 2025. Esta mención no acredita por sí sola el cumplimiento de todas las obligaciones aplicables.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">3. DATOS RECOPILADOS Y FINALIDAD DEL TRATAMIENTO</h2>
+            <h2 className="text-lg font-bold text-[#111111]">3. DATOS Y FINALIDADES</h2>
             <p>
-              Los datos personales solicitados a través de nuestros formularios web (nombres, número telefónico, WhatsApp, correo electrónico, ciudad, monto de financiamiento, tipo de inmueble y titularidad registral) tienen como fines exclusivos:
+              El formulario de crédito utiliza nombre, celular, ciudad, monto aproximado, tipo de financiamiento y finalidad. El de inversionistas utiliza nombre, celular, correo opcional y monto aproximado de inversión. No se solicitan DNI, escrituras ni archivos en esta etapa.
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-neutral-600">
-              <li>Evaluar la viabilidad financiera preliminar de la solicitud de crédito con garantía hipotecaria.</li>
-              <li>Coordinar la recepción y verificación de documentos registrales (SUNARP) e informes periciales de tasación.</li>
-              <li>Atender consultas y gestionar el contacto comercial directo por llamada, WhatsApp o correo.</li>
-              <li>Para el caso de inversionistas, perfilar la capacidad de colocación y presentar operaciones estructuradas de mutuo notarial.</li>
+              <li>Preparar un mensaje de WhatsApp con los datos introducidos por el visitante.</li>
+              <li>Si el visitante decide enviar el mensaje desde WhatsApp, permitir que el equipo comercial atienda la consulta de crédito o inversión por ese canal.</li>
             </ul>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">4. CONFIDENCIALIDAD Y MEDIDAS DE SEGURIDAD</h2>
+            <h2 className="text-lg font-bold text-[#111111]">4. CÓMO FUNCIONA EL ENLACE A WHATSAPP</h2>
             <p>
-              {siteConfig.legalEntity} adopta medidas técnicas, organizativas y legales para evitar la alteración, pérdida, acceso no autorizado o tratamiento ilícito de la información proporcionada. La información patrimonial o documental suministrada no será comercializada, cedida ni transferida a terceros sin consentimiento previo, salvo a los Notarios Públicos, peritos tasadores colegiados y entidades registrales que intervengan en la formalización de la operación acordada.
+              Al pulsar el botón, el sitio construye un enlace <strong>wa.me</strong> con el texto codificado y abre WhatsApp en otra pestaña. El visitante puede revisar y editar el mensaje; el sitio no lo envía automáticamente ni confirma que BREICORP CAPITAL lo haya recibido. Al abrir ese enlace, el texto viaja en la URL hacia WhatsApp y puede ser tratado por ese servicio incluso antes de pulsar Enviar dentro de la aplicación.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">5. EJERCICIO DE DERECHOS ARCO</h2>
+            <h2 className="text-lg font-bold text-[#111111]">5. CONSERVACIÓN Y SEGURIDAD</h2>
             <p>
-              El titular de los datos personales puede ejercer en cualquier momento sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición (ARCO)</strong> reconocidos por la legislación peruana. Para hacer valer estos derechos, el usuario puede remitir una solicitud formal al correo electrónico:
+              El sitio no envía los formularios a un servidor propio ni los guarda en una base de datos o en localStorage. Los datos se mantienen temporalmente en la página mientras se prepara el enlace. El navegador o WhatsApp pueden conservar el enlace o la conversación según su funcionamiento. Si el visitante envía el mensaje, la conservación y eliminación de la conversación por parte de la empresa requieren una política operativa aún pendiente de definición.
             </p>
-            <div className="p-4 rounded-xl bg-neutral-100 font-mono text-xs text-[#111111] inline-block">
-              {siteConfig.contact.email} (Asunto: Ejercicio de Derechos ARCO - BREICORP CAPITAL)
-            </div>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">6. CONSENTIMIENTO DEL USUARIO</h2>
+            <h2 className="text-lg font-bold text-[#111111]">6. DESTINATARIOS Y ENCARGADOS</h2>
             <p>
-              Al marcar la casilla de aceptación en nuestros formularios y remitir la información solicitada, el usuario declara haber leído, comprendido y aceptado libre, previa, expresa e inequívocamente la presente Política de Privacidad.
+              WhatsApp es un servicio de terceros. Su tratamiento de los datos compartidos mediante el enlace o la conversación se rige por sus propias condiciones y política de privacidad. La empresa debe revisar jurídicamente los posibles destinatarios, encargados y transferencias internacionales antes de publicar una versión definitiva de esta política.
+            </p>
+          </section>
+
+          <section className="space-y-2">
+            <h2 className="text-lg font-bold text-[#111111]">7. DERECHOS Y CANAL DE CONTACTO</h2>
+            <p>
+              El titular puede solicitar acceso, rectificación, cancelación u oposición respecto de los datos que la empresa llegue a tratar al recibir una conversación. El correo publicado para consultas es <strong>{siteConfig.contact.email}</strong>, pendiente de confirmación como canal para ejercer estos derechos.
+            </p>
+          </section>
+
+          <section className="space-y-2">
+            <h2 className="text-lg font-bold text-[#111111]">8. REVISIÓN PENDIENTE</h2>
+            <p>
+              Esta versión es un borrador técnico. La empresa debe confirmar sus datos de contacto y el número de WhatsApp, definir la conservación de conversaciones y obtener revisión jurídica antes de su publicación definitiva.
             </p>
           </section>
         </div>

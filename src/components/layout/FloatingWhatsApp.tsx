@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 import { MessageCircle, X } from "lucide-react";
-import { siteConfig } from "@/config/siteConfig";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-    siteConfig.contact.whatsappDefaultMessage
-  )}`;
+  const whatsappUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-end gap-3 pointer-events-none">

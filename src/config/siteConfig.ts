@@ -9,8 +9,8 @@ export const siteConfig = {
   legalEntity: "BREICORP E.I.R.L.",
   tagline: "El capital que necesitas, con el respaldo de tu propiedad.",
   description:
-    "Intermediación, gestión y administración de operaciones de financiamiento con garantía hipotecaria en Tingo María y Huánuco, Perú.",
-  domain: "https://breicorpcapital.pe", // Dominio referencial para metadatos y SEO
+    "Intermediación y gestión de posibles operaciones de financiamiento con garantía hipotecaria en Perú, sujetas a evaluación.",
+  domain: "https://breicorpcapital.pe", // Pendiente de confirmación antes de publicación definitiva
 
   // Ubicación inicial
   locations: [
@@ -23,20 +23,21 @@ export const siteConfig = {
     minAmount: 20000,
     minAmountFormatted: "S/ 20,000",
     maxAmountText: "Determinado mediante evaluación",
-    termText: "12 meses (sujeto a evaluación)",
+    termText: "Sujeto a evaluación y formalización",
     guaranteeText: "Inmueble inscrito en SUNARP a nombre del solicitante",
     targetAudience: "Empresarios, comerciantes y trabajadores independientes",
   },
 
-  // Canales de contacto oficiales (Centralizados para fácil configuración)
+  // Datos de contacto pendientes de confirmación empresarial; se mantienen visibles por indicación del propietario.
   contact: {
+    verificationNotice: "Dominio, WhatsApp, correos, horarios y cobertura pendientes de confirmación.",
     // Número de WhatsApp configurado (formato internacional sin '+' para enlaces wa.me)
-    whatsappRaw: "51962888200", // Número oficial o de atención al cliente
+    whatsappRaw: "51962888200", // Pendiente de confirmación
     whatsappDisplay: "+51 962 888 200",
     whatsappDefaultMessage:
-      "Hola BREICORP CAPITAL, deseo solicitar una evaluación para un financiamiento con garantía hipotecaria.",
+      "Hola BREICORP CAPITAL, deseo información sobre un crédito o financiamiento. Por favor, indíquenme los siguientes pasos.",
     whatsappInvestorsMessage:
-      "Hola BREICORP CAPITAL, estoy interesado en conocer las oportunidades de inversión con respaldo inmobiliario.",
+      "Hola BREICORP CAPITAL, deseo información sobre las modalidades y condiciones de participación para inversionistas.",
 
     // Correo corporativo
     email: "contacto@breicorpcapital.pe",
@@ -58,8 +59,48 @@ export const siteConfig = {
 
   // Descargo legal corporativo
   legalDisclaimer:
-    "BREICORP CAPITAL es una línea comercial de BREICORP E.I.R.L. orientada a la gestión e intermediación de operaciones de financiamiento. Las operaciones están sujetas a evaluación, disponibilidad de capital, formalización contractual y cumplimiento de las disposiciones legales aplicables. No es una entidad bancaria ni financiera supervisada por la SBS con captación de depósitos del público.",
+    "BREICORP CAPITAL es una línea comercial de BREICORP E.I.R.L. orientada a la gestión e intermediación de posibles operaciones de financiamiento. Cada operación está sujeta a evaluación, disponibilidad de capital y formalización contractual. Este sitio no ofrece depósitos ni presenta a BREICORP CAPITAL como entidad bancaria.",
 };
 
 export type SiteConfig = typeof siteConfig;
+
+export function whatsappHref(message: string): string {
+  return `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(message)}`;
+}
+
+export function creditWhatsAppMessage(data: {
+  fullName: string;
+  phone: string;
+  city: string;
+  requestedAmount: number;
+  financingType: string;
+  financingPurpose: string;
+}): string {
+  return `Hola, deseo recibir información sobre un crédito BREICORP CAPITAL.
+
+Nombre: ${data.fullName.trim()}
+Celular: ${data.phone.trim()}
+Ciudad: ${data.city}
+Monto solicitado: S/ ${data.requestedAmount.toLocaleString("es-PE")}
+Tipo de financiamiento: ${data.financingType}
+Finalidad: ${data.financingPurpose}
+
+Quedo atento a la información y evaluación correspondiente.`;
+}
+
+export function investorWhatsAppMessage(data: {
+  fullName: string;
+  phone: string;
+  email: string;
+  investmentAmount: number;
+}): string {
+  return `Hola, estoy interesado en conocer las oportunidades de inversión de BREICORP CAPITAL.
+
+Nombre: ${data.fullName.trim()}
+Celular: ${data.phone.trim()}
+Correo: ${data.email.trim() || "No indicado"}
+Monto aproximado de inversión: S/ ${data.investmentAmount.toLocaleString("es-PE")}
+
+Deseo recibir información sobre las modalidades y condiciones de participación.`;
+}
 

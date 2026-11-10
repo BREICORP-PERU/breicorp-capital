@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
-import { siteConfig } from "@/config/siteConfig";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function FaqSection() {
   const faqData: AccordionItemData[] = [
@@ -15,13 +15,13 @@ export default function FaqSection() {
       id: "faq-2",
       question: "¿Existe un monto máximo?",
       answer:
-        "No existe un monto máximo prefijado. El importe máximo a otorgar se determina de forma individual tras realizar la tasación comercial del inmueble ofrecido en garantía y analizar la capacidad demostrable de pago del solicitante.",
+        "No existe un monto máximo prefijado. El importe posible dependerá de la evaluación de la capacidad de pago, del inmueble y de las condiciones que se formalicen en cada operación.",
     },
     {
       id: "faq-3",
       question: "¿Puedo solicitar financiamiento si estoy reportado en INFOCORP?",
       answer:
-        "Sí. Estar reportado en una central de riesgo no te descalifica automáticamente para solicitar una evaluación. En BREICORP CAPITAL realizamos un análisis integral que pondera tu actividad económica actual, tu flujo de ingresos y el valor del bien inmueble ofrecido en garantía. La aprobación final siempre dependerá del análisis de viabilidad crediticia.",
+        "Sí. Estar reportado en una central de riesgo no impide solicitar una evaluación. La posibilidad de financiamiento dependerá de la revisión de tu actividad económica, capacidad de pago, inmueble y demás condiciones del caso; no se garantiza aprobación.",
     },
     {
       id: "faq-4",
@@ -39,19 +39,19 @@ export default function FaqSection() {
       id: "faq-6",
       question: "¿Cuánto tiempo demora la evaluación?",
       answer:
-        "El plazo de evaluación preliminar toma generalmente entre 48 y 72 horas hábiles a partir de la entrega completa de los requisitos solicitados (DNI, copia literal registral y sustentos de ingresos). Los tiempos de tasación y formalización notarial pueden variar según la agenda de la Notaría y la revisión registral en SUNARP.",
+        "El tiempo de evaluación dependerá de la documentación presentada y de las verificaciones necesarias. La tasación y la formalización, cuando correspondan, pueden requerir plazos adicionales.",
     },
     {
       id: "faq-7",
       question: "¿Puedo realizar amortizaciones anticipadas?",
       answer:
-        "Sí. La posibilidad de realizar amortizaciones a capital o la cancelación anticipada de la operación se contempla y se pacta expresamente en el contrato notarial, detallando los plazos mínimos y los términos convenidos.",
+        "Las condiciones de amortización o cancelación anticipada se definirán en los documentos contractuales de cada operación. Consúltalas antes de aceptar una propuesta.",
     },
     {
       id: "faq-8",
       question: "¿Cómo se realiza el desembolso?",
       answer:
-        "El desembolso se efectúa mediante transferencia bancaria o cheque de gerencia a nombre del solicitante una vez suscrita la Escritura Pública de hipoteca en la Notaría designada y confirmado el ingreso del título en Registros Públicos (SUNARP), conforme a lo estipulado en el contrato.",
+        "El medio, momento y requisitos del desembolso se establecerán en los documentos de cada operación, después de la evaluación y formalización que correspondan.",
     },
     {
       id: "faq-9",
@@ -63,7 +63,7 @@ export default function FaqSection() {
       id: "faq-10",
       question: "¿Cómo puedo solicitar una evaluación?",
       answer:
-        "Puedes iniciar tu solicitud completando el formulario web disponible en esta página con tus datos de contacto y las características de tu inmueble, o escribiéndonos directamente a nuestro WhatsApp de atención comercial para recibir orientación de un asesor.",
+        "Puedes completar los datos básicos del formulario para preparar un mensaje de WhatsApp o abrir directamente el chat comercial. La consulta solo llegará al equipo si decides enviarla desde WhatsApp.",
     },
   ];
 
@@ -92,9 +92,7 @@ export default function FaqSection() {
           </p>
           <div>
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-                siteConfig.contact.whatsappDefaultMessage
-              )}`}
+              href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-bold text-[#FF6801] hover:text-[#E55D00] transition-colors"

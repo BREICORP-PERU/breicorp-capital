@@ -30,8 +30,8 @@ export default function FeaturesSection() {
     {
       icon: Calendar,
       label: "Plazo referencial",
-      value: "12 meses",
-      detail: "Sujeto a evaluación según el perfil del solicitante",
+      value: "Sujeto a evaluación",
+      detail: "Se definirá y formalizará para cada operación",
       accent: "neutral",
     },
     {

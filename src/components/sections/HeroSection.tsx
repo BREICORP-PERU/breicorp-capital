@@ -9,12 +9,10 @@ import {
   PhoneCall,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { siteConfig } from "@/config/siteConfig";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function HeroSection() {
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-    siteConfig.contact.whatsappDefaultMessage
-  )}`;
+  const whatsappUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
 
   return (
     <section
@@ -52,13 +50,14 @@ export default function HeroSection() {
             {/* Botones de acción */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <Button
-                href="#contacto"
+                href={whatsappUrl}
+                isExternal
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 className="shadow-orange-glow"
               >
-                SOLICITAR EVALUACIÓN
+                SOLICITAR INFORMACIÓN DE CRÉDITO
               </Button>
 
               <Button

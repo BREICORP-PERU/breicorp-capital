@@ -2,13 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { Briefcase, TrendingUp, Gem, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { whatsappHref } from "@/config/siteConfig";
 
 export default function ServicesSection() {
   const applications = [
     {
       icon: Briefcase,
       title: "Capital de trabajo",
-      subtitle: "Liquidez inmediata para tu operación diaria",
+      subtitle: "Liquidez sujeta a evaluación para tu operación diaria",
       description:
         "Financia compras estratégicas de mercadería, aprovecha descuentos por volumen con proveedores clave o cubre necesidades de flujo de caja para que tu actividad comercial nunca se detenga.",
       image:
@@ -98,7 +99,9 @@ export default function ServicesSection() {
 
                   <div className="pt-4 border-t border-neutral-100">
                     <a
-                      href="#contacto"
+                      href={whatsappHref(`Hola BREICORP CAPITAL, deseo información sobre financiamiento para ${app.title.toLowerCase()}.`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111111] group-hover:text-[#FF6801] transition-colors"
                     >
                       <span>Solicitar evaluación para este destino</span>

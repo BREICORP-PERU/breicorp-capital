@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight, PhoneCall } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 import Button from "@/components/ui/Button";
-import { siteConfig } from "@/config/siteConfig";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const creditWhatsAppUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +22,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "Inicio", href: "/#inicio" },
-    { name: "Créditos hipotecarios", href: "/#creditos-hipotecarios" },
-    { name: "Inversionistas", href: "/inversionistas" },
-    { name: "Nosotros", href: "/#nosotros" },
-    { name: "Preguntas", href: "/#preguntas-frecuentes" },
-    { name: "Contacto", href: "/#contacto" },
-  ];
+  const navItems = siteConfig.navLinks;
 
   return (
     <header
@@ -77,9 +71,7 @@ export default function Header() {
           {/* Botones de acción escritorio */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-                siteConfig.contact.whatsappDefaultMessage
-              )}`}
+              href={creditWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-neutral-700 hover:text-[#111111] transition-colors"
@@ -90,7 +82,8 @@ export default function Header() {
             </a>
 
             <Button
-              href="/#contacto"
+              href={creditWhatsAppUrl}
+              isExternal
               variant="primary"
               size="md"
               icon={<ArrowUpRight className="w-4 h-4" />}
@@ -102,10 +95,11 @@ export default function Header() {
           {/* Botón hamburguesa móvil */}
           <div className="flex items-center gap-2 lg:hidden">
             <Button
-              href="/#contacto"
+              href={creditWhatsAppUrl}
+              isExternal
               variant="primary"
               size="sm"
-              className="text-xs px-3 py-1.5"
+              className="text-xs px-3 min-h-11"
             >
               EVALUAR
             </Button>
@@ -147,20 +141,18 @@ export default function Header() {
             ))}
 
             <div className="pt-4 mt-2 border-t border-neutral-100 space-y-3">
-              <Button
-                href="/#contacto"
-                variant="primary"
-                size="md"
-                fullWidth
+              <a
+                href={creditWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
+                className="w-full min-h-11 inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#FF6801] text-white text-sm font-semibold"
               >
-                SOLICITAR EVALUACIÓN
-              </Button>
+                SOLICITAR INFORMACIÓN DE CRÉDITO
+              </a>
 
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(
-                  siteConfig.contact.whatsappDefaultMessage
-                )}`}
+                href={creditWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-neutral-300 text-sm font-semibold text-neutral-800 hover:bg-neutral-50 transition-colors"

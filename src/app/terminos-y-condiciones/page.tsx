@@ -5,9 +5,10 @@ import { ArrowLeft, FileText } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | BREICORP CAPITAL",
+  title: "Términos y Condiciones",
   description:
     "Términos y condiciones de uso del portal web e intermediación de financiamiento con garantía hipotecaria de BREICORP CAPITAL.",
+  robots: { index: false, follow: false },
 };
 
 export default function TerminosCondicionesPage() {
@@ -39,7 +40,7 @@ export default function TerminosCondicionesPage() {
             TÉRMINOS Y CONDICIONES GENERALES
           </h1>
           <p className="text-sm text-neutral-500">
-            Regula el uso del sitio web y los servicios de intermediación de {siteConfig.legalEntity} ({siteConfig.name}).
+            Borrador pendiente de revisión jurídica sobre el uso del sitio y la intermediación de {siteConfig.legalEntity} ({siteConfig.name}).
           </p>
         </div>
 
@@ -57,12 +58,12 @@ export default function TerminosCondicionesPage() {
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">2. ALCANCE DE LA SOLICITUD DE EVALUACIÓN</h2>
             <p>
-              El envío de un formulario o la entrega de documentación a través de este portal web <strong>no constituye una oferta vinculante, un contrato de préstamo ni una aprobación garantizada</strong>. Toda operación está condicionada a:
+              Abrir WhatsApp con una consulta preparada o enviar un mensaje por ese canal <strong>no constituye una oferta vinculante, un contrato de préstamo ni una aprobación garantizada</strong>. Este sitio no recibe formularios ni documentos. Toda posible operación está condicionada a:
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-neutral-600">
-              <li>El análisis satisfactorio de la solvencia y actividad económica del solicitante.</li>
+              <li>La evaluación de la actividad económica y capacidad de pago del solicitante.</li>
               <li>La verificación de la partida registral en la Superintendencia Nacional de los Registros Públicos (SUNARP).</li>
-              <li>La tasación comercial del inmueble realizada por un perito calificado.</li>
+              <li>La valoración del inmueble, cuando corresponda, según los criterios acordados.</li>
               <li>La suscripción de los instrumentos legales y notariales correspondientes por ambas partes.</li>
             </ul>
           </section>
@@ -70,28 +71,28 @@ export default function TerminosCondicionesPage() {
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">3. CONDICIONES FINANCIERAS Y CONTRACTUALES</h2>
             <p>
-              El monto otorgable (con un piso mínimo evaluable de S/ 20,000), la tasa de interés compensatoria y moratoria, el plazo de amortización, los gastos notariales, periciales y registrales, así como las penalidades por incumplimiento, se fijan individualmente en cada caso y se consignan detalladamente en la minuta y Escritura Pública celebrada ante Notario Público.
+              El monto mínimo referencial evaluable es S/ 20,000. No existe un monto máximo prefijado. El plazo, las tasas, los gastos y cualquier otra condición económica se definirán para cada operación y deberán constar en los documentos contractuales aplicables antes de su aceptación. Abrir o enviar un mensaje de WhatsApp no implica aprobación ni desembolso.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">4. VERACIDAD DE LA INFORMACIÓN SUMINISTRADA</h2>
             <p>
-              El solicitante o inversionista declara bajo juramento que toda la información, declaraciones de ingresos y documentación relativa a los bienes inmuebles ofrecidos en garantía son verídicos, legítimos y corresponden a su realidad patrimonial. El suministro de información falsa o adulterada motivará el rechazo inmediato de la solicitud sin perjuicio de las acciones legales a que hubiere lugar.
+              El solicitante o inversionista debe proporcionar información veraz para que su consulta pueda evaluarse. Los requisitos de declaración y documentación de una operación formal se definirán en sus instrumentos contractuales.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">5. PROPIEDAD INTELECTUAL</h2>
             <p>
-              Todos los contenidos, textos, logotipos, estructuras de información y diseños visuales expuestos en este sitio web son propiedad exclusiva de {siteConfig.legalEntity} o se encuentran debidamente autorizados para su uso. Queda prohibida su reproducción total o parcial sin autorización expresa.
+              Los textos, elementos de marca e imágenes de este sitio pueden estar sujetos a derechos de sus respectivos titulares. El alcance de los derechos de uso del material visual está pendiente de verificación.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-[#111111]">6. LEGISLACIÓN Y JURISDICCIÓN</h2>
             <p>
-              Los presentes términos se rigen por las leyes de la República del Perú. Para cualquier controversia derivada del uso del portal web o de los servicios de intermediación, las partes se someten a la competencia de los jueces y tribunales del distrito judicial de Huánuco / Tingo María.
+              La legislación y jurisdicción aplicables a cada operación deberán definirse en los documentos contractuales correspondientes y revisarse jurídicamente antes de publicar condiciones definitivas.
             </p>
           </section>
         </div>

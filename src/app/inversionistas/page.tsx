@@ -16,34 +16,34 @@ import InvestorForm from "./InvestorForm";
 export const metadata: Metadata = {
   title: "Red de Inversionistas | BREICORP CAPITAL",
   description:
-    "Participa en operaciones estructuradas de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+    "Conoce la participación privada en operaciones de financiamiento con garantía hipotecaria sujetas a evaluación y formalización.",
 };
 
 export default function InversionistasPage() {
   const steps = [
     {
       step: "01",
-      title: "Registro y Perfilamiento",
+      title: "Consulta inicial",
       description:
-        "Registras tus datos y el rango de capital que deseas movilizar. Nuestro equipo directivo agenda una reunión informativa inicial.",
+        "Preparas una consulta con tus datos básicos y decides si la envías por WhatsApp. El equipo comercial podrá responderte por ese canal.",
     },
     {
       step: "02",
       title: "Presentación de Expedientes",
       description:
-        "Te presentamos oportunidades pre-evaluadas con informe de solvencia del solicitante, estudio de títulos en SUNARP y tasación comercial del inmueble.",
+        "De existir oportunidades disponibles, se presentará la información y las verificaciones realizadas para cada caso.",
     },
     {
       step: "03",
       title: "Formalización en Notaría",
       description:
-        "Aceptada la operación, se suscribe el contrato de mutuo con garantía hipotecaria mediante Escritura Pública Notarial inscrita a tu favor.",
+        "Las condiciones de la garantía y su formalización notarial y registral se definirán y documentarán en cada operación.",
     },
     {
       step: "04",
       title: "Administración y Seguimiento",
       description:
-        "BREICORP CAPITAL gestiona el cronograma de cobro, la conciliación periódica y la comunicación con el deudor hasta la cancelación total.",
+        "El alcance de la administración y el seguimiento se establecerá en los documentos de cada operación.",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function InversionistasPage() {
             <div className="pt-4 flex items-center gap-6 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
-                <span>Garantía con primera y preferente hipoteca</span>
+                <span>Garantía sujeta a evaluación y contrato</span>
               </div>
               <div className="flex items-center gap-2">
                 <Scale className="w-4 h-4 text-[#C6A15B]" />
@@ -105,7 +105,7 @@ export default function InversionistasPage() {
           <SectionHeading
             kicker="Gobernanza del Capital"
             title="¿POR QUÉ PARTICIPAR A TRAVÉS DE BREICORP CAPITAL?"
-            description="Brindamos una estructura formal e integral que mitiga contingencias operativas mediante rigurosos filtros de selección previa, tasación profesional y supervisión constante."
+            description="Conoce los aspectos que deberán evaluarse y documentarse antes de participar en una operación."
             align="center"
             className="mb-16"
           />
@@ -116,10 +116,10 @@ export default function InversionistasPage() {
                 <Building className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#111111]">
-                Garantía Real Registrada a tu Nombre
+                Garantía Definida en Cada Operación
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                La garantía no queda en manos de terceros ni en esquemas colectivos difusos: la hipoteca se constituye legalmente ante Notario a favor directo del inversionista e inscrita en SUNARP.
+                La titularidad, prioridad y condiciones de cualquier hipoteca dependerán del inmueble, la evaluación registral y los documentos contractuales de la operación.
               </p>
             </div>
 
@@ -128,10 +128,10 @@ export default function InversionistasPage() {
                 <FileCheck2 className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#111111]">
-                Filtros Previos de Riesgo y Capacidad de Pago
+                Evaluación de Riesgo y Capacidad de Pago
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Descartamos operaciones riesgosas. Solo seleccionamos solicitantes con negocio activo, ingresos comprobados y propiedades con tasaciones comerciales que permitan un colchón patrimonial holgado.
+                La evaluación prevista considera la actividad económica, la capacidad de pago y, cuando corresponda, la situación registral y tasación del inmueble. Ninguna garantía elimina el riesgo de pérdida.
               </p>
             </div>
 
@@ -140,10 +140,10 @@ export default function InversionistasPage() {
                 <Briefcase className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#111111]">
-                Gestión Integral y Cobranza Especializada
+                Gestión Según las Condiciones Pactadas
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Nos encargamos del monitoreo de cuotas, liquidaciones oportunas y el control de cumplimiento. Como inversionista, recibes informes claros sin desgaste administrativo.
+                Las tareas de seguimiento, cobranza e información al inversionista se definirán expresamente para cada operación.
               </p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function InversionistasPage() {
           <SectionHeading
             kicker="Ruta de Participación"
             title="PROCESO PARA FORMAR PARTE DE LA RED."
-            description="Una secuencia estructurada y transparente para evaluar expedientes con pleno control de tus decisiones financieras."
+            description="Ruta informativa prevista; cada participación dependerá de la evaluación y los acuerdos entre las partes."
             align="center"
             className="mb-14"
           />
@@ -192,7 +192,7 @@ export default function InversionistasPage() {
               Aviso de Prudencia y Cumplimiento Normativo
             </div>
             <p>
-              BREICORP CAPITAL no publica rentabilidades fijas, no garantiza tasas de retorno ni promete recuperaciones sin riesgo. Las condiciones de cada operación se pactan entre las partes en el respectivo contrato notarial de mutuo con garantía hipotecaria, y están sujetas a los riesgos y contingencias propios de cualquier operación de financiamiento privado.
+              BREICORP CAPITAL no publica rentabilidades fijas, no garantiza tasas de retorno ni promete recuperaciones sin riesgo. Las condiciones de cada operación se pactarán entre las partes y se documentarán según la estructura contractual aplicable.
             </p>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function InversionistasPage() {
           <SectionHeading
             kicker="Contacto Institucional"
             title="SOLICITAR INFORMACIÓN PARA INVERSIONISTAS."
-            description="Completa el formulario para coordinar una reunión de presentación con la dirección de BREICORP CAPITAL."
+            description="Completa los datos básicos para abrir WhatsApp con una consulta preparada. Revisa el mensaje antes de enviarlo."
             align="center"
             className="mb-12"
           />

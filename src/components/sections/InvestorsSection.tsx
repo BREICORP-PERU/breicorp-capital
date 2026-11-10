@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ArrowRight, ShieldCheck, Building2, Layers } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function InvestorsSection() {
   return (
@@ -36,7 +37,7 @@ export default function InvestorsSection() {
                   Garantía directa
                 </div>
                 <div className="text-xs text-neutral-400">
-                  Hipoteca inscrita en SUNARP a tu favor
+                  Condiciones de garantía definidas por operación
                 </div>
               </div>
 
@@ -46,7 +47,7 @@ export default function InvestorsSection() {
                   Filtrado previo
                 </div>
                 <div className="text-xs text-neutral-400">
-                  Operaciones pre-evaluadas y tasadas
+                  Evaluación documental según cada operación
                 </div>
               </div>
 
@@ -63,7 +64,8 @@ export default function InvestorsSection() {
 
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Button
-                href="/inversionistas"
+                href={whatsappHref(siteConfig.contact.whatsappInvestorsMessage)}
+                isExternal
                 variant="gold"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
@@ -73,7 +75,7 @@ export default function InvestorsSection() {
             </div>
 
             <p className="text-xs text-neutral-500 italic">
-              * Nota: BREICORP CAPITAL no promete tasas de retorno garantizadas ni ausencia de riesgo. Cada operación se analiza de forma individual y se formaliza legalmente conforme al marco legal aplicable.
+              * Nota: BREICORP CAPITAL no promete tasas de retorno garantizadas ni ausencia de riesgo. Cada posible operación requiere evaluación y formalización según las condiciones acordadas.
             </p>
           </div>
 

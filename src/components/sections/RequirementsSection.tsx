@@ -9,6 +9,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function RequirementsSection() {
   const requirements = [
@@ -122,7 +123,9 @@ export default function RequirementsSection() {
 
             <div className="lg:col-span-4 flex lg:justify-end">
               <a
-                href="#contacto"
+                href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#FF6801] hover:bg-[#E55D00] text-white font-semibold text-sm transition-all shadow-sm text-center"
               >
                 SOLICITAR EVALUACIÓN PREVIA

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function HowItWorksSection() {
   const steps = [
@@ -17,42 +18,42 @@ export default function HowItWorksSection() {
       number: "01",
       title: "SOLICITUD",
       subtitle: "Registro inicial",
-      description: "El interesado registra sus datos personales y las necesidades de financiamiento a través de nuestro formulario o canal comercial.",
+      description: "El interesado puede preparar un mensaje con sus datos básicos y decidir si lo envía por WhatsApp.",
       icon: FileText,
     },
     {
       number: "02",
       title: "EVALUACIÓN",
       subtitle: "Análisis financiero",
-      description: "Se analiza su actividad económica, ingresos recurrentes y capacidad real de pago para estructurar una operación viable y sostenible.",
+      description: "La evaluación prevista consideraría la actividad económica, los ingresos y la capacidad de pago del solicitante.",
       icon: LineChart,
     },
     {
       number: "03",
       title: "TASACIÓN",
       subtitle: "Inspección técnica",
-      description: "Se coordina la valorización comercial y técnica del inmueble ofrecido en garantía y la verificación de su situación registral en SUNARP.",
+      description: "Cuando corresponda, se coordinarían la valoración del inmueble y la revisión de su situación registral en SUNARP.",
       icon: Scale,
     },
     {
       number: "04",
       title: "PROPUESTA",
       subtitle: "Términos del financiamiento",
-      description: "Se presentan con total transparencia las condiciones de la operación: monto viable, plazos, cronograma y gastos asociados.",
+      description: "Una eventual propuesta deberá detallar monto, plazo, cronograma y gastos antes de su aceptación.",
       icon: FileCheck2,
     },
     {
       number: "05",
       title: "FORMALIZACIÓN",
       subtitle: "Seguridad notarial",
-      description: "Se realizan las verificaciones finales y se formaliza el contrato y la hipoteca por Escritura Pública ante Notario Público.",
+      description: "La estructura contractual, notarial y registral se definirá para cada operación que llegue a formalizarse.",
       icon: FileSignature,
     },
     {
       number: "06",
       title: "DESEMBOLSO",
       subtitle: "Entrega de fondos",
-      description: "Cumplidas las formalidades notariales y registrales convenidas, se entrega el financiamiento conforme a las cláusulas del contrato.",
+      description: "De aprobarse y formalizarse una operación, el desembolso se realizará según las condiciones pactadas.",
       icon: CreditCard,
     },
   ];
@@ -63,7 +64,7 @@ export default function HowItWorksSection() {
         <SectionHeading
           kicker="Proceso Estructurado"
           title="¿CÓMO FUNCIONA EL PROCESO?"
-          description="Una ruta clara de seis etapas diseñada para brindarte rapidez, orden documental y absoluta seguridad jurídica desde el primer contacto hasta el desembolso."
+          description="Etapas previstas para una posible operación; su aplicación y duración dependerán de la evaluación y los acuerdos entre las partes."
           align="center"
           className="mb-16"
         />
@@ -113,7 +114,8 @@ export default function HowItWorksSection() {
         {/* CTA tras el proceso */}
         <div className="mt-14 text-center">
           <Button
-            href="#contacto"
+            href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
+            isExternal
             variant="primary"
             size="lg"
             icon={<ArrowRight className="w-5 h-5" />}
