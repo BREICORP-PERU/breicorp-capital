@@ -127,7 +127,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-400">
-                    WhatsApp publicado (por confirmar)
+                    WhatsApp Corporativo
                   </div>
                   <div className="text-sm font-semibold text-white">
                     {siteConfig.contact.whatsappDisplay}

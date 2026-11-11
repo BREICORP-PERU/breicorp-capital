@@ -123,7 +123,7 @@ export default function HeroSection() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative rounded-2xl overflow-hidden shadow-card border border-neutral-200 aspect-[4/4.5] bg-neutral-900">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                  src="/images/hero-propiedad.jpg"
                   alt="Propiedad moderna representativa de respaldo inmobiliario"
                   fill
                   priority

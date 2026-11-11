@@ -14,8 +14,7 @@ export default function ServicesSection() {
       title: "CRÉDITOS MYPE",
       description:
         "Financiamiento para impulsar tu negocio, capital de trabajo y crecimiento empresarial.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=800&q=80",
+      image: "/images/credito-mype.jpg",
       tag: "Comercio y Empresa",
       ctaText: "Solicitar Crédito MYPE",
       ctaHref: whatsappHref("Hola BREICORP CAPITAL, deseo consultar sobre un Crédito MYPE para mi negocio."),
@@ -28,8 +27,7 @@ export default function ServicesSection() {
       title: "CRÉDITO CON GARANTÍA HIPOTECARIA",
       description:
         "Alternativas de financiamiento respaldadas por un inmueble, sujetas a evaluación.",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+      image: "/images/garantia-hipotecaria.jpg",
       tag: "Respaldo Inmobiliario",
       ctaText: "Consultar con Garantía",
       ctaHref: whatsappHref("Hola BREICORP CAPITAL, deseo consultar sobre un Crédito con Garantía Hipotecaria."),
@@ -42,8 +40,7 @@ export default function ServicesSection() {
       title: "OPORTUNIDADES DE INVERSIÓN",
       description:
         "Información y evaluación para personas interesadas en participar en operaciones de financiamiento.",
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+      image: "/images/oportunidades-inversion.jpg",
       tag: "Participación Privada",
       ctaText: "Ver Oportunidades",
       ctaHref: "/inversionistas",

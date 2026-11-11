@@ -29,12 +29,12 @@ export const siteConfig = {
     targetAudience: "Empresarios, comerciantes y trabajadores independientes",
   },
 
-  // Datos de contacto pendientes de confirmación empresarial; se mantienen visibles por indicación del propietario.
+  // Datos de contacto oficiales y referenciales de la empresa
   contact: {
-    verificationNotice: "Dominio, WhatsApp, correos, horarios y cobertura pendientes de confirmación.",
-    // Número de WhatsApp configurado (formato internacional sin '+' para enlaces wa.me)
-    whatsappRaw: "51962888200", // Pendiente de confirmación
-    whatsappDisplay: "+51 962 888 200",
+    verificationNotice: "Dominio, correos, horarios y cobertura referenciales sujetos a confirmación.",
+    // Número oficial de WhatsApp de BREICORP CAPITAL
+    whatsappRaw: "51948261382",
+    whatsappDisplay: "+51 948 261 382",
     whatsappDefaultMessage:
       "Hola BREICORP CAPITAL, deseo información sobre un crédito o financiamiento. Por favor, indíquenme los siguientes pasos.",
     whatsappInvestorsMessage:
@@ -65,8 +65,11 @@ export const siteConfig = {
 
 export type SiteConfig = typeof siteConfig;
 
-export function whatsappHref(message: string): string {
-  return `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(message)}`;
+export function whatsappHref(message?: string): string {
+  if (!message || message.trim() === "") {
+    return `https://wa.me/${siteConfig.contact.whatsappRaw}`;
+  }
+  return `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${encodeURIComponent(message.trim())}`;
 }
 
 export function creditWhatsAppMessage(data: {

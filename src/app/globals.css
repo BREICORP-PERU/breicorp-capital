@@ -67,3 +67,42 @@ body {
 .shadow-orange-glow {
   box-shadow: 0 10px 25px -5px rgba(238, 60, 6, 0.28);
 }
+
+/* Halo animado continuo y suave para el botón de WhatsApp */
+@keyframes whatsapp-halo-pulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.42);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.42);
+    opacity: 0;
+  }
+}
+
+.whatsapp-halo {
+  position: relative;
+  isolation: isolate;
+}
+
+.whatsapp-halo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #25D366;
+  z-index: -1;
+  pointer-events: none;
+  animation: whatsapp-halo-pulse 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-halo::before {
+    animation: none;
+    display: none;
+  }
+}
