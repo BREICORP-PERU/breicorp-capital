@@ -12,45 +12,95 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import Button from "@/components/ui/Button";
 import InvestorForm from "./InvestorForm";
+import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
   title: "Red de Inversionistas | BREICORP CAPITAL",
   description:
-    "Conoce la participación privada en operaciones de financiamiento con garantía hipotecaria sujetas a evaluación y formalización.",
+    "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
 };
 
 export default function InversionistasPage() {
-  const steps = [
+  const whatsappUrl = whatsappHref(siteConfig.contact.whatsappInvestorsMessage);
+
+  const modelHighlights = [
     {
-      step: "01",
-      title: "Consulta inicial",
+      icon: Building,
+      title: "Garantía Directa en SUNARP",
       description:
-        "Preparas una consulta con tus datos básicos y decides si la envías por WhatsApp. El equipo comercial podrá responderte por ese canal.",
+        "La hipoteca se constituye por Escritura Pública ante Notario y se inscribe en Registros Públicos a favor del inversionista.",
     },
     {
-      step: "02",
-      title: "Presentación de Expedientes",
+      icon: FileCheck2,
+      title: "Pre-evaluación Integral",
       description:
-        "De existir oportunidades disponibles, se presentará la información y las verificaciones realizadas para cada caso.",
+        "Analizamos la capacidad de pago del solicitante y la tasación comercial del inmueble para respaldar la operación.",
     },
     {
-      step: "03",
-      title: "Formalización en Notaría",
+      icon: Briefcase,
+      title: "Administración Transparente",
       description:
-        "Las condiciones de la garantía y su formalización notarial y registral se definirán y documentarán en cada operación.",
+        "Seguimiento documental, coordinación de cronogramas y liquidaciones según los términos convenidos.",
+    },
+  ];
+
+  const generalFeatures = [
+    {
+      label: "Garantía",
+      value: "Inmueble en SUNARP",
+      detail: "Propiedades con partida registral inscrita y verificada",
     },
     {
-      step: "04",
-      title: "Administración y Seguimiento",
-      description:
-        "El alcance de la administración y el seguimiento se establecerá en los documentos de cada operación.",
+      label: "Formalidad",
+      value: "Escritura Pública",
+      detail: "Suscripción ante Notario Público colegiado",
+    },
+    {
+      label: "Perfil",
+      value: "Precalificado",
+      detail: "Solicitantes con actividad comercial y capacidad de pago",
+    },
+    {
+      label: "Gestión",
+      value: "Acompañamiento",
+      detail: "Administración operativa de la operación",
+    },
+  ];
+
+  const investorFaqs: AccordionItemData[] = [
+    {
+      id: "inv-faq-1",
+      question: "¿A nombre de quién se inscribe la garantía hipotecaria?",
+      answer:
+        "La hipoteca se eleva a Escritura Pública y se inscribe en SUNARP a favor directo del inversionista, otorgando un respaldo real e individual sobre el bien inmueble.",
+    },
+    {
+      id: "inv-faq-2",
+      question: "¿Qué tipo de inmuebles respaldan las operaciones?",
+      answer:
+        "Se evalúan exclusivamente bienes raíces con partida registral independizada (casas, locales, terrenos urbanos) con estudio de títulos previo.",
+    },
+    {
+      id: "inv-faq-3",
+      question: "¿Existe una tasa de rentabilidad fija o garantizada?",
+      answer:
+        "No. BREICORP CAPITAL no ofrece rentabilidades garantizadas ni ausencia de riesgo. Los términos, plazos y condiciones se pactan contractualmente en cada operación.",
+    },
+    {
+      id: "inv-faq-4",
+      question: "¿Cómo comienzo a formar parte de la red de inversionistas?",
+      answer:
+        "Completa el formulario de contacto para que nuestro equipo directivo coordine una reunión informativa y te presente las operaciones disponibles.",
     },
   ];
 
   return (
-    <div className="pt-24 pb-20 bg-white">
-      {/* Barra de retorno y migas de pan */}
+    <div className="pt-24 pb-12 bg-white">
+      {/* 1. Barra de retorno y migas de pan */}
       <div className="border-b border-neutral-200 bg-neutral-50 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-xs text-neutral-500">
@@ -67,37 +117,52 @@ export default function InversionistasPage() {
         </div>
       </div>
 
-      {/* Hero de Inversionistas */}
-      <section className="relative py-16 lg:py-24 bg-[#111111] text-white overflow-hidden">
+      {/* 1. Hero de Inversión */}
+      <section className="relative py-14 lg:py-20 bg-[#111111] text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#C6A15B]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#C6A15B] text-xs font-semibold uppercase tracking-wider border border-[#C6A15B]/30">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#C6A15B] text-xs font-semibold uppercase tracking-wider border border-[#C6A15B]/30">
               <span className="w-2 h-2 rounded-full bg-[#C6A15B]" />
               Participación Privada Estructurada
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight font-sans">
-              OPORTUNIDADES DE INVERSIÓN{" "}
-              <span className="text-[#C6A15B]">CON RESPALDO</span> INMOBILIARIO.
+              PARTICIPA EN FINANCIAMIENTO CON{" "}
+              <span className="text-[#C6A15B]">RESPALDO INMOBILIARIO</span>.
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed">
-              Conoce nuestro modelo de participación en operaciones de financiamiento con garantía hipotecaria y las condiciones para formar parte de nuestra red de inversionistas en Tingo María y Huánuco.
+            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+              Conoce nuestro modelo para participar en operaciones de financiamiento formalmente respaldadas por hipotecas inscritas en SUNARP.
             </p>
 
-            <a
-              href="#registro-inversionistas"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#FF6801] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#E55D00] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C6A15B]"
-            >
-              QUIERO RECIBIR INFORMACIÓN
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <Button
+                href="#formulario"
+                variant="gold"
+                size="lg"
+                icon={<ArrowRight className="w-4 h-4" />}
+                className="font-bold tracking-wide"
+              >
+                COMPLETAR CONSULTA
+              </Button>
 
-            <div className="pt-4 flex items-center gap-6 text-xs text-neutral-400">
+              <Button
+                href={whatsappUrl}
+                isExternal
+                variant="outline-light"
+                size="lg"
+                icon={<WhatsAppIcon className="w-4 h-4 text-[#25D366]" />}
+                iconPosition="left"
+              >
+                CONSULTAR POR WHATSAPP
+              </Button>
+            </div>
+
+            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
-                <span>Garantía sujeta a evaluación y contrato</span>
+                <span>Garantía hipotecaria en SUNARP</span>
               </div>
               <div className="flex items-center gap-2">
                 <Scale className="w-4 h-4 text-[#C6A15B]" />
@@ -108,130 +173,113 @@ export default function InversionistasPage() {
         </div>
       </section>
 
-      {/* Consulta de inversión integrada en la página */}
-      <section id="registro-inversionistas" className="scroll-mt-24 bg-[#F5F5F5] py-16 lg:py-24">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
-          <div className="space-y-5 lg:col-span-5 lg:pt-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#C6A15B]/30 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#A77B30]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#C6A15B]" />
-              Contacto para inversionistas
-            </div>
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-[#111111] sm:text-4xl">
-              Haz crecer tus oportunidades de inversión
-            </h2>
-            <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
-              Déjanos tus datos y nuestro equipo se comunicará contigo para brindarte información sobre las oportunidades de inversión de BREICORP CAPITAL.
-            </p>
-            <p className="text-sm leading-relaxed text-neutral-600">
-              El formulario prepara una consulta en WhatsApp. Podrás revisar el mensaje y decidir si lo envías.
-            </p>
-          </div>
-          <div className="min-w-0 lg:col-span-7">
-            <InvestorForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Propuesta de Valor y Pilares del Modelo */}
-      <section className="py-20 bg-white">
+      {/* 2. Breve explicación del modelo de participación */}
+      <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            kicker="Gobernanza del Capital"
-            title="¿POR QUÉ PARTICIPAR A TRAVÉS DE BREICORP CAPITAL?"
-            description="Conoce los aspectos que deberán evaluarse y documentarse antes de participar en una operación."
+            kicker="Nuestro Modelo"
+            title="¿CÓMO PARTICIPAR EN LAS OPERACIONES?"
+            description="Una estructura formal que prioriza la seguridad jurídica y el análisis técnico previo de cada caso."
             align="center"
-            className="mb-16"
+            className="mb-12"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-4 hover:border-neutral-300 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#C6A15B]/15 text-[#C6A15B] flex items-center justify-center">
-                <Building className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-[#111111]">
-                Garantía Definida en Cada Operación
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
-                La titularidad, prioridad y condiciones de cualquier hipoteca dependerán del inmueble, la evaluación registral y los documentos contractuales de la operación.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-4 hover:border-neutral-300 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#FF6801]/10 text-[#FF6801] flex items-center justify-center">
-                <FileCheck2 className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-[#111111]">
-                Evaluación de Riesgo y Capacidad de Pago
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
-                La evaluación prevista considera la actividad económica, la capacidad de pago y, cuando corresponda, la situación registral y tasación del inmueble. Ninguna garantía elimina el riesgo de pérdida.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-neutral-50 border border-neutral-200 space-y-4 hover:border-neutral-300 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#111111] text-white flex items-center justify-center">
-                <Briefcase className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-[#111111]">
-                Gestión Según las Condiciones Pactadas
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">
-                Las tareas de seguimiento, cobranza e información al inversionista se definirán expresamente para cada operación.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proceso para Inversionistas */}
-      <section className="py-20 bg-[#F5F5F5] border-y border-neutral-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Ruta de Participación"
-            title="PROCESO PARA FORMAR PARTE DE LA RED."
-            description="Ruta informativa prevista; cada participación dependerá de la evaluación y los acuerdos entre las partes."
-            align="center"
-            className="mb-14"
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((st) => (
-              <div
-                key={st.step}
-                className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-subtle space-y-3 flex flex-col justify-between"
-              >
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/15 text-[#C6A15B] font-mono font-bold flex items-center justify-center text-sm">
-                    {st.step}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {modelHighlights.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="p-7 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-neutral-300 transition-colors space-y-3"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#C6A15B]/15 text-[#C6A15B] flex items-center justify-center">
+                    <Icon className="w-6 h-6" />
                   </div>
-                  <h4 className="text-base font-bold text-[#111111]">
-                    {st.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                    {st.description}
+                  <h3 className="text-lg font-bold text-[#111111]">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-neutral-600 leading-relaxed">
+                    {item.description}
                   </p>
                 </div>
-                <div className="pt-3 border-t border-neutral-100 text-[11px] font-semibold text-[#FF6801]">
-                  Etapa formal {st.step}
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Características generales de las operaciones */}
+      <section className="py-16 lg:py-20 bg-[#F5F5F5] border-y border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            kicker="Condiciones Operativas"
+            title="CARACTERÍSTICAS DE LAS OPERACIONES"
+            description="Parámetros fundamentales de estructuración legal y financiera."
+            align="center"
+            className="mb-12"
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {generalFeatures.map((feat) => (
+              <div
+                key={feat.label}
+                className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-subtle space-y-2"
+              >
+                <div className="text-[11px] uppercase tracking-wider text-neutral-400 font-semibold">
+                  {feat.label}
+                </div>
+                <div className="text-xl font-bold text-[#111111]">
+                  {feat.value}
+                </div>
+                <div className="text-xs text-neutral-600 pt-1">
+                  {feat.detail}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Advertencia preventiva obligatoria */}
-          <div className="mt-12 p-6 rounded-2xl bg-white border-l-4 border-l-[#C6A15B] border-neutral-200 text-xs sm:text-sm text-neutral-700 space-y-1.5 shadow-sm">
+          {/* Aviso preventivo obligatorio */}
+          <div className="mt-10 p-5 rounded-2xl bg-white border-l-4 border-l-[#C6A15B] border-neutral-200 text-xs sm:text-sm text-neutral-700 space-y-1.5 shadow-sm max-w-4xl mx-auto">
             <div className="flex items-center gap-2 font-bold text-[#111111] uppercase tracking-wider text-xs">
               <AlertTriangle className="w-4 h-4 text-[#C6A15B]" />
-              Aviso de Prudencia y Cumplimiento Normativo
+              Aviso de Cumplimiento Normativo
             </div>
             <p>
-              BREICORP CAPITAL no publica rentabilidades fijas, no garantiza tasas de retorno ni promete recuperaciones sin riesgo. Las condiciones de cada operación se pactarán entre las partes y se documentarán según la estructura contractual aplicable.
+              BREICORP CAPITAL no publica rentabilidades fijas ni garantiza retornos. Las condiciones de cada operación se acuerdan y documentan contractualmente en Escritura Pública según la naturaleza de cada financiamiento.
             </p>
           </div>
         </div>
       </section>
 
+      {/* 4. Formulario visible de inversionistas */}
+      <section id="formulario" className="py-16 lg:py-20 bg-white scroll-mt-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            kicker="Contacto Privado"
+            title="SOLICITAR INFORMACIÓN PARA INVERTIR"
+            description="Completa tus datos y genera tu consulta directamente en WhatsApp para conversar con nuestro equipo directivo."
+            align="center"
+            className="mb-10"
+          />
+
+          <InvestorForm />
+        </div>
+      </section>
+
+      {/* 5. Preguntas frecuentes breves */}
+      <section className="py-16 lg:py-20 bg-[#F5F5F5] border-t border-neutral-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            kicker="Preguntas para Inversionistas"
+            title="DUDAS HABITUALES SOBRE PARTICIPACIÓN"
+            description="Aspectos clave sobre formalidad notarial, garantías y tiempos."
+            align="center"
+            className="mb-10"
+          />
+
+          <Accordion items={investorFaqs} defaultOpenId="inv-faq-1" />
+        </div>
+      </section>
     </div>
   );
 }
-

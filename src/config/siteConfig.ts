@@ -47,13 +47,13 @@ export const siteConfig = {
     schedule: "Lunes a Viernes: 8:30 a.m. – 6:30 p.m. | Sábados: 9:00 a.m. – 1:00 p.m.",
   },
 
-  // Enlaces de navegación
+  // Enlaces de navegación comercial
   navLinks: [
     { name: "Inicio", href: "/#inicio" },
-    { name: "Créditos hipotecarios", href: "/#creditos-hipotecarios" },
+    { name: "Soluciones", href: "/#soluciones" },
+    { name: "¿Cómo funciona?", href: "/#como-funciona" },
+    { name: "¿Por qué nosotros?", href: "/#por-que-nosotros" },
     { name: "Inversionistas", href: "/inversionistas" },
-    { name: "Nosotros", href: "/#nosotros" },
-    { name: "Preguntas", href: "/#preguntas-frecuentes" },
     { name: "Contacto", href: "/#contacto" },
   ],
 

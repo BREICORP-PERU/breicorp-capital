@@ -1,43 +1,31 @@
 import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import FeaturesSection from "@/components/sections/FeaturesSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import RequirementsSection from "@/components/sections/RequirementsSection";
-import SecurityGovernanceSection from "@/components/sections/SecurityGovernanceSection";
-import InvestorsSection from "@/components/sections/InvestorsSection";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import FaqSection from "@/components/sections/FaqSection";
-import ContactFormSection from "@/components/sections/ContactFormSection";
+import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero Principal */}
+      {/* SECCIÓN 1 — HERO */}
       <HeroSection />
 
-      {/* 2. Presentación del Servicio (3 aplicaciones) */}
+      {/* SECCIÓN 2 — SOLUCIONES DE FINANCIAMIENTO */}
       <ServicesSection />
 
-      {/* 3. Características del Financiamiento */}
-      <FeaturesSection />
-
-      {/* 4. ¿Cómo Funciona? (6 etapas) */}
+      {/* SECCIÓN 3 — ¿CÓMO FUNCIONA? */}
       <HowItWorksSection />
 
-      {/* 5. Requisitos e información INFOCORP */}
-      <RequirementsSection />
+      {/* SECCIÓN 4 — ¿POR QUÉ BREICORP CAPITAL? */}
+      <WhyChooseUsSection />
 
-      {/* 6. Respaldo y Gestión (4 pilares) */}
-      <SecurityGovernanceSection />
-
-      {/* 7. Sección para Inversionistas */}
-      <InvestorsSection />
-
-      {/* 8. Preguntas Frecuentes */}
+      {/* PREGUNTAS FRECUENTES (COMPACTAS) */}
       <FaqSection />
 
-      {/* 9. Contacto y Formulario de Solicitud */}
-      <ContactFormSection />
+      {/* SECCIÓN 5 — CTA FINAL */}
+      <FinalCtaSection />
     </>
   );
 }

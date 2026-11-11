@@ -89,11 +89,11 @@ export default function Header() {
               size="md"
               icon={<ArrowUpRight className="w-4 h-4" />}
             >
-              SOLICITAR EVALUACIÓN
+              SOLICITAR CRÉDITO
             </Button>
           </div>
 
-          {/* Botón hamburguesa móvil */}
+          {/* Botón rápido móvil */}
           <div className="flex items-center gap-2 lg:hidden">
             <Button
               href={creditWhatsAppUrl}
@@ -102,7 +102,7 @@ export default function Header() {
               size="sm"
               className="text-xs px-3 min-h-11"
             >
-              EVALUAR
+              CRÉDITO
             </Button>
 
             <button

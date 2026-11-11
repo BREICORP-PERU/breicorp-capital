@@ -56,18 +56,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#creditos-hipotecarios"
+                  href="/#soluciones"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> Créditos con garantía hipotecaria
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#requisitos"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <span className="text-[#FF6801]">›</span> Requisitos de evaluación
+                  <span className="text-[#FF6801]">›</span> Soluciones de crédito
                 </Link>
               </li>
               <li>
@@ -75,7 +67,15 @@ export default function Footer() {
                   href="/#como-funciona"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> Proceso paso a paso
+                  <span className="text-[#FF6801]">›</span> ¿Cómo funciona?
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#por-que-nosotros"
+                  className="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span className="text-[#FF6801]">›</span> ¿Por qué nosotros?
                 </Link>
               </li>
               <li>

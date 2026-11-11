@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { siteConfig } from "@/config/siteConfig";
 import "./globals.css";
 
@@ -25,20 +26,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: "BREICORP CAPITAL | Financiamiento con Garantía Hipotecaria",
+    default: "BREICORP CAPITAL | Financiamiento y Créditos",
     template: "%s | BREICORP CAPITAL",
   },
   description:
-    "Conoce las alternativas de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita una evaluación personalizada desde S/ 20,000.",
+    "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades en Perú.",
   keywords: [
     "BREICORP CAPITAL",
     "financiamiento con garantia hipotecaria",
-    "credito con garantia hipotecaria Huanuco",
-    "creditos hipotecarios Tingo Maria",
-    "prestamos con garantia inmobiliaria",
-    "capital de trabajo Huánuco",
-    "inversiones inmobiliarias",
-    "garantia SUNARP",
+    "credito mype huanuco",
+    "creditos hipotecarios tingo maria",
+    "prestamos empresariales",
+    "capital de trabajo huanuco",
+    "inversionistas tingo maria",
   ],
   authors: [{ name: "BREICORP E.I.R.L." }],
   creator: "BREICORP CAPITAL",
@@ -58,15 +58,15 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: siteConfig.domain,
     siteName: "BREICORP CAPITAL",
-    title: "BREICORP CAPITAL | Financiamiento con Garantía Hipotecaria",
+    title: "BREICORP CAPITAL | Financiamiento y Créditos",
     description:
-      "Conoce las alternativas de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita una evaluación personalizada desde S/ 20,000.",
+      "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BREICORP CAPITAL | Financiamiento con Garantía Hipotecaria",
+    title: "BREICORP CAPITAL | Financiamiento y Créditos",
     description:
-      "Conoce las alternativas de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita una evaluación personalizada desde S/ 20,000.",
+      "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades.",
   },
 };
 
@@ -81,14 +81,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased h-full`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#111111]">
-        {/* Encabezado fijo y accesible */}
+        {/* Encabezado fijo superior para escritorio y móvil */}
         <Header />
 
-        {/* Contenido principal con landmark semántico */}
-        <main className="flex-1">{children}</main>
+        {/* Contenido principal con espacio inferior reservado para la barra móvil */}
+        <main className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
+          {children}
+        </main>
 
-        {/* Botón flotante accesible de WhatsApp */}
+        {/* Botón flotante accesible de WhatsApp adaptado a móvil y escritorio */}
         <FloatingWhatsApp />
+
+        {/* Barra de navegación inferior exclusiva para móviles */}
+        <MobileBottomNav />
 
         {/* Pie de página institucional */}
         <Footer />
