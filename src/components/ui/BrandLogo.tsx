@@ -1,42 +1,47 @@
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface BrandLogoProps {
   variant?: "default" | "light" | "dark";
   className?: string;
   size?: "sm" | "md" | "lg";
+  hideText?: boolean;
 }
 
 /**
- * Identidad tipográfica temporal oficial de BREICORP CAPITAL
- * Diseñada para ser elegante, sobria y corporativa.
- * Preparada para ser sustituida directamente cuando se entregue el archivo SVG o PNG final.
+ * Identidad corporativa oficial de BREICORP CAPITAL
+ * Integra el logotipo oficial (logobreicorp.webp) sin alterar sus proporciones ni colores,
+ * acompañado de la tipografía institucional.
  */
 export default function BrandLogo({
   variant = "default",
   className = "",
   size = "md",
+  hideText = false,
 }: BrandLogoProps) {
-  // Ajuste de colores según variante
   const isLight = variant === "light";
   const primaryTextColor = isLight ? "text-white" : "text-[#111111]";
-  const subTextColor = isLight ? "text-[#C6A15B]" : "text-[#FF6801]";
-  const dividerColor = isLight ? "bg-white/20" : "bg-neutral-300";
+  const subTextColor = isLight ? "text-[#C6A15B]" : "text-[#EE3C06]";
 
-  const sizeClasses = {
+  const config = {
     sm: {
-      main: "text-lg tracking-tight",
-      sub: "text-[10px] tracking-[0.28em]",
-      spacing: "gap-0.5",
+      imageSize: 32,
+      mainText: "text-base tracking-tight",
+      subText: "text-[9px] tracking-[0.28em]",
+      spacing: "gap-2.5",
     },
     md: {
-      main: "text-xl sm:text-2xl tracking-tight",
-      sub: "text-[11px] sm:text-xs tracking-[0.32em]",
-      spacing: "gap-1",
+      imageSize: 40,
+      mainText: "text-lg sm:text-xl tracking-tight",
+      subText: "text-[10px] sm:text-[11px] tracking-[0.30em]",
+      spacing: "gap-3",
     },
     lg: {
-      main: "text-2xl sm:text-3xl tracking-tight",
-      sub: "text-xs sm:text-sm tracking-[0.35em]",
-      spacing: "gap-1.5",
+      imageSize: 48,
+      mainText: "text-xl sm:text-2xl tracking-tight",
+      subText: "text-xs tracking-[0.32em]",
+      spacing: "gap-3.5",
     },
   }[size];
 
@@ -44,27 +49,35 @@ export default function BrandLogo({
     <Link
       href="/"
       aria-label="BREICORP CAPITAL - Inicio"
-      className={`inline-flex flex-col group select-none ${className}`}
+      className={`inline-flex items-center ${config.spacing} group select-none ${className}`}
     >
-      <div className={`flex flex-col ${sizeClasses.spacing} leading-none`}>
-        {/* Nombre principal */}
-        <span
-          className={`font-black font-sans uppercase ${primaryTextColor} ${sizeClasses.main} transition-colors duration-200 group-hover:opacity-90`}
-        >
-          BREICORP
-        </span>
+      {/* Logotipo oficial BREICORP (Respetando relación 1:1 original sin deformación) */}
+      <div className="relative shrink-0 overflow-hidden rounded-full shadow-sm">
+        <Image
+          src="/logo/logobreicorp.webp"
+          alt="Logotipo oficial de BREICORP CAPITAL"
+          width={config.imageSize}
+          height={config.imageSize}
+          priority
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
 
-        {/* Descriptor distintivo CAPITAL */}
-        <div className="flex items-center gap-1.5">
+      {/* Identidad tipográfica corporativa */}
+      {!hideText && (
+        <div className="flex flex-col leading-none">
           <span
-            className={`font-semibold font-sans uppercase font-mono ${subTextColor} ${sizeClasses.sub} transition-colors duration-200`}
+            className={`font-black font-sans uppercase ${primaryTextColor} ${config.mainText} transition-colors duration-200 group-hover:opacity-90`}
+          >
+            BREICORP
+          </span>
+          <span
+            className={`font-bold font-sans uppercase font-mono ${subTextColor} ${config.subText} mt-0.5`}
           >
             CAPITAL
           </span>
-          <div className={`h-[1px] flex-1 ${dividerColor}`} />
         </div>
-      </div>
+      )}
     </Link>
   );
 }
-

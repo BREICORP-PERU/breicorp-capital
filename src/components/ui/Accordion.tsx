@@ -52,14 +52,14 @@ export default function Accordion({
                 className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer transition-colors duration-150 group"
               >
                 <span className="flex items-center gap-3">
-                  <span className="text-xs font-mono font-bold text-[#FF6801] w-6 shrink-0">
+                  <span className="text-xs font-mono font-bold text-[#EE3C06] w-6 shrink-0">
                     {String(index + 1).padStart(2, "0")}.
                   </span>
                   <span
                     className={`font-semibold text-base sm:text-lg transition-colors ${
                       isOpen
                         ? "text-[#111111]"
-                        : "text-neutral-800 group-hover:text-[#FF6801]"
+                        : "text-neutral-800 group-hover:text-[#EE3C06]"
                     }`}
                   >
                     {item.question}
@@ -68,7 +68,7 @@ export default function Accordion({
                 <span
                   className={`p-1 rounded-full transition-transform duration-200 shrink-0 ${
                     isOpen
-                      ? "rotate-180 bg-[#FF6801]/10 text-[#FF6801]"
+                      ? "rotate-180 bg-[#EE3C06]/10 text-[#EE3C06]"
                       : "text-neutral-400 group-hover:text-neutral-600 bg-neutral-100"
                   }`}
                 >

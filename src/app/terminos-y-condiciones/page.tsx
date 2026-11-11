@@ -33,7 +33,7 @@ export default function TerminosCondicionesPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="space-y-4 border-b border-neutral-200 pb-8 mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 text-neutral-800 text-xs font-semibold uppercase tracking-wider">
-            <FileText className="w-4 h-4 text-[#FF6801]" />
+            <FileText className="w-4 h-4 text-[#EE3C06]" />
             Condiciones de Servicio e Intermediación
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#111111] tracking-tight">

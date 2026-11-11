@@ -31,12 +31,12 @@ export default function SectionHeading({
           className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-3 ${
             isDark
               ? "bg-white/10 text-[#C6A15B] border border-[#C6A15B]/30"
-              : "bg-[#FF6801]/10 text-[#FF6801] border border-[#FF6801]/20"
+              : "bg-[#EE3C06]/10 text-[#EE3C06] border border-[#EE3C06]/20"
           }`}
         >
           <span
             className={`w-1.5 h-1.5 rounded-full ${
-              isDark ? "bg-[#C6A15B]" : "bg-[#FF6801]"
+              isDark ? "bg-[#C6A15B]" : "bg-[#EE3C06]"
             }`}
           />
           {kicker}

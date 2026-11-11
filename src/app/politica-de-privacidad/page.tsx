@@ -32,7 +32,7 @@ export default function PoliticaPrivacidadPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="space-y-4 border-b border-neutral-200 pb-8 mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF6801]/10 text-[#FF6801] text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EE3C06]/10 text-[#EE3C06] text-xs font-semibold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
             Información sobre datos personales
           </div>

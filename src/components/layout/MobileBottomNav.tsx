@@ -4,13 +4,10 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Coins, TrendingUp } from "lucide-react";
-import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
-import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
   const [homeSection, setHomeSection] = useState<"inicio" | "soluciones">("inicio");
-  const whatsappUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
 
   const isHome = pathname === "/";
   const isInvestors = pathname === "/inversionistas";
@@ -42,7 +39,10 @@ export default function MobileBottomNav() {
     };
   }, [isHome]);
 
-  const handleNavClick = (sectionId: "inicio" | "soluciones", event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleNavClick = (
+    sectionId: "inicio" | "soluciones",
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
     if (isHome) {
       event.preventDefault();
       if (sectionId === "inicio") {
@@ -67,24 +67,35 @@ export default function MobileBottomNav() {
   return (
     <nav
       aria-label="Navegación móvil inferior"
-      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white/95 backdrop-blur-md border-t border-neutral-200/90 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] pb-[max(env(safe-area-inset-bottom,0px),0.5rem)] pt-1 px-2 select-none"
+      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden w-full bg-white border-t border-neutral-200/90 shadow-[0_-2px_12px_rgba(0,0,0,0.05)] pb-[max(env(safe-area-inset-bottom,0px),0.5rem)] pt-0 select-none"
     >
-      <div className="grid grid-cols-4 items-center max-w-md mx-auto">
+      <div className="grid grid-cols-3 w-full max-w-lg mx-auto h-16 items-stretch">
         {/* 1. INICIO */}
         <Link
           href="/#inicio"
           onClick={(e) => handleNavClick("inicio", e)}
-          className={`flex flex-col items-center justify-center py-1 px-1 transition-colors relative group ${
-            isInicioActive ? "text-[#FF6801]" : "text-neutral-500 hover:text-neutral-900"
+          className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
+            isInicioActive
+              ? "text-[#EE3C06]"
+              : "text-neutral-400 hover:text-neutral-700"
           }`}
           aria-current={isInicioActive ? "page" : undefined}
         >
+          {/* Indicador horizontal naranja sobre la opción activa */}
           {isInicioActive && (
-            <span className="absolute -top-1 w-6 h-0.5 rounded-full bg-[#FF6801]" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
           )}
-          <Home className={`w-5 h-5 mb-0.5 transition-transform ${isInicioActive ? "scale-110" : ""}`} />
-          <span className={`text-[10px] tracking-tight uppercase font-medium ${isInicioActive ? "font-bold text-[#FF6801]" : ""}`}>
-            Inicio
+          <Home
+            className={`w-6 h-6 mb-1 transition-transform ${
+              isInicioActive ? "scale-105 stroke-[2.25]" : "stroke-[1.75]"
+            }`}
+          />
+          <span
+            className={`text-[10px] tracking-wider uppercase font-sans ${
+              isInicioActive ? "font-bold text-[#EE3C06]" : "font-medium"
+            }`}
+          >
+            INICIO
           </span>
         </Link>
 
@@ -92,53 +103,58 @@ export default function MobileBottomNav() {
         <Link
           href="/#soluciones"
           onClick={(e) => handleNavClick("soluciones", e)}
-          className={`flex flex-col items-center justify-center py-1 px-1 transition-colors relative group ${
-            isCreditosActive ? "text-[#FF6801]" : "text-neutral-500 hover:text-neutral-900"
+          className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
+            isCreditosActive
+              ? "text-[#EE3C06]"
+              : "text-neutral-400 hover:text-neutral-700"
           }`}
           aria-current={isCreditosActive ? "page" : undefined}
         >
+          {/* Indicador horizontal naranja sobre la opción activa */}
           {isCreditosActive && (
-            <span className="absolute -top-1 w-6 h-0.5 rounded-full bg-[#FF6801]" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
           )}
-          <Coins className={`w-5 h-5 mb-0.5 transition-transform ${isCreditosActive ? "scale-110" : ""}`} />
-          <span className={`text-[10px] tracking-tight uppercase font-medium ${isCreditosActive ? "font-bold text-[#FF6801]" : ""}`}>
-            Créditos
+          <Coins
+            className={`w-6 h-6 mb-1 transition-transform ${
+              isCreditosActive ? "scale-105 stroke-[2.25]" : "stroke-[1.75]"
+            }`}
+          />
+          <span
+            className={`text-[10px] tracking-wider uppercase font-sans ${
+              isCreditosActive ? "font-bold text-[#EE3C06]" : "font-medium"
+            }`}
+          >
+            CRÉDITOS
           </span>
         </Link>
 
         {/* 3. INVERTIR */}
         <Link
           href="/inversionistas"
-          className={`flex flex-col items-center justify-center py-1 px-1 transition-colors relative group ${
-            isInvertirActive ? "text-[#FF6801]" : "text-neutral-500 hover:text-neutral-900"
+          className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
+            isInvertirActive
+              ? "text-[#EE3C06]"
+              : "text-neutral-400 hover:text-neutral-700"
           }`}
           aria-current={isInvertirActive ? "page" : undefined}
         >
+          {/* Indicador horizontal naranja sobre la opción activa */}
           {isInvertirActive && (
-            <span className="absolute -top-1 w-6 h-0.5 rounded-full bg-[#FF6801]" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
           )}
-          <TrendingUp className={`w-5 h-5 mb-0.5 transition-transform ${isInvertirActive ? "scale-110" : ""}`} />
-          <span className={`text-[10px] tracking-tight uppercase font-medium ${isInvertirActive ? "font-bold text-[#FF6801]" : ""}`}>
-            Invertir
+          <TrendingUp
+            className={`w-6 h-6 mb-1 transition-transform ${
+              isInvertirActive ? "scale-105 stroke-[2.25]" : "stroke-[1.75]"
+            }`}
+          />
+          <span
+            className={`text-[10px] tracking-wider uppercase font-sans ${
+              isInvertirActive ? "font-bold text-[#EE3C06]" : "font-medium"
+            }`}
+          >
+            INVERTIR
           </span>
         </Link>
-
-        {/* 4. WHATSAPP */}
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-1 px-1 text-neutral-600 hover:text-[#25D366] transition-colors relative group"
-          aria-label="Contactar a BREICORP CAPITAL por WhatsApp"
-        >
-          <div className="relative mb-0.5">
-            <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
-            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-          </div>
-          <span className="text-[10px] tracking-tight uppercase font-semibold text-neutral-700 group-hover:text-[#25D366]">
-            WhatsApp
-          </span>
-        </a>
       </div>
     </nav>
   );

@@ -9,8 +9,9 @@ export const siteConfig = {
   legalEntity: "BREICORP E.I.R.L.",
   tagline: "El capital que necesitas, con el respaldo de tu propiedad.",
   description:
-    "Intermediación y gestión de posibles operaciones de financiamiento con garantía hipotecaria en Perú, sujetas a evaluación.",
-  domain: "https://breicorpcapital.pe", // Pendiente de confirmación antes de publicación definitiva
+    "Soluciones de financiamiento y oportunidades de inversión con respaldo inmobiliario en Perú, sujetas a evaluación.",
+  domain: "https://breicorp-capital.vercel.app",
+  ogImage: "https://breicorp-capital.vercel.app/og-breicorp-capital.png",
 
   // Ubicación inicial
   locations: [
@@ -52,7 +53,7 @@ export const siteConfig = {
     { name: "Inicio", href: "/#inicio" },
     { name: "Soluciones", href: "/#soluciones" },
     { name: "¿Cómo funciona?", href: "/#como-funciona" },
-    { name: "¿Por qué nosotros?", href: "/#por-que-nosotros" },
+    { name: "Quiénes somos", href: "/#quienes-somos" },
     { name: "Inversionistas", href: "/inversionistas" },
     { name: "Contacto", href: "/#contacto" },
   ],

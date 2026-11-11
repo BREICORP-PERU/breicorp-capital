@@ -59,7 +59,7 @@ export default function Header() {
                     isInvestors
                       ? "text-[#C6A15B] font-semibold hover:text-[#B5904A] hover:bg-[#FAF6ED]"
                       : isActive
-                      ? "text-[#FF6801] font-semibold"
+                      ? "text-[#EE3C06] font-semibold"
                       : "text-neutral-700 hover:text-[#111111] hover:bg-neutral-50"
                   }`}
                 >
@@ -134,7 +134,7 @@ export default function Header() {
                 className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
                   item.href === "/inversionistas"
                     ? "text-[#C6A15B] font-semibold bg-[#FAF6ED]"
-                    : "text-neutral-800 hover:bg-neutral-50 hover:text-[#FF6801]"
+                    : "text-neutral-800 hover:bg-neutral-50 hover:text-[#EE3C06]"
                 }`}
               >
                 {item.name}
@@ -147,7 +147,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full min-h-11 inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#FF6801] text-white text-sm font-semibold"
+                className="w-full min-h-11 inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#EE3C06] text-white text-sm font-semibold"
               >
                 SOLICITAR INFORMACIÓN DE CRÉDITO
               </a>

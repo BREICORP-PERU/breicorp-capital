@@ -20,7 +20,7 @@ export default function ServicesSection() {
       ctaText: "Solicitar Crédito MYPE",
       ctaHref: whatsappHref("Hola BREICORP CAPITAL, deseo consultar sobre un Crédito MYPE para mi negocio."),
       isExternal: true,
-      badgeColor: "bg-[#FF6801] text-white",
+      badgeColor: "bg-[#EE3C06] text-white",
     },
     {
       id: "hipotecario",
@@ -96,7 +96,7 @@ export default function ServicesSection() {
                 {/* Contenido conciso */}
                 <div className="flex-1 p-6 flex flex-col justify-between space-y-4">
                   <div className="space-y-2.5">
-                    <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-[#FF6801] group-hover:bg-[#FF6801]/10 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-[#EE3C06] group-hover:bg-[#EE3C06]/10 transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
 
@@ -116,7 +116,7 @@ export default function ServicesSection() {
                         href={item.ctaHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#FF6801] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#FF6801] transition-all shadow-subtle"
+                        className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#EE3C06] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#EE3C06] transition-all shadow-subtle"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:text-white transition-colors" />
                         <span>{item.ctaText}</span>

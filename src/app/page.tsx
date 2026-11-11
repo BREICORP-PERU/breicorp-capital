@@ -3,6 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+import AboutUsSection from "@/components/sections/AboutUsSection";
 import FaqSection from "@/components/sections/FaqSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 
@@ -20,6 +21,9 @@ export default function HomePage() {
 
       {/* SECCIÓN 4 — ¿POR QUÉ BREICORP CAPITAL? */}
       <WhyChooseUsSection />
+
+      {/* SECCIÓN INSTITUCIONAL — QUIÉNES SOMOS */}
+      <AboutUsSection />
 
       {/* PREGUNTAS FRECUENTES (COMPACTAS) */}
       <FaqSection />

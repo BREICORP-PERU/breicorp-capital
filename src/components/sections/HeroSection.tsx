@@ -28,14 +28,14 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             {/* Tag comercial */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111111] text-white text-xs font-semibold tracking-wide">
-              <span className="w-2 h-2 rounded-full bg-[#FF6801] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#EE3C06] animate-pulse" />
               <span>Financiamiento ágil y formal en Perú</span>
             </div>
 
             {/* Titular Principal optimizado comercialmente */}
             <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#111111] tracking-tight leading-[1.12] uppercase font-sans">
               FINANCIAMIENTO PARA{" "}
-              <span className="text-[#FF6801] relative inline-block">
+              <span className="text-[#EE3C06] relative inline-block">
                 HACER CRECER
               </span>{" "}
               TUS PROYECTOS.
@@ -75,7 +75,7 @@ export default function HeroSection() {
             {/* 3 Indicadores clave sintetizados */}
             <div className="pt-6 border-t border-neutral-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/80 shadow-subtle">
-                <div className="w-8 h-8 rounded-lg bg-[#FF6801]/10 flex items-center justify-center text-[#FF6801] shrink-0 font-bold text-xs font-mono">
+                <div className="w-8 h-8 rounded-lg bg-[#EE3C06]/10 flex items-center justify-center text-[#EE3C06] shrink-0 font-bold text-xs font-mono">
                   S/
                 </div>
                 <div>
@@ -90,7 +90,7 @@ export default function HeroSection() {
 
               <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-neutral-200/80 shadow-subtle">
                 <div className="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center text-[#111111] shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-[#FF6801]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#EE3C06]" />
                 </div>
                 <div>
                   <div className="text-[10px] uppercase tracking-wider text-neutral-500 font-semibold">
@@ -150,7 +150,7 @@ export default function HeroSection() {
 
               {/* Insignia flotante superior */}
               <div className="absolute -top-4 -left-4 sm:-top-5 sm:-left-5 bg-white p-3.5 rounded-xl shadow-lg border border-neutral-200 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[#FF6801] flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-lg bg-[#EE3C06] flex items-center justify-center text-white">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>

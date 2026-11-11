@@ -30,15 +30,15 @@ export default function FloatingWhatsApp() {
         </div>
       )}
 
-      {/* Botón flotante accesible con ícono oficial */}
+      {/* Botón flotante circular accesible con logotipo oficial de WhatsApp */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a BREICORP CAPITAL por WhatsApp"
-        className="pointer-events-auto flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111111]"
+        className="pointer-events-auto flex items-center justify-center w-14 h-14 sm:w-15 sm:h-15 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111111]"
       >
-        <WhatsAppIcon className="w-6.5 h-6.5 sm:w-7 sm:h-7" />
+        <WhatsAppIcon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
       </a>
     </div>
   );

@@ -65,7 +65,7 @@ export default function FaqSection() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#FF6801] hover:text-[#E55D00] transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#EE3C06] hover:text-[#D63404] transition-colors"
             >
               <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
               <span>Conversar por WhatsApp con un asesor comercial ›</span>

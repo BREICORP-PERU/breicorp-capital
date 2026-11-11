@@ -22,6 +22,30 @@ export const metadata: Metadata = {
   title: "Red de Inversionistas | BREICORP CAPITAL",
   description:
     "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+  openGraph: {
+    title: "Red de Inversionistas | BREICORP CAPITAL",
+    description:
+      "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+    url: `${siteConfig.domain}/inversionistas`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/og-breicorp-capital.png",
+        width: 1200,
+        height: 630,
+        alt: "BREICORP CAPITAL - Red de Inversionistas",
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Red de Inversionistas | BREICORP CAPITAL",
+    description:
+      "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+    images: ["/og-breicorp-capital.png"],
+  },
 };
 
 export default function InversionistasPage() {

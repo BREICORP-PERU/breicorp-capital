@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-orange: #FF6801;
-  --color-brand-orange-hover: #E55D00;
-  --color-brand-orange-light: #FFF5EE;
-  --color-brand-orange-tint: rgba(255, 104, 1, 0.08);
+  --color-brand-orange: #EE3C06;
+  --color-brand-orange-hover: #D63404;
+  --color-brand-orange-secondary: #E63912;
+  --color-brand-orange-light: #FFF4F0;
+  --color-brand-orange-tint: rgba(238, 60, 6, 0.08);
 
   --color-brand-black: #111111;
   --color-brand-black-soft: #1C1C1C;
@@ -46,7 +47,7 @@ body {
 
 /* Selección de texto con identidad de marca */
 ::selection {
-  background-color: #FF6801;
+  background-color: #EE3C06;
   color: #FFFFFF;
 }
 
@@ -64,5 +65,5 @@ body {
 }
 
 .shadow-orange-glow {
-  box-shadow: 0 10px 25px -5px rgba(255, 104, 1, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(238, 60, 6, 0.28);
 }

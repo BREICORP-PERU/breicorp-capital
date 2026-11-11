@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-[#FF6801]/10 text-[#FF6801] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-[#EE3C06]/10 text-[#EE3C06] flex items-center justify-center">
                       <Icon className="w-6 h-6" />
                     </div>
                     <span className="text-2xl font-black font-mono text-neutral-300">
@@ -68,7 +68,7 @@ export default function HowItWorksSection() {
 
                 <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-400">
                   <span>Paso {item.number} de 03</span>
-                  <div className="w-2 h-2 rounded-full bg-[#FF6801]" />
+                  <div className="w-2 h-2 rounded-full bg-[#EE3C06]" />
                 </div>
               </div>
             );
@@ -77,7 +77,7 @@ export default function HowItWorksSection() {
 
         {/* Aclaración requerida */}
         <div className="mt-10 p-4 rounded-xl bg-white border border-neutral-200 text-xs text-neutral-600 flex items-center gap-3 max-w-2xl mx-auto">
-          <AlertCircle className="w-4 h-4 text-[#FF6801] shrink-0" />
+          <AlertCircle className="w-4 h-4 text-[#EE3C06] shrink-0" />
           <span>
             La aprobación y las condiciones del financiamiento dependen de la evaluación y formalización correspondiente de cada operación.
           </span>

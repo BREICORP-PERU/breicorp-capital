@@ -49,7 +49,7 @@ export default function WhyChooseUsSection() {
                 key={item.title}
                 className="p-6 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-neutral-300 transition-all space-y-3"
               >
-                <div className="w-11 h-11 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-[#FF6801] shadow-subtle">
+                <div className="w-11 h-11 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-[#EE3C06] shadow-subtle">
                   <Icon className="w-5 h-5" />
                 </div>
 

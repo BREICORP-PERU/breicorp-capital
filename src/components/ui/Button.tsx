@@ -38,7 +38,7 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#FF6801] hover:bg-[#E55D00] text-white shadow-sm hover:shadow-orange-glow focus:ring-[#FF6801]",
+      "bg-[#EE3C06] hover:bg-[#D63404] text-white shadow-sm hover:shadow-orange-glow focus:ring-[#EE3C06]",
     secondary:
       "bg-[#111111] hover:bg-neutral-800 text-white shadow-sm focus:ring-[#111111]",
     outline:

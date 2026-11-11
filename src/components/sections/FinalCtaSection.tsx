@@ -12,7 +12,7 @@ export default function FinalCtaSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl bg-[#111111] text-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-card border border-neutral-800">
           {/* Luces sutiles decorativas */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF6801]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#EE3C06]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#C6A15B]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
@@ -22,7 +22,7 @@ export default function FinalCtaSection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight font-sans">
-              TU PRÓXIMO PASO <span className="text-[#FF6801]">COMIENZA AQUÍ</span>.
+              TU PRÓXIMO PASO <span className="text-[#EE3C06]">COMIENZA AQUÍ</span>.
             </h2>
 
             <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-xl mx-auto">
@@ -58,7 +58,7 @@ export default function FinalCtaSection() {
             {/* Credenciales de cobertura */}
             <div className="pt-6 border-t border-neutral-800 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#FF6801]" />
+                <MapPin className="w-3.5 h-3.5 text-[#EE3C06]" />
                 <span>Tingo María y Huánuco, Perú</span>
               </div>
               <div className="flex items-center gap-2">

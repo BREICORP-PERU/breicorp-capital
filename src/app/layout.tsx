@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#FF6801",
+  themeColor: "#EE3C06",
   width: "device-width",
   initialScale: 1,
 };
@@ -26,18 +26,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: "BREICORP CAPITAL | Financiamiento y Créditos",
+    default: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
     template: "%s | BREICORP CAPITAL",
   },
   description:
-    "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades en Perú.",
+    "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
   keywords: [
     "BREICORP CAPITAL",
     "financiamiento con garantia hipotecaria",
     "credito mype huanuco",
-    "creditos hipotecarios tingo maria",
-    "prestamos empresariales",
-    "capital de trabajo huanuco",
+    "creditos tingo maria",
+    "prestamos empresariales peru",
+    "oportunidades de inversion",
     "inversionistas tingo maria",
   ],
   authors: [{ name: "BREICORP E.I.R.L." }],
@@ -58,15 +58,24 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: siteConfig.domain,
     siteName: "BREICORP CAPITAL",
-    title: "BREICORP CAPITAL | Financiamiento y Créditos",
+    title: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
     description:
-      "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades.",
+      "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
+    images: [
+      {
+        url: "/og-breicorp-capital.png",
+        width: 1200,
+        height: 630,
+        alt: "BREICORP CAPITAL - Financiamiento y oportunidades de inversión",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BREICORP CAPITAL | Financiamiento y Créditos",
+    title: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
     description:
-      "Soluciones de financiamiento para emprendedores, empresarios y personas que buscan nuevas oportunidades.",
+      "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
+    images: ["/og-breicorp-capital.png"],
   },
 };
 

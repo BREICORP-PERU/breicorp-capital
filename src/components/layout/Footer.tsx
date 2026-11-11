@@ -30,7 +30,7 @@ export default function Footer() {
 
             <div className="space-y-3 pt-2 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#FF6801] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#EE3C06] shrink-0" />
                 <span>Cobertura referencial: {siteConfig.locations.map((location) => location.city).join(" y ")}, Perú</span>
               </div>
               <div className="flex items-center gap-2">
@@ -51,7 +51,7 @@ export default function Footer() {
                   href="/#inicio"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> Inicio
+                  <span className="text-[#EE3C06]">›</span> Inicio
                 </Link>
               </li>
               <li>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href="/#soluciones"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> Soluciones de crédito
+                  <span className="text-[#EE3C06]">›</span> Soluciones de crédito
                 </Link>
               </li>
               <li>
@@ -67,7 +67,7 @@ export default function Footer() {
                   href="/#como-funciona"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> ¿Cómo funciona?
+                  <span className="text-[#EE3C06]">›</span> ¿Cómo funciona?
                 </Link>
               </li>
               <li>
@@ -75,7 +75,15 @@ export default function Footer() {
                   href="/#por-que-nosotros"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> ¿Por qué nosotros?
+                  <span className="text-[#EE3C06]">›</span> ¿Por qué nosotros?
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#quienes-somos"
+                  className="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span className="text-[#EE3C06]">›</span> Quiénes somos
                 </Link>
               </li>
               <li>
@@ -91,7 +99,7 @@ export default function Footer() {
                   href="/#preguntas-frecuentes"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#FF6801]">›</span> Preguntas frecuentes
+                  <span className="text-[#EE3C06]">›</span> Preguntas frecuentes
                 </Link>
               </li>
             </ul>
@@ -112,7 +120,7 @@ export default function Footer() {
                 href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#FF6801] transition-colors group"
+                className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#EE3C06] transition-colors group"
               >
                 <div className="w-8 h-8 rounded-md bg-white/10 flex items-center justify-center text-[#25D366]">
                   <WhatsAppIcon className="w-4 h-4" />
@@ -158,7 +166,7 @@ export default function Footer() {
         {/* Nota legal explícita y obligatoria */}
         <div className="bg-neutral-900/90 rounded-xl p-5 border border-neutral-800 text-xs leading-relaxed text-neutral-400 space-y-2">
           <div className="flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-[11px]">
-            <FileCheck2 className="w-4 h-4 text-[#FF6801]" />
+            <FileCheck2 className="w-4 h-4 text-[#EE3C06]" />
             Aviso Legal e Institucional
           </div>
           <p>{siteConfig.legalDisclaimer}</p>
