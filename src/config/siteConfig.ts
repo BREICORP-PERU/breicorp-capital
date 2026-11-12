@@ -41,8 +41,7 @@ export const siteConfig = {
       "Hola BREICORP CAPITAL, deseo información sobre las modalidades y condiciones de participación para inversionistas.",
 
     // Correo corporativo
-    email: "contacto@breicorpcapital.pe",
-    inversionistasEmail: "inversiones@breicorpcapital.pe",
+    email: "administracion@breicorp.com.pe",
 
     // Horarios de atención referenciales
     schedule: "Lunes a Viernes: 8:30 a.m. – 6:30 p.m. | Sábados: 9:00 a.m. – 1:00 p.m.",

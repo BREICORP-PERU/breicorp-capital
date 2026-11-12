@@ -163,7 +163,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-400">
-                    Correo publicado (por confirmar)
+                    Correo publicado
                   </div>
                   <div className="text-sm font-semibold text-white break-all">
                     {siteConfig.contact.email}
