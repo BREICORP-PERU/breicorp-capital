@@ -7,6 +7,7 @@ import {
   FileCheck2,
   Clock,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
@@ -37,6 +38,24 @@ export default function Footer() {
                 <Clock className="w-4 h-4 text-[#C6A15B] shrink-0" />
                 <span>{siteConfig.contact.schedule}</span>
               </div>
+            </div>
+
+            {/* Vinculación institucional con Empresa Matriz */}
+            <div className="pt-2 border-t border-neutral-800/60 max-w-sm">
+              <span className="text-[11px] uppercase tracking-wider text-neutral-400 block mb-2 font-medium">
+                Empresa matriz
+              </span>
+              <a
+                href="https://breicorp.com.pe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-xs text-neutral-300 hover:text-white hover:border-neutral-700 hover:bg-neutral-800/80 transition-all group"
+                aria-label="Conoce BREICORP E.I.R.L. (abre en nueva pestaña)"
+              >
+                <span className="text-neutral-400 group-hover:text-neutral-300">Conoce</span>
+                <strong className="text-white font-semibold">BREICORP E.I.R.L.</strong>
+                <ExternalLink className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#EE3C06] transition-colors shrink-0" />
+              </a>
             </div>
           </div>
 
@@ -177,7 +196,15 @@ export default function Footer() {
         <div className="mt-8 pt-6 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
           <div>
             © {currentYear} <span className="text-white font-medium">BREICORP CAPITAL</span>. Una marca de{" "}
-            <span className="text-white font-medium">BREICORP E.I.R.L.</span> Todos los derechos reservados.
+            <a
+              href="https://breicorp.com.pe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium hover:text-[#EE3C06] underline underline-offset-4 decoration-neutral-700 hover:decoration-[#EE3C06] transition-colors"
+            >
+              BREICORP E.I.R.L.
+            </a>
+            . Todos los derechos reservados.
           </div>
 
           <div className="flex items-center gap-6">
