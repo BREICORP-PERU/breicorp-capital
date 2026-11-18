@@ -1,0 +1,122 @@
+{
+  "url": "https://www.breicorpcapital.pe/",
+  "source": "file",
+  "status_code": null,
+  "headers_available": false,
+  "facts": {
+    "title": "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversi\u00f3n",
+    "title_length": 62,
+    "title_count": 1,
+    "meta_description": "Financiamiento y oportunidades de inversi\u00f3n. Soluciones para empresarios, emprendedores e inversionistas.",
+    "meta_description_length": 105,
+    "h1": [
+      "FINANCIAMIENTO PARA HACER CRECER TUS PROYECTOS."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://www.breicorpcapital.pe",
+    "canonical_status": "self",
+    "canonical_note": "differs from the page URL only by a trailing slash, treated as self-referencing",
+    "meta_robots": "robots: index, follow; googlebot: index, follow, max-image-preview:large, max-snippet:-1",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "es",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": null,
+    "has_viewport": true,
+    "images": {
+      "total": 6,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 4,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 35,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 31,
+      "query_params": []
+    },
+    "html_bytes": 163953,
+    "dom": {
+      "nodes": 670,
+      "max_depth": 14,
+      "max_children": 44,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversi\u00f3n",
+      "og:description": "Financiamiento y oportunidades de inversi\u00f3n. Soluciones para empresarios, emprendedores e inversionistas.",
+      "og:url": "https://www.breicorpcapital.pe",
+      "og:site_name": "BREICORP CAPITAL",
+      "og:locale": "es_PE",
+      "og:image": "https://www.breicorpcapital.pe/og-breicorp-capital.png",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:alt": "BREICORP CAPITAL - Financiamiento y oportunidades de inversi\u00f3n",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "word_count": 664,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 1.0
+  },
+  "findings": [
+    {
+      "id": "title-too-long",
+      "severity": "Medium",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "62 characters: BREICORP CAPITAL | Financiamiento y Oportunidades de Inversi\u00f3n"
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "4 of 6 images: /_next/image?url=%2Fimages%2Fhero-propiedad.jpg&w=3840&q=75, /_next/image?url=%2Fimages%2Fcredito-mype.jpg&w=3840&q=75, /_next/image?url=%2Fimages%2Fgarantia-hipotecaria.jpg&w=3...,...",
+      "count": 4
+    }
+  ],
+  "not_checked": [
+    {
+      "id": "noindex-header",
+      "reason": "no response headers were supplied"
+    },
+    {
+      "id": "charset-mismatch",
+      "reason": "no response headers were supplied"
+    }
+  ],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 2,
+    "Low": 0,
+    "total": 2,
+    "checks_run": 45
+  }
+}

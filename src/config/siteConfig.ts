@@ -10,8 +10,8 @@ export const siteConfig = {
   tagline: "El capital que necesitas, con el respaldo de tu propiedad.",
   description:
     "Soluciones de financiamiento y oportunidades de inversión con respaldo inmobiliario en Perú, sujetas a evaluación.",
-  domain: "https://breicorp-capital.vercel.app",
-  ogImage: "https://breicorp-capital.vercel.app/og-breicorp-capital.png",
+  domain: "https://www.breicorpcapital.pe",
+  ogImage: "https://www.breicorpcapital.pe/og-breicorp-capital.png",
 
   // Ubicación inicial
   locations: [

@@ -19,7 +19,8 @@ import InvestorForm from "./InvestorForm";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Red de Inversionistas | BREICORP CAPITAL",
+  title: "Red de Inversionistas",
+  alternates: { canonical: "/inversionistas" },
   description:
     "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
   openGraph: {

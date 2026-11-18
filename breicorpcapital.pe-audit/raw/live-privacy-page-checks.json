@@ -1,0 +1,118 @@
+{
+  "url": "https://www.breicorpcapital.pe/politica-de-privacidad",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Pol\u00edtica de Privacidad | BREICORP CAPITAL",
+    "title_length": 41,
+    "title_count": 1,
+    "meta_description": "Informaci\u00f3n preliminar sobre el tratamiento de datos personales de BREICORP CAPITAL, pendiente de revisi\u00f3n jur\u00eddica.",
+    "meta_description_length": 116,
+    "h1": [
+      "POL\u00cdTICA DE PRIVACIDAD Y PROTECCI\u00d3N DE DATOS PERSONALES"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": null,
+    "canonical_status": "missing",
+    "canonical_note": null,
+    "meta_robots": "robots: noindex, nofollow",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "es",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 0,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 28,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 53,
+      "query_params": []
+    },
+    "html_bytes": 62577,
+    "dom": {
+      "nodes": 283,
+      "max_depth": 11,
+      "max_children": 40,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversi\u00f3n",
+      "og:description": "Financiamiento y oportunidades de inversi\u00f3n. Soluciones para empresarios, emprendedores e inversionistas.",
+      "og:url": "https://breicorp-capital.vercel.app",
+      "og:site_name": "BREICORP CAPITAL",
+      "og:locale": "es_PE",
+      "og:image": "https://breicorp-capital.vercel.app/og-breicorp-capital.png",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:alt": "BREICORP CAPITAL - Financiamiento y oportunidades de inversi\u00f3n",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "word_count": 494,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.91
+  },
+  "findings": [
+    {
+      "id": "noindex",
+      "severity": "Critical",
+      "message": "A robots meta tag asks search engines not to index this page. Confirm this is intended.",
+      "evidence": "meta robots: noindex, nofollow"
+    },
+    {
+      "id": "missing-canonical",
+      "severity": "Medium",
+      "message": "The page has no canonical link. Search engines then choose the preferred URL themselves.",
+      "evidence": "no <link rel=\"canonical\"> with an href"
+    },
+    {
+      "id": "nofollow",
+      "severity": "Medium",
+      "message": "The page asks search engines not to follow any of its links. Confirm this is intended.",
+      "evidence": "meta robots: noindex, nofollow"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 1,
+    "High": 0,
+    "Medium": 2,
+    "Low": 0,
+    "total": 3,
+    "checks_run": 47
+  }
+}

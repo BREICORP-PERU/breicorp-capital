@@ -1,0 +1,26 @@
+{
+  "audit_date": "2026-11-18",
+  "tool": "Claude SEO 2.6.2",
+  "site": "https://www.breicorpcapital.pe/",
+  "business_type": "financiamiento e inversion con alcance local",
+  "health_score": null,
+  "score_reason": "PSI devolvio HTTP 429 y no hay datos verificados de Core Web Vitals, Search Console ni conversiones.",
+  "pages_checked": [
+    { "path": "/", "http_status": 200, "indexable_by_meta": true },
+    { "path": "/inversionistas", "http_status": 200, "indexable_by_meta": true },
+    { "path": "/politica-de-privacidad", "http_status": 200, "indexable_by_meta": false },
+    { "path": "/terminos-y-condiciones", "http_status": 200, "indexable_by_meta": false }
+  ],
+  "top_findings": [
+    "robots.txt y sitemap de produccion anuncian URLs de Vercel",
+    "dos paginas noindex estan incluidas en el sitemap",
+    "datos empresariales y de contacto requieren confirmacion",
+    "canonical ausente y metadatos sociales con Vercel en produccion"
+  ],
+  "not_measured": ["LCP", "INP", "CLS", "Lighthouse", "CrUX", "Search Console", "conversiones", "Google Business Profile"],
+  "evidence": {
+    "findings_dir": "findings/",
+    "raw_dir": "raw/",
+    "screenshots_dir": "screenshots/"
+  }
+}

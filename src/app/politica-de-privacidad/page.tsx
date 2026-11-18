@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
+  alternates: { canonical: "/politica-de-privacidad" },
   description:
     "Información preliminar sobre el tratamiento de datos personales de BREICORP CAPITAL, pendiente de revisión jurídica.",
   robots: { index: false, follow: false },

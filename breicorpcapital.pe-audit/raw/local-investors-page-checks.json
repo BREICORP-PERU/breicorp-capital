@@ -1,0 +1,108 @@
+{
+  "url": "https://www.breicorpcapital.pe/inversionistas",
+  "source": "file",
+  "status_code": null,
+  "headers_available": false,
+  "facts": {
+    "title": "Red de Inversionistas | BREICORP CAPITAL",
+    "title_length": 40,
+    "title_count": 1,
+    "meta_description": "Participa en operaciones de financiamiento con garant\u00eda hipotecaria inscrita en SUNARP en Tingo Mar\u00eda y Hu\u00e1nuco.",
+    "meta_description_length": 112,
+    "h1": [
+      "PARTICIPA EN FINANCIAMIENTO CON RESPALDO INMOBILIARIO ."
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://www.breicorpcapital.pe/inversionistas",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": "robots: index, follow; googlebot: index, follow, max-image-preview:large, max-snippet:-1",
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "es",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": null,
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 0,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 30,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 45,
+      "query_params": []
+    },
+    "html_bytes": 92456,
+    "dom": {
+      "nodes": 437,
+      "max_depth": 13,
+      "max_children": 43,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "Red de Inversionistas | BREICORP CAPITAL",
+      "og:description": "Participa en operaciones de financiamiento con garant\u00eda hipotecaria inscrita en SUNARP en Tingo Mar\u00eda y Hu\u00e1nuco.",
+      "og:url": "https://www.breicorpcapital.pe/inversionistas",
+      "og:site_name": "BREICORP CAPITAL",
+      "og:locale": "es_PE",
+      "og:image": "https://www.breicorpcapital.pe/og-breicorp-capital.png",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:alt": "BREICORP CAPITAL - Red de Inversionistas",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "word_count": 410,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.73
+  },
+  "findings": [],
+  "not_checked": [
+    {
+      "id": "noindex-header",
+      "reason": "no response headers were supplied"
+    },
+    {
+      "id": "charset-mismatch",
+      "reason": "no response headers were supplied"
+    }
+  ],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 0,
+    "Low": 0,
+    "total": 0,
+    "checks_run": 45
+  }
+}

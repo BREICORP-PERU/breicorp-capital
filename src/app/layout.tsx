@@ -25,6 +25,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
+  alternates: { canonical: "/" },
   title: {
     default: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
     template: "%s | BREICORP CAPITAL",

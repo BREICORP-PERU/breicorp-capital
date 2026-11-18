@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
   title: "Términos y Condiciones",
+  alternates: { canonical: "/terminos-y-condiciones" },
   description:
     "Términos y condiciones de uso del portal web e intermediación de financiamiento con garantía hipotecaria de BREICORP CAPITAL.",
   robots: { index: false, follow: false },
