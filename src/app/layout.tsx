@@ -95,7 +95,7 @@ export default function RootLayout({
         name: siteConfig.name,
         legalName: siteConfig.legalEntity,
         url: siteConfig.domain,
-        logo: `${siteConfig.domain}/logo/logobreicorp.webp`,
+        logo: `${siteConfig.domain}/LOGOTIPO.webp`,
         description: siteConfig.description,
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.whatsappDisplay,
