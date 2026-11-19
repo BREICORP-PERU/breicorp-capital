@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
@@ -28,7 +30,7 @@ export default function FaqSection() {
       id: "faq-4",
       question: "¿Cuánto tiempo toma la respuesta de evaluación?",
       answer:
-        "El plazo de respuesta depende de la información recibida y de la evaluación de cada caso. Nuestro equipo te indicará los siguientes pasos al atender tu consulta.",
+        "El plazo de respuesta preliminar toma entre 48 a 72 horas hábiles tras recibir los datos y la documentación básica solicitada de la propiedad.",
     },
     {
       id: "faq-5",
@@ -43,32 +45,35 @@ export default function FaqSection() {
   return (
     <section
       id="preguntas-frecuentes"
-      className="py-20 lg:py-24 bg-[#F5F5F5] border-t border-neutral-200 scroll-mt-20"
+      className="py-24 lg:py-32 bg-[#F8F9FB] border-t border-neutral-200/80 scroll-mt-20 relative overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Dudas Habituales"
           title="PREGUNTAS FRECUENTES"
-          description="Respuestas directas y transparentes para tomar una decisión informada."
+          description="Respuestas directas, objetivas y transparentes para tomar una decisión informada."
           align="center"
-          className="mb-12"
+          className="mb-14"
         />
 
         <Accordion items={faqData} defaultOpenId="faq-1" />
 
-        <div className="mt-10 p-5 rounded-2xl bg-white border border-neutral-200 text-center space-y-2">
-          <p className="text-sm font-bold text-[#111111]">
-            ¿Tienes una consulta específica sobre tu inmueble?
+        <div className="mt-12 p-6 rounded-3xl bg-white border border-neutral-200/90 shadow-card text-center space-y-3">
+          <p className="text-base font-bold text-[#111111]">
+            ¿Tienes una consulta específica sobre tu inmueble o proyecto?
           </p>
-          <div>
+          <p className="text-xs sm:text-sm text-neutral-500 max-w-lg mx-auto">
+            Conversa directamente con un asesor para analizar la partida registral y conocer el monto estimado evaluable.
+          </p>
+          <div className="pt-2">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#EE3C06] hover:text-[#D63404] transition-colors"
+              className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#EE3C06] hover:bg-[#D63404] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-orange-glow active:scale-[0.98]"
             >
-              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
-              <span>Conversar por WhatsApp con un asesor comercial ›</span>
+              <WhatsAppIcon className="w-4 h-4 text-white" />
+              <span>Consultar por WhatsApp con un asesor ›</span>
             </a>
           </div>
         </div>
