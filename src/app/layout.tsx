@@ -25,22 +25,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${siteConfig.domain}/` },
   title: {
-    default: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
+    default: "Préstamos con Garantía Hipotecaria | BREICORP CAPITAL",
     template: "%s | BREICORP CAPITAL",
   },
   description:
-    "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
-  keywords: [
-    "BREICORP CAPITAL",
-    "financiamiento con garantia hipotecaria",
-    "credito mype huanuco",
-    "creditos tingo maria",
-    "prestamos empresariales peru",
-    "oportunidades de inversion",
-    "inversionistas tingo maria",
-  ],
+    "Conoce las soluciones de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita información y una evaluación personalizada en Perú.",
   authors: [{ name: "BREICORP E.I.R.L." }],
   creator: "BREICORP CAPITAL",
   publisher: "BREICORP E.I.R.L.",
@@ -67,11 +58,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_PE",
-    url: siteConfig.domain,
+    url: `${siteConfig.domain}/`,
     siteName: "BREICORP CAPITAL",
-    title: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
+    title: "Préstamos con Garantía Hipotecaria | BREICORP CAPITAL",
     description:
-      "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
+      "Conoce las soluciones de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita información y una evaluación personalizada en Perú.",
     images: [
       {
         url: "/og-breicorp-capital.png",
@@ -83,9 +74,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BREICORP CAPITAL | Financiamiento y Oportunidades de Inversión",
+    title: "Préstamos con Garantía Hipotecaria | BREICORP CAPITAL",
     description:
-      "Financiamiento y oportunidades de inversión. Soluciones para empresarios, emprendedores e inversionistas.",
+      "Conoce las soluciones de financiamiento con garantía hipotecaria de BREICORP CAPITAL. Solicita información y una evaluación personalizada en Perú.",
     images: ["/og-breicorp-capital.png"],
   },
 };
@@ -95,12 +86,43 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteConfig.domain}/#organization`,
+        name: siteConfig.name,
+        legalName: siteConfig.legalEntity,
+        url: siteConfig.domain,
+        logo: `${siteConfig.domain}/logo/logobreicorp.webp`,
+        description: siteConfig.description,
+        email: siteConfig.contact.email,
+        telephone: siteConfig.contact.whatsappDisplay,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.domain}/#website`,
+        name: siteConfig.name,
+        url: siteConfig.domain,
+        inLanguage: "es-PE",
+        publisher: { "@id": `${siteConfig.domain}/#organization` },
+      },
+    ],
+  };
+
   return (
     <html
-      lang="es"
+      lang="es-PE"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased h-full`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#111111]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         {/* Encabezado fijo superior para escritorio y móvil */}
         <Header />
 

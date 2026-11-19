@@ -34,11 +34,11 @@ export default function HeroSection() {
 
             {/* Titular Principal optimizado comercialmente */}
             <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#111111] tracking-tight leading-[1.12] uppercase font-sans">
-              FINANCIAMIENTO PARA{" "}
+              FINANCIAMIENTO CON GARANTÍA HIPOTECARIA PARA{" "}
               <span className="text-[#EE3C06] relative inline-block">
-                HACER CRECER
+                TUS PROYECTOS
               </span>{" "}
-              TUS PROYECTOS.
+              EN PERÚ.
             </h1>
 
             {/* Texto breve persuasivo (máximo 3 líneas) */}

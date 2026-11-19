@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   title: "Red de Inversionistas",
   alternates: { canonical: "/inversionistas" },
   description:
-    "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+    "Conoce la red de inversionistas de BREICORP CAPITAL, su proceso de evaluación y los criterios de estructuración de operaciones respaldadas por garantías.",
   openGraph: {
     title: "Red de Inversionistas | BREICORP CAPITAL",
     description:
-      "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+      "Conoce la red de inversionistas de BREICORP CAPITAL, su proceso de evaluación y los criterios de estructuración de operaciones respaldadas por garantías.",
     url: `${siteConfig.domain}/inversionistas`,
     siteName: siteConfig.name,
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Red de Inversionistas | BREICORP CAPITAL",
     description:
-      "Participa en operaciones de financiamiento con garantía hipotecaria inscrita en SUNARP en Tingo María y Huánuco.",
+      "Conoce la red de inversionistas de BREICORP CAPITAL, su proceso de evaluación y los criterios de estructuración de operaciones respaldadas por garantías.",
     images: ["/og-breicorp-capital.png"],
   },
 };

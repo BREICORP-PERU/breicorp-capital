@@ -26,13 +26,13 @@ export default function Footer() {
             <BrandLogo variant="light" size="lg" />
 
             <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">
-              Línea de negocio de <strong className="text-white">BREICORP E.I.R.L.</strong> orientada a la intermediación y gestión de posibles operaciones de financiamiento con garantía hipotecaria entre solicitantes e inversionistas privados.
+              Línea de negocio de <strong className="text-white">BREICORP E.I.R.L.</strong> orientada a la intermediación y gestión de operaciones de financiamiento con garantía hipotecaria entre solicitantes e inversionistas privados.
             </p>
 
             <div className="space-y-3 pt-2 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#EE3C06] shrink-0" />
-                <span>Cobertura referencial: {siteConfig.locations.map((location) => location.city).join(" y ")}, Perú</span>
+                <span>Atención en {siteConfig.locations.map((location) => location.city).join(" y ")}, Perú</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#C6A15B] shrink-0" />
@@ -79,6 +79,16 @@ export default function Footer() {
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
                   <span className="text-[#EE3C06]">›</span> Soluciones de crédito
+                </Link>
+              </li>
+              <li>
+                <Link href="/prestamos-garantia-hipotecaria" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#EE3C06]">›</span> Préstamos con garantía hipotecaria
+                </Link>
+              </li>
+              <li>
+                <Link href="/financiamiento-empresarial" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#EE3C06]">›</span> Financiamiento empresarial
                 </Link>
               </li>
               <li>
@@ -189,7 +199,6 @@ export default function Footer() {
             Aviso Legal e Institucional
           </div>
           <p>{siteConfig.legalDisclaimer}</p>
-          <p>{siteConfig.contact.verificationNotice}</p>
         </div>
 
         {/* Barra inferior de derechos y enlaces legales */}

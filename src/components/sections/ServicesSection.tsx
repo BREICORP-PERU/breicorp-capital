@@ -18,6 +18,7 @@ export default function ServicesSection() {
       tag: "Comercio y Empresa",
       ctaText: "Solicitar Crédito MYPE",
       ctaHref: whatsappHref("Hola BREICORP CAPITAL, deseo consultar sobre un Crédito MYPE para mi negocio."),
+      detailHref: "/financiamiento-empresarial",
       isExternal: true,
       badgeColor: "bg-[#EE3C06] text-white",
     },
@@ -31,6 +32,7 @@ export default function ServicesSection() {
       tag: "Respaldo Inmobiliario",
       ctaText: "Consultar con Garantía",
       ctaHref: whatsappHref("Hola BREICORP CAPITAL, deseo consultar sobre un Crédito con Garantía Hipotecaria."),
+      detailHref: "/prestamos-garantia-hipotecaria",
       isExternal: true,
       badgeColor: "bg-[#111111] text-white",
     },
@@ -44,6 +46,7 @@ export default function ServicesSection() {
       tag: "Participación Privada",
       ctaText: "Ver Oportunidades",
       ctaHref: "/inversionistas",
+      detailHref: "/inversionistas",
       isExternal: false,
       badgeColor: "bg-[#C6A15B] text-white",
     },
@@ -59,7 +62,7 @@ export default function ServicesSection() {
         <SectionHeading
           kicker="Nuestras Soluciones"
           title="SOLUCIONES DE FINANCIAMIENTO"
-          description="Alternativas comerciales directas diseñadas para cada necesidad de capital o inversión."
+          description="Alternativas de financiamiento e inversión sujetas a evaluación para distintas necesidades de capital."
           align="center"
           className="mb-14"
         />
@@ -104,6 +107,14 @@ export default function ServicesSection() {
                     <p className="text-sm text-neutral-600 leading-relaxed">
                       {item.description}
                     </p>
+                    {item.isExternal && (
+                      <Link
+                        href={item.detailHref}
+                        className="inline-flex min-h-11 items-center text-sm font-semibold text-[#C83204] underline underline-offset-2 hover:text-[#A52A05]"
+                      >
+                        Conocer detalles de {item.title.toLowerCase()}
+                      </Link>
+                    )}
                   </div>
 
                   {/* CTA destacado */}
@@ -113,7 +124,7 @@ export default function ServicesSection() {
                         href={item.ctaHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#EE3C06] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#EE3C06] transition-all shadow-subtle"
+                        className="inline-flex min-h-11 items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#EE3C06] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#EE3C06] transition-all shadow-subtle"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-[#25D366] group-hover:text-white transition-colors" />
                         <span>{item.ctaText}</span>
@@ -121,7 +132,7 @@ export default function ServicesSection() {
                     ) : (
                       <Link
                         href={item.ctaHref}
-                        className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#111111] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#111111] transition-all shadow-subtle"
+                        className="inline-flex min-h-11 items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-neutral-50 hover:bg-[#111111] text-neutral-800 hover:text-white border border-neutral-200 hover:border-[#111111] transition-all shadow-subtle"
                       >
                         <span>{item.ctaText}</span>
                         <ArrowRight className="w-4 h-4 text-[#C6A15B]" />

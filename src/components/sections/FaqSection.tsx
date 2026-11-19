@@ -28,7 +28,7 @@ export default function FaqSection() {
       id: "faq-4",
       question: "¿Cuánto tiempo toma la respuesta de evaluación?",
       answer:
-        "Emitimos una respuesta preliminar en un plazo aproximado de 48 a 72 horas hábiles tras recibir los datos y la documentación básica solicitada.",
+        "El plazo de respuesta depende de la información recibida y de la evaluación de cada caso. Nuestro equipo te indicará los siguientes pasos al atender tu consulta.",
     },
     {
       id: "faq-5",

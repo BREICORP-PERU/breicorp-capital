@@ -31,7 +31,6 @@ export const siteConfig = {
 
   // Datos de contacto oficiales y referenciales de la empresa
   contact: {
-    verificationNotice: "Dominio, correos, horarios y cobertura referenciales sujetos a confirmación.",
     // Número oficial de WhatsApp de BREICORP CAPITAL
     whatsappRaw: "51948261382",
     whatsappDisplay: "+51 948 261 382",
@@ -59,7 +58,7 @@ export const siteConfig = {
 
   // Descargo legal corporativo
   legalDisclaimer:
-    "BREICORP CAPITAL es una línea comercial de BREICORP E.I.R.L. orientada a la gestión e intermediación de posibles operaciones de financiamiento. Cada operación está sujeta a evaluación, disponibilidad de capital y formalización contractual. Este sitio no ofrece depósitos ni presenta a BREICORP CAPITAL como entidad bancaria.",
+    "BREICORP CAPITAL es una línea comercial de BREICORP E.I.R.L. orientada a la gestión e intermediación de operaciones de financiamiento privado con garantía hipotecaria. Cada operación está sujeta a evaluación, disponibilidad de capital y formalización contractual. Este sitio no ofrece depósitos ni presenta a BREICORP CAPITAL como entidad bancaria.",
 };
 
 export type SiteConfig = typeof siteConfig;
