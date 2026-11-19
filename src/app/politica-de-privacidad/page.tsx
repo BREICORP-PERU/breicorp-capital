@@ -4,12 +4,30 @@ import Link from "next/link";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
+const description =
+  "Información preliminar sobre el tratamiento de datos personales de BREICORP CAPITAL, pendiente de revisión jurídica.";
+const url = `${siteConfig.domain}/politica-de-privacidad`;
+
 export const metadata: Metadata = {
   title: "Política de Privacidad",
-  alternates: { canonical: "/politica-de-privacidad" },
-  description:
-    "Información preliminar sobre el tratamiento de datos personales de BREICORP CAPITAL, pendiente de revisión jurídica.",
+  alternates: { canonical: url },
+  description,
   robots: { index: false, follow: false },
+  openGraph: {
+    type: "website",
+    locale: "es_PE",
+    url,
+    siteName: siteConfig.name,
+    title: `Política de Privacidad | ${siteConfig.name}`,
+    description,
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Política de Privacidad | ${siteConfig.name}`,
+    description,
+    images: [siteConfig.ogImage],
+  },
 };
 
 export default function PoliticaPrivacidadPage() {

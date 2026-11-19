@@ -4,12 +4,30 @@ import Link from "next/link";
 import { ArrowLeft, FileText } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
+const description =
+  "Términos y condiciones de uso del portal web e intermediación de financiamiento con garantía hipotecaria de BREICORP CAPITAL.";
+const url = `${siteConfig.domain}/terminos-y-condiciones`;
+
 export const metadata: Metadata = {
   title: "Términos y Condiciones",
-  alternates: { canonical: "/terminos-y-condiciones" },
-  description:
-    "Términos y condiciones de uso del portal web e intermediación de financiamiento con garantía hipotecaria de BREICORP CAPITAL.",
+  alternates: { canonical: url },
+  description,
   robots: { index: false, follow: false },
+  openGraph: {
+    type: "website",
+    locale: "es_PE",
+    url,
+    siteName: siteConfig.name,
+    title: `Términos y Condiciones | ${siteConfig.name}`,
+    description,
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Términos y Condiciones | ${siteConfig.name}`,
+    description,
+    images: [siteConfig.ogImage],
+  },
 };
 
 export default function TerminosCondicionesPage() {
