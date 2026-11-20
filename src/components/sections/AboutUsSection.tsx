@@ -36,7 +36,7 @@ export default function AboutUsSection() {
       icon: Handshake,
       name: "CONFIANZA",
       description:
-        "Construcción de vínculos sólidos y duraderos, garantizando confidencialidad y estricta protección de información.",
+        "Tratamos la información de contacto conforme a la política de privacidad publicada en este sitio.",
       color: "text-white",
       bg: "bg-white/10",
     },
@@ -44,7 +44,7 @@ export default function AboutUsSection() {
       icon: Scale,
       name: "RESPONSABILIDAD",
       description:
-        "Evaluación prudente y diligente que pondera la capacidad económica y asegura compromisos formalmente sostenibles.",
+        "La evaluación considera la capacidad económica y las condiciones de cada operación, sin prometer una aprobación.",
       color: "text-[#EE3C06]",
       bg: "bg-[#EE3C06]/10",
     },
@@ -52,7 +52,7 @@ export default function AboutUsSection() {
       icon: FileCheck2,
       name: "SEGURIDAD JURÍDICA",
       description:
-        "Formalización documental estricta mediante Escritura Pública ante Notario colegiado e inscripción registral en SUNARP.",
+        "Las garantías y documentos se formalizan mediante los instrumentos notariales y registrales que correspondan.",
       color: "text-[#C6A15B]",
       bg: "bg-[#C6A15B]/15",
     },

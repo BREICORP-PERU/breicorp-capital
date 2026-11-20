@@ -59,7 +59,7 @@ export default function PrestamosGarantiaHipotecariaPage() {
             El sitio informa que se consideran la actividad económica y capacidad de pago, junto con la situación registral y valoración del inmueble. Se contemplan casas, departamentos, locales comerciales y terrenos con partida inscrita en SUNARP.
           </p>
           <p className="text-neutral-700 leading-relaxed">
-            El monto mínimo evaluable publicado es de {siteConfig.financing.minAmountFormatted}. El importe final, plazo, tasas y gastos se determinan para cada operación y deben constar en sus documentos contractuales.
+            El importe, plazo, tasas y gastos se determinan para cada operación y deben constar en sus documentos contractuales.
           </p>
         </section>
 

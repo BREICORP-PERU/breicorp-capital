@@ -78,11 +78,11 @@ export default function FinalCtaSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Building2 className="w-4 h-4 text-[#C6A15B]" />
-                <span className="text-neutral-300">Garantía inscrita en SUNARP</span>
+                <span className="text-neutral-300">Inscripción cuando corresponda</span>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#EE3C06]" />
-                <span className="text-neutral-300">Escritura Pública ante Notario</span>
+                <span className="text-neutral-300">Formalización según operación</span>
               </div>
             </div>
           </div>

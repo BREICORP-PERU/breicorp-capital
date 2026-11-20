@@ -54,7 +54,7 @@ export default function ServicesSection() {
             <div className="absolute inset-0 z-0 overflow-hidden">
               <Image
                 src="/images/garantia-hipotecaria.jpg"
-                alt="Edificio moderno para crédito con garantía hipotecaria"
+                alt="Fotografía ilustrativa de un edificio moderno"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover object-center filter brightness-[0.70] group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -70,7 +70,7 @@ export default function ServicesSection() {
                   <ShieldCheck className="w-3.5 h-3.5" /> Solución Principal
                 </span>
                 <span className="text-xs text-neutral-300 font-mono">
-                  Desde S/ 20,000
+                  Monto según evaluación
                 </span>
               </div>
 

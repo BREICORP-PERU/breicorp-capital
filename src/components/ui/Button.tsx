@@ -28,7 +28,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none";
+    "inline-flex min-h-11 items-center justify-center font-semibold rounded-lg transition-all duration-200 cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none";
 
   const sizeClasses = {
     sm: "px-3.5 py-1.5 text-xs gap-1.5",
@@ -38,7 +38,7 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#EE3C06] hover:bg-[#D63404] text-white shadow-sm hover:shadow-orange-glow focus:ring-[#EE3C06]",
+      "bg-[#B83208] hover:bg-[#9C2B08] text-white shadow-sm hover:shadow-orange-glow focus-visible:ring-[#B83208]",
     secondary:
       "bg-[#111111] hover:bg-neutral-800 text-white shadow-sm focus:ring-[#111111]",
     outline:
@@ -46,7 +46,7 @@ export default function Button({
     "outline-light":
       "border border-white/25 hover:border-white bg-transparent text-white hover:bg-white/10 focus:ring-white/40",
     gold:
-      "bg-[#C6A15B] hover:bg-[#B5904A] text-white shadow-sm focus:ring-[#C6A15B]",
+      "bg-[#C6A15B] hover:bg-[#B5904A] text-[#111111] shadow-sm focus-visible:ring-[#8F6B25]",
     ghost:
       "bg-transparent hover:bg-neutral-100 text-neutral-800 focus:ring-neutral-300",
   }[variant];

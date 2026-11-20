@@ -1,122 +1,29 @@
-import React from "react";
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, FileText } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
-const description =
-  "Términos y condiciones de uso del portal web e intermediación de financiamiento con garantía hipotecaria de BREICORP CAPITAL.";
-const url = `${siteConfig.domain}/terminos-y-condiciones`;
-
 export const metadata: Metadata = {
-  title: "Términos y Condiciones",
-  alternates: { canonical: url },
-  description,
+  title: "Términos y condiciones",
+  description: "Condiciones de uso del sitio y alcance de las consultas comerciales de BREICORP CAPITAL.",
+  alternates: { canonical: `${siteConfig.domain}/terminos-y-condiciones` },
   robots: { index: false, follow: false },
-  openGraph: {
-    type: "website",
-    locale: "es_PE",
-    url,
-    siteName: siteConfig.name,
-    title: `Términos y Condiciones | ${siteConfig.name}`,
-    description,
-    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `Términos y Condiciones | ${siteConfig.name}`,
-    description,
-    images: [siteConfig.ogImage],
-  },
+  openGraph: { url: `${siteConfig.domain}/terminos-y-condiciones`, title: `Términos y condiciones | ${siteConfig.name}`, description: "Condiciones de uso del sitio y alcance de las consultas comerciales." },
 };
 
 export default function TerminosCondicionesPage() {
   return (
-    <div className="pt-24 pb-20 bg-white min-h-screen">
-      <div className="border-b border-neutral-200 bg-neutral-50 py-3">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center gap-2 text-xs text-neutral-500">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 hover:text-[#111111] transition-colors"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Volver a Inicio</span>
-            </Link>
-            <span>/</span>
-            <span className="text-[#111111] font-semibold">Términos y Condiciones</span>
-          </div>
-        </div>
+    <article className="mx-auto max-w-4xl px-4 pb-20 pt-28 text-neutral-700 sm:px-6">
+      <Link href="/" className="inline-flex min-h-11 items-center text-sm font-semibold text-[#B83208] underline">Volver al inicio</Link>
+      <h1 className="mt-6 text-3xl font-extrabold text-[#111111] sm:text-4xl">Términos y condiciones</h1>
+      <p className="mt-3 text-sm">Condiciones de uso de este sitio. Última revisión: noviembre de 2026.</p>
+      <div className="mt-10 space-y-8 leading-relaxed">
+        <section><h2 className="text-xl font-bold text-[#111111]">Identificación y alcance</h2><p className="mt-2">{siteConfig.name} es una línea comercial de {siteConfig.legalEntity}, RUC {siteConfig.ruc}, con domicilio publicado en {siteConfig.address}. El sitio presenta servicios de gestión e intermediación de posibles operaciones de financiamiento privado. No recibe depósitos ni se presenta como entidad bancaria.</p></section>
+        <section><h2 className="text-xl font-bold text-[#111111]">Consultas y propuestas</h2><p className="mt-2">La información de la web es general. Completar el formulario, abrir WhatsApp o conversar con el equipo no constituye aprobación, oferta vinculante, contrato ni desembolso. Toda operación requiere evaluación individual, disponibilidad de capital y condiciones acordadas por las partes en los documentos aplicables.</p></section>
+        <section><h2 className="text-xl font-bold text-[#111111]">Condiciones y riesgos</h2><p className="mt-2">Montos, tasas, plazos, gastos, garantías y obligaciones se determinarán para cada operación y deberán comunicarse antes de asumir compromisos. Una garantía inmobiliaria no elimina riesgos ni asegura resultados para inversionistas. Ninguna cifra informativa del sitio sustituye la documentación contractual.</p></section>
+        <section><h2 className="text-xl font-bold text-[#111111]">Uso del sitio y datos personales</h2><p className="mt-2">Proporciona información veraz y no compartas documentos o datos sensibles en la consulta inicial. Los enlaces externos, incluido WhatsApp, se rigen por las condiciones de sus proveedores. Consulta nuestra <Link href="/politica-de-privacidad" className="underline">política de privacidad</Link> antes de enviar información personal.</p></section>
+        <section><h2 className="text-xl font-bold text-[#111111]">Pagos, devoluciones y reclamos</h2><p className="mt-2">Este sitio no tiene pasarela de pago ni cobra al completar una consulta. Todo pago relacionado con una operación debe acordarse y documentarse por separado. Consulta la <Link href="/politica-de-pagos-y-reembolsos" className="underline">política de pagos y reembolsos</Link>. Para consultas escribe a <a href={`mailto:${siteConfig.contact.email}`} className="underline">{siteConfig.contact.email}</a>. Este texto no limita derechos reconocidos por la legislación de protección al consumidor.</p></section>
+        <section><h2 className="text-xl font-bold text-[#111111]">Propiedad intelectual y cambios</h2><p className="mt-2">La marca y los materiales del sitio pertenecen a sus respectivos titulares. Su reutilización requiere comprobar los derechos correspondientes. La información del sitio puede actualizarse; los acuerdos formalizados se rigen por sus propios documentos.</p></section>
       </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
-        <div className="space-y-4 border-b border-neutral-200 pb-8 mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 text-neutral-800 text-xs font-semibold uppercase tracking-wider">
-            <FileText className="w-4 h-4 text-[#EE3C06]" />
-            Condiciones de Servicio e Intermediación
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#111111] tracking-tight">
-            TÉRMINOS Y CONDICIONES GENERALES
-          </h1>
-          <p className="text-sm text-neutral-500">
-            Borrador pendiente de revisión jurídica sobre el uso del sitio y la intermediación de {siteConfig.legalEntity} ({siteConfig.name}).
-          </p>
-        </div>
-
-        <div className="prose prose-neutral max-w-none text-sm sm:text-base leading-relaxed space-y-6 text-neutral-700">
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">1. NATURALEZA DE LA EMPRESA Y ALCANCE DE LA ACTIVIDAD</h2>
-            <p>
-              <strong>{siteConfig.name}</strong> es una línea comercial de <strong>{siteConfig.legalEntity}</strong> dedicada a la gestión, asesoría e intermediación de operaciones de financiamiento privado con garantía hipotecaria.
-            </p>
-            <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-xs text-neutral-700 leading-relaxed">
-              <strong className="text-[#111111]">Aviso regulatorio:</strong> {siteConfig.legalDisclaimer}
-            </div>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">2. ALCANCE DE LA SOLICITUD DE EVALUACIÓN</h2>
-            <p>
-              Abrir WhatsApp con una consulta preparada o enviar un mensaje por ese canal <strong>no constituye una oferta vinculante, un contrato de préstamo ni una aprobación garantizada</strong>. Este sitio no recibe formularios ni documentos. Toda posible operación está condicionada a:
-            </p>
-            <ul className="list-disc pl-5 space-y-1.5 text-neutral-600">
-              <li>La evaluación de la actividad económica y capacidad de pago del solicitante.</li>
-              <li>La verificación de la partida registral en la Superintendencia Nacional de los Registros Públicos (SUNARP).</li>
-              <li>La valoración del inmueble, cuando corresponda, según los criterios acordados.</li>
-              <li>La suscripción de los instrumentos legales y notariales correspondientes por ambas partes.</li>
-            </ul>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">3. CONDICIONES FINANCIERAS Y CONTRACTUALES</h2>
-            <p>
-              El monto mínimo referencial evaluable es S/ 20,000. No existe un monto máximo prefijado. El plazo, las tasas, los gastos y cualquier otra condición económica se definirán para cada operación y deberán constar en los documentos contractuales aplicables antes de su aceptación. Abrir o enviar un mensaje de WhatsApp no implica aprobación ni desembolso.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">4. VERACIDAD DE LA INFORMACIÓN SUMINISTRADA</h2>
-            <p>
-              El solicitante o inversionista debe proporcionar información veraz para que su consulta pueda evaluarse. Los requisitos de declaración y documentación de una operación formal se definirán en sus instrumentos contractuales.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">5. PROPIEDAD INTELECTUAL</h2>
-            <p>
-              Los textos, elementos de marca e imágenes de este sitio pueden estar sujetos a derechos de sus respectivos titulares. El alcance de los derechos de uso del material visual está pendiente de verificación.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-[#111111]">6. LEGISLACIÓN Y JURISDICCIÓN</h2>
-            <p>
-              La legislación y jurisdicción aplicables a cada operación deberán definirse en los documentos contractuales correspondientes y revisarse jurídicamente antes de publicar condiciones definitivas.
-            </p>
-          </section>
-        </div>
-      </div>
-    </div>
+    </article>
   );
 }
-

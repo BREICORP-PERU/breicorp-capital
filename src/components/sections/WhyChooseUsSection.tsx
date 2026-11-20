@@ -24,24 +24,24 @@ export default function WhyChooseUsSection() {
       title: "Atención personalizada directa",
       shortTitle: "Atención Directa",
       description:
-        "Trato directo y cercano con un asesor comercial dedicado a entender la realidad de tu proyecto, sin centralitas automatizadas ni respuestas genéricas.",
-      metric: "Asesor dedicado a tu caso",
+        "Puedes consultar tu caso directamente con el equipo comercial y conocer los pasos de la evaluación.",
+      metric: "Contacto comercial directo",
     },
     {
       icon: SearchCheck,
       title: "Evaluación integral de cada operación",
       shortTitle: "Evaluación Real",
       description:
-        "Análisis individual de la capacidad económica y del respaldo del bien inmueble. Estar reportado en centrales de riesgo no impide evaluar la viabilidad de la garantía.",
-      metric: "No te descartamos por scoring",
+        "La posibilidad de financiamiento depende de la información económica y de las condiciones del inmueble ofrecido como respaldo.",
+      metric: "Evaluación según el caso",
     },
     {
       icon: Layers,
       title: "Alternativas de financiamiento estructuradas",
       shortTitle: "Estructuras Flexibles",
       description:
-        "Propuestas estructuradas que se ajustan al destino que tu negocio o inversión necesita, con montos acordes al valor comercial tasado del inmueble.",
-      metric: "Montos desde S/ 20,000",
+        "Las condiciones de cada propuesta se definen tras revisar el destino del financiamiento y la garantía aplicable.",
+      metric: "Monto según evaluación",
     },
     {
       icon: ShieldCheck,
@@ -49,7 +49,7 @@ export default function WhyChooseUsSection() {
       shortTitle: "Seguridad Notarial",
       description:
         "Coordinación notarial y registral transparente desde el estudio de títulos hasta la firma por Escritura Pública e inscripción formal en SUNARP.",
-      metric: "100% formal ante Notario",
+      metric: "Formalización según contrato",
     },
   ];
 
@@ -71,8 +71,8 @@ export default function WhyChooseUsSection() {
     },
     {
       icon: ShieldCheck,
-      label: "Transparencia Total",
-      desc: "Condiciones contractuales claras sin cobros ocultos.",
+      label: "Condiciones por escrito",
+      desc: "Revisa el costo y las obligaciones antes de aceptar.",
     },
   ];
 
@@ -85,7 +85,7 @@ export default function WhyChooseUsSection() {
         <SectionHeading
           kicker="Nuestros Diferenciales"
           title="¿POR QUÉ ELEGIR BREICORP CAPITAL?"
-          description="Estructuramos operaciones formales que unen agilidad comercial y el máximo respaldo del derecho notarial e inmobiliario peruano."
+          description="Conoce cómo se evalúan y documentan las posibles operaciones de financiamiento."
           align="center"
           className="mb-16"
         />
@@ -101,9 +101,17 @@ export default function WhyChooseUsSection() {
               return (
                 <div
                   key={item.title}
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setActiveTab(index)}
-                  onMouseEnter={() => setActiveTab(index)}
-                  className={`p-6 rounded-2xl transition-all duration-300 cursor-pointer border ${
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setActiveTab(index);
+                    }
+                  }}
+                  aria-pressed={isSelected}
+                  className={`w-full p-6 rounded-2xl transition-all duration-300 cursor-pointer border text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EE3C06] ${
                     isSelected
                       ? "bg-neutral-50 border-[#EE3C06] shadow-card -translate-x-1"
                       : "bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50/50"
@@ -175,7 +183,7 @@ export default function WhyChooseUsSection() {
                 </div>
 
                 <p className="text-xs text-neutral-300 leading-relaxed">
-                  Cada operación en BREICORP CAPITAL sigue un protocolo estricto de 4 filtros legales para garantizar certeza y protección a ambas partes:
+                  Estos son aspectos que pueden revisarse según la naturaleza de cada operación; ninguno elimina los riesgos ni garantiza un resultado:
                 </p>
 
                 {/* Lista de filtros del protocolo */}

@@ -59,7 +59,7 @@ export default function FinanciamientoEmpresarialPage() {
             La consulta inicia con información sobre la actividad económica y el destino del financiamiento. El equipo evalúa la capacidad de pago y, cuando corresponda, la viabilidad de una garantía inmobiliaria.
           </p>
           <p className="text-neutral-700 leading-relaxed">
-            El monto mínimo evaluable publicado es de {siteConfig.financing.minAmountFormatted}. El monto final, plazo, tasas y gastos se definen en la propuesta y documentación de cada operación.
+            El monto, plazo, tasas y gastos se definen en la propuesta y documentación de cada operación, tras evaluar el caso.
           </p>
         </section>
 

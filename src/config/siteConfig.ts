@@ -7,6 +7,8 @@
 export const siteConfig = {
   name: "BREICORP CAPITAL",
   legalEntity: "BREICORP E.I.R.L.",
+  ruc: "20615859312",
+  address: "Av. Tito Jaime 642, Tingo María, Huánuco, Perú",
   tagline: "El capital que necesitas, con el respaldo de tu propiedad.",
   description:
     "Soluciones de financiamiento y oportunidades de inversión con respaldo inmobiliario en Perú, sujetas a evaluación.",
@@ -21,8 +23,6 @@ export const siteConfig = {
 
   // Parámetros de financiamiento
   financing: {
-    minAmount: 20000,
-    minAmountFormatted: "S/ 20,000",
     maxAmountText: "Determinado mediante evaluación",
     termText: "Sujeto a evaluación y formalización",
     guaranteeText: "Inmueble inscrito en SUNARP a nombre del solicitante",

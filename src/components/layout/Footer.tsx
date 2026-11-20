@@ -28,6 +28,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">
               Línea de negocio de <strong className="text-white">BREICORP E.I.R.L.</strong> orientada a la intermediación y gestión de operaciones de financiamiento con garantía hipotecaria entre solicitantes e inversionistas privados.
             </p>
+            <p className="text-xs text-neutral-400">RUC {siteConfig.ruc} · {siteConfig.address}</p>
 
             <div className="space-y-3 pt-2 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
@@ -216,7 +217,7 @@ export default function Footer() {
             . Todos los derechos reservados.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
             <Link
               href="/politica-de-privacidad"
               className="hover:text-white transition-colors"
@@ -230,6 +231,9 @@ export default function Footer() {
             >
               Términos y condiciones
             </Link>
+            <Link href="/politica-de-cookies" className="hover:text-white transition-colors">Política de cookies</Link>
+            <Link href="/politica-de-pagos-y-reembolsos" className="hover:text-white transition-colors">Pagos y reembolsos</Link>
+            <a href="https://breicorpperu.breicorp.pe/reclamos" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Libro de reclamaciones</a>
           </div>
         </div>
       </div>

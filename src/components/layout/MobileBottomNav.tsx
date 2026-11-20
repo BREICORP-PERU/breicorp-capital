@@ -76,8 +76,8 @@ export default function MobileBottomNav() {
           onClick={(e) => handleNavClick("inicio", e)}
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isInicioActive
-              ? "text-[#EE3C06]"
-              : "text-neutral-400 hover:text-neutral-700"
+              ? "text-[#B83208]"
+              : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isInicioActive ? "page" : undefined}
         >
@@ -105,8 +105,8 @@ export default function MobileBottomNav() {
           onClick={(e) => handleNavClick("soluciones", e)}
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isCreditosActive
-              ? "text-[#EE3C06]"
-              : "text-neutral-400 hover:text-neutral-700"
+              ? "text-[#B83208]"
+              : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isCreditosActive ? "page" : undefined}
         >
@@ -133,8 +133,8 @@ export default function MobileBottomNav() {
           href="/inversionistas"
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isInvertirActive
-              ? "text-[#EE3C06]"
-              : "text-neutral-400 hover:text-neutral-700"
+              ? "text-[#B83208]"
+              : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isInvertirActive ? "page" : undefined}
         >

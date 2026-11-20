@@ -10,9 +10,9 @@ export default function FaqSection() {
   const faqData: AccordionItemData[] = [
     {
       id: "faq-1",
-      question: "¿Cuál es el monto mínimo que puedo solicitar?",
+      question: "¿Qué monto puedo solicitar?",
       answer:
-        "El monto mínimo evaluable es desde S/ 20,000. El importe final dependerá de la capacidad de pago demostrable y de la tasación del inmueble ofrecido.",
+        "El monto se determina tras evaluar la capacidad de pago y, cuando corresponda, la valoración del inmueble ofrecido.",
     },
     {
       id: "faq-2",
@@ -30,13 +30,13 @@ export default function FaqSection() {
       id: "faq-4",
       question: "¿Cuánto tiempo toma la respuesta de evaluación?",
       answer:
-        "El plazo de respuesta preliminar toma entre 48 a 72 horas hábiles tras recibir los datos y la documentación básica solicitada de la propiedad.",
+        "El plazo depende de la información recibida y de la evaluación de cada caso. Nuestro equipo te indicará los siguientes pasos al atender tu consulta.",
     },
     {
       id: "faq-5",
       question: "¿Cómo se formaliza y garantiza la operación?",
       answer:
-        "Toda operación se formaliza mediante contrato con garantía por Escritura Pública ante Notario Público colegiado, con total validez legal y formalidad.",
+        "Si una operación avanza, sus condiciones y garantías se documentan en los instrumentos contractuales y notariales que correspondan. La consulta inicial no garantiza su aprobación.",
     },
   ];
 

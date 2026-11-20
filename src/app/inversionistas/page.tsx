@@ -57,7 +57,7 @@ export default function InversionistasPage() {
       icon: Building,
       title: "Garantía Directa en SUNARP",
       description:
-        "La hipoteca se constituye por Escritura Pública ante Notario y se inscribe en Registros Públicos a favor del inversionista.",
+        "Si la operación contempla una hipoteca, su constitución e inscripción se documentan conforme a los acuerdos de las partes.",
     },
     {
       icon: FileCheck2,
@@ -101,13 +101,13 @@ export default function InversionistasPage() {
       id: "inv-faq-1",
       question: "¿A nombre de quién se inscribe la garantía hipotecaria?",
       answer:
-        "La hipoteca se eleva a Escritura Pública y se inscribe en SUNARP a favor directo del inversionista, otorgando un respaldo real e individual sobre el bien inmueble.",
+        "La titularidad, alcance e inscripción de cualquier garantía se definen en los documentos de cada operación. Solicita revisar dichos documentos antes de decidir participar.",
     },
     {
       id: "inv-faq-2",
       question: "¿Qué tipo de inmuebles respaldan las operaciones?",
       answer:
-        "Se evalúan exclusivamente bienes raíces con partida registral independizada (casas, locales, terrenos urbanos) con estudio de títulos previo.",
+        "Se pueden evaluar inmuebles con partida registral. El tipo de bien aceptable y la revisión de títulos dependen de cada operación.",
     },
     {
       id: "inv-faq-3",
@@ -119,7 +119,7 @@ export default function InversionistasPage() {
       id: "inv-faq-4",
       question: "¿Cómo comienzo a formar parte de la red de inversionistas?",
       answer:
-        "Completa el formulario de contacto para que nuestro equipo directivo coordine una reunión informativa y te presente las operaciones disponibles.",
+        "Completa el formulario para preparar una consulta por WhatsApp. El equipo podrá responderte y explicar el proceso de evaluación.",
     },
   ];
 
@@ -282,7 +282,7 @@ export default function InversionistasPage() {
           <SectionHeading
             kicker="Contacto Privado"
             title="SOLICITAR INFORMACIÓN PARA INVERTIR"
-            description="Completa tus datos y genera tu consulta directamente en WhatsApp para conversar con nuestro equipo directivo."
+            description="Completa tus datos y prepara una consulta por WhatsApp para que el equipo pueda atenderte."
             align="center"
             className="mb-10"
           />

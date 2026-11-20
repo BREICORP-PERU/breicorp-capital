@@ -57,9 +57,9 @@ export default function Header() {
                   href={item.href}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isInvestors
-                      ? "text-[#C6A15B] font-semibold hover:text-[#B5904A] hover:bg-[#FAF6ED]"
+                      ? "text-[#8F6B25] font-semibold hover:text-[#72551B] hover:bg-[#FAF6ED]"
                       : isActive
-                      ? "text-[#EE3C06] font-semibold"
+                      ? "text-[#B83208] font-semibold"
                       : "text-neutral-700 hover:text-[#111111] hover:bg-neutral-50"
                   }`}
                 >
@@ -133,8 +133,8 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
                   item.href === "/inversionistas"
-                    ? "text-[#C6A15B] font-semibold bg-[#FAF6ED]"
-                    : "text-neutral-800 hover:bg-neutral-50 hover:text-[#EE3C06]"
+                    ? "text-[#8F6B25] font-semibold bg-[#FAF6ED]"
+                    : "text-neutral-800 hover:bg-neutral-50 hover:text-[#B83208]"
                 }`}
               >
                 {item.name}

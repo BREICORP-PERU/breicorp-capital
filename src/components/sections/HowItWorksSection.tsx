@@ -23,23 +23,23 @@ export default function HowItWorksSection() {
       number: "01",
       title: "CONTACTO & PRE-CALIFICACIÓN",
       subtitle: "Respuesta preliminar ágil",
-      time: "En minutos vía WhatsApp",
+      time: "Consulta inicial por WhatsApp",
       description:
-        "Nos compartes la información básica de tu inmueble (partida registral) y el monto requerido. Verificamos la viabilidad preliminar sin costo alguno.",
+        "Nos cuentas qué financiamiento buscas. El equipo te indicará qué información necesita para revisar la viabilidad preliminar de tu caso.",
       icon: MessageSquareText,
       tag: "Paso Inicial",
-      metrics: ["Sin cobros por adelantado", "Atención directa personalizada"],
+      metrics: ["Consulta inicial", "Atención personalizada"],
     },
     {
       number: "02",
       title: "EVALUACIÓN & TASACIÓN TÉCNICA",
       subtitle: "Análisis jurídico e inmobiliario",
-      time: "48 a 72 horas hábiles",
+      time: "Plazo según cada caso",
       description:
-        "Revisamos los títulos en SUNARP, comprobamos la ausencia de impedimentos legales y tasamos el valor comercial real del bien para estructurar la propuesta.",
+        "Se revisan los títulos registrales y, cuando corresponda, la situación legal y el valor comercial del inmueble antes de estructurar una propuesta.",
       icon: SearchCheck,
       tag: "Fase Técnica",
-      metrics: ["Estudio de títulos SUNARP", "Tasación comercial objetiva"],
+      metrics: ["Revisión registral", "Valoración según la operación"],
     },
     {
       number: "03",
@@ -47,10 +47,10 @@ export default function HowItWorksSection() {
       subtitle: "Formalización notarial con validez legal",
       time: "Firma notarial",
       description:
-        "Suscripción del contrato de mutuo con garantía hipotecaria ante Notario Público colegiado, ingreso registral y desembolso del financiamiento acordado.",
+        "Si ambas partes aceptan las condiciones y se cumplen los requisitos, se formalizan los instrumentos contractuales y notariales aplicables antes del desembolso acordado.",
       icon: FileSignature,
       tag: "Cierre Formal",
-      metrics: ["Escritura Pública Notarial", "Garantía inscrita en SUNARP"],
+      metrics: ["Documentación contractual", "Inscripción cuando corresponda"],
     },
   ];
 
@@ -122,9 +122,18 @@ export default function HowItWorksSection() {
             return (
               <div
                 key={item.number}
+                role="button"
+                tabIndex={0}
                 onClick={() => setActiveStep(index)}
-                onMouseEnter={() => setActiveStep(index)}
-                className={`group relative p-7 sm:p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between cursor-pointer border ${
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setActiveStep(index);
+                  }
+                }}
+                aria-pressed={isSelected}
+                aria-label={`Ver detalles de ${item.title.toLowerCase()}`}
+                className={`group relative p-7 sm:p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between cursor-pointer border text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EE3C06] ${
                   isSelected
                     ? "glass-dark border-[#EE3C06]/80 shadow-[0_12px_40px_rgba(238,60,6,0.15)] ring-1 ring-[#EE3C06]/30 -translate-y-1.5"
                     : "glass-dark-card border-white/10 hover:border-white/20 hover:bg-[#18181F]/70"

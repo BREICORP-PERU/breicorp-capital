@@ -52,7 +52,7 @@ export default function InvestorForm() {
     if (!Number.isSafeInteger(amount) || amount <= 0) {
       nextErrors.investmentAmount = "Ingresa un monto aproximado mayor a cero.";
     }
-    if (!consent) nextErrors.consent = "Debes autorizar el tratamiento de datos y el contacto.";
+    if (!consent) nextErrors.consent = "Acepta el uso de tus datos para esta consulta antes de continuar.";
 
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) return;
@@ -112,21 +112,21 @@ export default function InvestorForm() {
               aria-describedby={errors.consent ? "inv_consent_error" : undefined}
               className="mt-1 h-5 w-5 shrink-0 accent-[#C6A15B]"
             />
-            <span>Autorizo el tratamiento de mis datos personales para preparar esta consulta y, si envío el mensaje, para que BREICORP CAPITAL me contacte sobre oportunidades de inversión. *</span>
+            <span>Autorizo a BREICORP E.I.R.L. a usar los datos que facilito para preparar esta consulta y responderme si envío el mensaje por WhatsApp. He leído la <Link href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer" className="font-semibold underline">política de privacidad</Link>. *</span>
           </label>
           {errors.consent && <p id="inv_consent_error" className="text-xs text-red-600">{errors.consent}</p>}
         </div>
         <p className="text-xs text-neutral-600">
           Al continuar, el texto se incluirá en un enlace a WhatsApp y podrá llegar a ese servicio aunque no pulses Enviar. Podrás revisarlo antes de enviarlo a BREICORP CAPITAL. Consulta nuestra{" "}
-          <Link href="/politica-de-privacidad" target="_blank" className="text-[#A77B30] font-semibold underline">Política de Privacidad</Link>.
+          <Link href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer" className="text-[#8F6B25] font-semibold underline">Política de Privacidad</Link>.
         </p>
         <Button type="submit" variant="gold" size="lg" fullWidth icon={<WhatsAppIcon className="w-6 h-6 rounded-full bg-white p-0.5 text-[#25D366]" />} iconPosition="left" className="min-h-12">
-          QUIERO RECIBIR INFORMACIÓN
+          Abrir consulta en WhatsApp
         </Button>
         {preparedUrl && (
           <div role="status" className="p-4 rounded-xl bg-neutral-50 border border-neutral-200 text-sm text-neutral-700">
             WhatsApp no envía el mensaje automáticamente. Revísalo y pulsa Enviar allí. Si no se abrió,{" "}
-            <a href={preparedUrl} target="_blank" rel="noopener noreferrer" className="text-[#A77B30] font-semibold underline">abre tu consulta aquí</a>.
+            <a href={preparedUrl} target="_blank" rel="noopener noreferrer" className="text-[#8F6B25] font-semibold underline">abre tu consulta aquí</a>.
           </div>
         )}
       </form>

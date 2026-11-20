@@ -148,7 +148,7 @@ export default function HeroSection() {
                     Montos
                   </div>
                   <div className="text-sm font-bold text-white">
-                    Desde S/ 20,000
+                    Según evaluación
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function HeroSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 aspect-[4/4.8] bg-neutral-900 group">
                 <Image
                   src="/images/hero-propiedad.jpg"
-                  alt="Inmueble con garantía hipotecaria formal en Perú"
+                  alt="Fotografía ilustrativa de una propiedad"
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
@@ -249,7 +249,7 @@ export default function HeroSection() {
                   <div className="pt-1 flex items-center justify-between text-[11px] text-neutral-300">
                     <span className="flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5 text-[#EE3C06]" />
-                      Evaluación inicial: 48-72h
+                      Plazo según evaluación
                     </span>
                     <a
                       href={whatsappCreditUrl}
@@ -257,7 +257,7 @@ export default function HeroSection() {
                       rel="noopener noreferrer"
                       className="text-[#EE3C06] font-bold hover:underline inline-flex items-center gap-0.5"
                     >
-                      Consultar <ArrowUpRight className="w-3 h-3" />
+                      Consultar por WhatsApp <ArrowUpRight className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
