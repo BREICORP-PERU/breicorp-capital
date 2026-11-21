@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/prestamos-garantia-hipotecaria` },
     { url: `${baseUrl}/financiamiento-empresarial` },
     { url: `${baseUrl}/inversionistas` },
+    { url: `${baseUrl}/prestamos-garantia-hipotecaria-tingo-maria` },
     { url: `${baseUrl}/guias` },
     ...guideUrls,
   ];

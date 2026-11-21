@@ -107,7 +107,13 @@ export default function RootLayout({
           streetAddress: "Av. Tito Jaime 642",
           addressLocality: "Tingo María",
           addressRegion: "Huánuco",
+          postalCode: "10131",
           addressCountry: "PE",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: -9.2953,
+          longitude: -75.9972,
         },
         areaServed: [
           {

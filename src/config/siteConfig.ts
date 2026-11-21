@@ -9,6 +9,11 @@ export const siteConfig = {
   legalEntity: "BREICORP E.I.R.L.",
   ruc: "20615859312",
   address: "Av. Tito Jaime 642, Tingo María, Huánuco, Perú",
+  postalCode: "10131",
+  geo: {
+    latitude: -9.2953,
+    longitude: -75.9972,
+  },
   tagline: "El capital que necesitas, con el respaldo de tu propiedad.",
   description:
     "Soluciones de financiamiento y oportunidades de inversión con respaldo inmobiliario en Perú, sujetas a evaluación.",
