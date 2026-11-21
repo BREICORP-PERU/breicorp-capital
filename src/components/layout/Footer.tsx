@@ -126,6 +126,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/guias"
+                  className="text-neutral-300 hover:text-[#EE3C06] font-medium transition-colors flex items-center gap-1.5"
+                >
+                  <span className="text-[#EE3C06]">›</span> Guías Financieras
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#preguntas-frecuentes"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >

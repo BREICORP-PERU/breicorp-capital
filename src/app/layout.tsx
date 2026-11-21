@@ -91,13 +91,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "FinancialService"],
         "@id": `${siteConfig.domain}/#organization`,
         name: siteConfig.name,
         legalName: siteConfig.legalEntity,
         taxID: siteConfig.ruc,
         url: siteConfig.domain,
         logo: `${siteConfig.domain}/LOGOTIPO.webp`,
+        image: `${siteConfig.domain}/og-breicorp-capital.png`,
         description: siteConfig.description,
         email: siteConfig.contact.email,
         telephone: siteConfig.contact.whatsappDisplay,
@@ -108,6 +109,16 @@ export default function RootLayout({
           addressRegion: "Huánuco",
           addressCountry: "PE",
         },
+        areaServed: [
+          {
+            "@type": "Country",
+            name: "Perú",
+          },
+          {
+            "@type": "AdministrativeArea",
+            name: "Huánuco",
+          },
+        ],
       },
       {
         "@type": "WebSite",

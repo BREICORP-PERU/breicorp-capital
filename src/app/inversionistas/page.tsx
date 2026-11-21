@@ -16,6 +16,7 @@ import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Button from "@/components/ui/Button";
 import InvestorForm from "./InvestorForm";
+import FAQStructuredData from "@/components/seo/FAQStructuredData";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export const metadata: Metadata = {
@@ -125,6 +126,7 @@ export default function InversionistasPage() {
 
   return (
     <div className="pt-24 pb-12 bg-white">
+      <FAQStructuredData items={investorFaqs} />
       {/* 1. Barra de retorno y migas de pan */}
       <div className="border-b border-neutral-200 bg-neutral-50 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

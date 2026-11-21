@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import FAQStructuredData from "@/components/seo/FAQStructuredData";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function FaqSection() {
@@ -47,6 +48,7 @@ export default function FaqSection() {
       id="preguntas-frecuentes"
       className="py-24 lg:py-32 bg-[#F8F9FB] border-t border-neutral-200/80 scroll-mt-20 relative overflow-hidden"
     >
+      <FAQStructuredData items={faqData} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Dudas Habituales"

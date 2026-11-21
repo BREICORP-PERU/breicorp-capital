@@ -51,6 +51,7 @@ export const siteConfig = {
     { name: "Inicio", href: "/#inicio" },
     { name: "Soluciones", href: "/#soluciones" },
     { name: "¿Cómo funciona?", href: "/#como-funciona" },
+    { name: "Guías", href: "/guias" },
     { name: "Quiénes somos", href: "/#quienes-somos" },
     { name: "Inversionistas", href: "/inversionistas" },
     { name: "Contacto", href: "/#contacto" },
