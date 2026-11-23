@@ -3,8 +3,8 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 
-const STORAGE_KEY = "breicorp_cookie_consent_v1";
-const GTM_ID = "GTM-NP5TJRNR";
+const STORAGE_KEY = "breicorp_cookie_consent_v2";
+const GA4_ID = "G-XBBZ6QTH8R";
 const SETTINGS_EVENT = "breicorp:open-cookie-settings";
 const CHOICE_EVENT = "breicorp:cookie-choice-changed";
 
@@ -60,18 +60,18 @@ function setConsentDefaults() {
   });
 }
 
-function loadTagManager() {
-  if (document.getElementById("breicorp-google-tag-manager")) return;
+function loadGoogleAnalytics() {
+  if (document.getElementById("breicorp-google-analytics")) return;
 
   setConsentDefaults();
   consentCommand("consent", "update", { analytics_storage: "granted" });
-  const googleWindow = window as GoogleWindow;
-  googleWindow.dataLayer?.push({ "gtm.start": Date.now(), event: "gtm.js" });
+  consentCommand("js", new Date());
+  consentCommand("config", GA4_ID);
 
   const script = document.createElement("script");
-  script.id = "breicorp-google-tag-manager";
+  script.id = "breicorp-google-analytics";
   script.async = true;
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
   document.head.appendChild(script);
 }
 
@@ -90,8 +90,8 @@ export default function CookieConsent() {
 
   useEffect(() => {
     if (choice === "accepted") {
-      loadTagManager();
-    } else if (choice === "rejected" && document.getElementById("breicorp-google-tag-manager")) {
+      loadGoogleAnalytics();
+    } else if (choice === "rejected" && document.getElementById("breicorp-google-analytics")) {
       // También aplica una retirada realizada desde otra pestaña.
       consentCommand("consent", "update", { analytics_storage: "denied" });
       window.location.reload();
@@ -109,8 +109,8 @@ export default function CookieConsent() {
     window.dispatchEvent(new Event(CHOICE_EVENT));
     setOpen(false);
     if (nextChoice === "accepted") {
-      loadTagManager();
-    } else if (document.getElementById("breicorp-google-tag-manager")) {
+      loadGoogleAnalytics();
+    } else if (document.getElementById("breicorp-google-analytics")) {
       consentCommand("consent", "update", { analytics_storage: "denied" });
       window.location.reload();
     }
@@ -128,7 +128,7 @@ export default function CookieConsent() {
     >
       <h2 id="cookie-consent-title" className="text-lg font-bold">Medición del sitio</h2>
       <p id="cookie-consent-description" className="mt-2 text-sm leading-relaxed text-neutral-700">
-        Podemos cargar Google Tag Manager para medir el uso del sitio. La medición es opcional y permanecerá desactivada hasta que la aceptes. Puedes cambiar tu decisión cuando quieras. Lee la{" "}
+        Podemos cargar Google Analytics para medir el uso del sitio. La medición es opcional y permanecerá desactivada hasta que la aceptes. Puedes cambiar tu decisión cuando quieras. Lee la{" "}
         <Link href="/politica-de-cookies" className="font-semibold underline underline-offset-2">política de cookies</Link>.
       </p>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-end">
