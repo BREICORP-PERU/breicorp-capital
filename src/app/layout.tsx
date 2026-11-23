@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
+import CookieConsent from "@/components/analytics/CookieConsent";
 import { siteConfig } from "@/config/siteConfig";
 import "./globals.css";
 
@@ -162,6 +163,8 @@ export default function RootLayout({
 
         {/* Barra de navegación inferior exclusiva para móviles */}
         <MobileBottomNav />
+
+        <CookieConsent />
 
         {/* Pie de página institucional */}
         <Footer />

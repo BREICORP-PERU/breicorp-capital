@@ -12,6 +12,7 @@ import {
 import BrandLogo from "@/components/ui/BrandLogo";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import CookieSettingsButton from "@/components/analytics/CookieSettingsButton";
 
 export default function Footer() {
   const currentYear = 2026;
@@ -245,6 +246,7 @@ export default function Footer() {
               Términos y condiciones
             </Link>
             <Link href="/politica-de-cookies" className="hover:text-white transition-colors">Política de cookies</Link>
+            <CookieSettingsButton className="min-h-11 text-neutral-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" />
             <Link href="/politica-de-pagos-y-reembolsos" className="hover:text-white transition-colors">Pagos y reembolsos</Link>
             <a href="https://breicorpperu.breicorp.pe/reclamos" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Libro de reclamaciones</a>
           </div>
