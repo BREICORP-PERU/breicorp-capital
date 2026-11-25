@@ -185,7 +185,7 @@ export default function InversionistasPage() {
               description="Completa tus datos para preparar una consulta por WhatsApp."
               align="left"
             />
-            <EditorialImage photo={photos.property} className="mt-5" />
+            <EditorialImage photo={photos.financialAdvice} className="mt-5" />
           </div>
           <InvestorForm />
         </div>

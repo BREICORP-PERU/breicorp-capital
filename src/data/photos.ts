@@ -7,6 +7,7 @@ export const photos = {
   city: { src: "/images/garantia-hipotecaria.jpg", alt: "Edificios comerciales vistos desde la calle" },
   business: { src: "/images/credito-mype.jpg", alt: "Un comerciante en su taller de cerámica" },
   investment: { src: "/images/oportunidades-inversion.jpg", alt: "Una persona de traje frente a una escalera" },
+  financialAdvice: { src: "/images/Asesoría-financiera.webp", alt: "Dos personas revisan documentos de una inversión inmobiliaria" },
   conversation: { src: "/images/conversacion.jpg", alt: "Personas que revisan gráficos y documentos en una mesa" },
   documents: { src: "/images/formalizacion.jpg", alt: "Una persona firma un documento en un escritorio" },
 } as const;
