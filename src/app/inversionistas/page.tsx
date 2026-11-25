@@ -1,16 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ShieldCheck,
-  Building,
-  Scale,
-  FileCheck2,
-  ArrowLeft,
-  ArrowRight,
-  Briefcase,
-  AlertTriangle,
-} from "lucide-react";
+import { AlertTriangle, ArrowUpRight } from "lucide-react";
+import EditorialImage from "@/components/ui/EditorialImage";
+import { photos } from "@/data/photos";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion, { AccordionItemData } from "@/components/ui/Accordion";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
@@ -55,19 +48,16 @@ export default function InversionistasPage() {
 
   const modelHighlights = [
     {
-      icon: Building,
       title: "Garantía Directa en SUNARP",
       description:
         "Si la operación contempla una hipoteca, su constitución e inscripción se documentan conforme a los acuerdos de las partes.",
     },
     {
-      icon: FileCheck2,
       title: "Pre-evaluación Integral",
       description:
         "Analizamos la capacidad de pago del solicitante y la tasación comercial del inmueble para respaldar la operación.",
     },
     {
-      icon: Briefcase,
       title: "Administración Transparente",
       description:
         "Seguimiento documental, coordinación de cronogramas y liquidaciones según los términos convenidos.",
@@ -125,188 +115,91 @@ export default function InversionistasPage() {
   ];
 
   return (
-    <div className="pt-24 pb-12 bg-white">
+    <>
       <FAQStructuredData items={investorFaqs} />
-      {/* 1. Barra de retorno y migas de pan */}
-      <div className="border-b border-neutral-200 bg-neutral-50 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-xs text-neutral-500">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 hover:text-[#111111] transition-colors"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Volver a Inicio</span>
-            </Link>
-            <span>/</span>
-            <span className="text-[#C6A15B] font-semibold">Red de Inversionistas</span>
+      <nav className="breadcrumb" aria-label="Ruta de navegación">
+        <div className="site-shell"><Link href="/">Inicio</Link><span aria-hidden="true"> / </span>Inversionistas</div>
+      </nav>
+
+      <section className="site-shell inner-hero editorial-split">
+        <div className="section-intro section-intro-inline">
+          <h1 className="page-headline">Inversión con respaldo inmobiliario</h1>
+          <p>Conoce cómo participar en operaciones privadas de financiamiento respaldadas por inmuebles e instrumentadas según las condiciones de cada operación.</p>
+          <div className="action-row">
+            <Button href="#formulario" size="lg" icon={<ArrowUpRight className="size-4" />}>Completar consulta</Button>
+            <Button href={whatsappUrl} isExternal variant="outline" size="lg" icon={<WhatsAppIcon className="size-5" />} iconPosition="left">
+              Consultar por WhatsApp
+            </Button>
           </div>
         </div>
-      </div>
+        <EditorialImage photo={photos.investment} preload />
+      </section>
 
-      {/* 1. Hero de Inversión */}
-      <section className="relative py-14 lg:py-20 bg-[#111111] text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C6A15B]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#C6A15B] text-xs font-semibold uppercase tracking-wider border border-[#C6A15B]/30">
-              <span className="w-2 h-2 rounded-full bg-[#C6A15B]" />
-              Participación Privada Estructurada
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight font-sans">
-              PARTICIPA EN FINANCIAMIENTO CON{" "}
-              <span className="text-[#C6A15B]">RESPALDO INMOBILIARIO</span>.
-            </h1>
-
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
-              Conoce nuestro modelo para participar en operaciones de financiamiento formalmente respaldadas por hipotecas inscritas en SUNARP.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-              <Button
-                href="#formulario"
-                variant="gold"
-                size="lg"
-                icon={<ArrowRight className="w-4 h-4" />}
-                className="font-bold tracking-wide"
-              >
-                COMPLETAR CONSULTA
-              </Button>
-
-              <Button
-                href={whatsappUrl}
-                isExternal
-                variant="outline-light"
-                size="lg"
-                icon={<WhatsAppIcon className="w-4 h-4 text-[#25D366]" />}
-                iconPosition="left"
-              >
-                CONSULTAR POR WHATSAPP
-              </Button>
-            </div>
-
-            <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-neutral-400">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
-                <span>Garantía hipotecaria en SUNARP</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Scale className="w-4 h-4 text-[#C6A15B]" />
-                <span>Escritura Pública Notarial</span>
-              </div>
-            </div>
+      <section className="editorial-section tone-white" aria-labelledby="modelo-inversion">
+        <div className="site-shell editorial-split">
+          <EditorialImage photo={photos.conversation} />
+          <div>
+            <SectionHeading id="modelo-inversion" title="Cómo participar" align="left" />
+            <dl className="mt-5 divide-y divide-[#D9CEC2]">
+              {modelHighlights.map((item) => (
+                <div key={item.title} className="py-4">
+                  <dt className="text-lg font-semibold">{item.title}</dt>
+                  <dd className="mt-1 text-[var(--ink-muted)]">{item.description}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* 2. Breve explicación del modelo de participación */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Nuestro Modelo"
-            title="¿CÓMO PARTICIPAR EN LAS OPERACIONES?"
-            description="Una estructura formal que prioriza la seguridad jurídica y el análisis técnico previo de cada caso."
-            align="center"
-            className="mb-12"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {modelHighlights.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="p-7 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-neutral-300 transition-colors space-y-3"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-[#C6A15B]/15 text-[#C6A15B] flex items-center justify-center">
-                    <Icon className="w-6 h-6" />
+      <section className="editorial-section" aria-labelledby="condiciones-inversion">
+        <div className="site-shell">
+          <div className="editorial-split">
+            <div>
+              <SectionHeading id="condiciones-inversion" title="Condiciones de las operaciones" align="left" />
+              <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+                {generalFeatures.map((item) => (
+                  <div key={item.label} className="border-t border-[#D9CEC2] pt-3">
+                    <dt className="text-sm text-[var(--ink-muted)]">{item.label}</dt>
+                    <dd className="mt-1 text-lg font-semibold">{item.value}</dd>
+                    <dd className="mt-1 text-sm text-[var(--ink-muted)]">{item.detail}</dd>
                   </div>
-                  <h3 className="text-lg font-bold text-[#111111]">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-neutral-600 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Características generales de las operaciones */}
-      <section className="py-16 lg:py-20 bg-[#F5F5F5] border-y border-neutral-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Condiciones Operativas"
-            title="CARACTERÍSTICAS DE LAS OPERACIONES"
-            description="Parámetros fundamentales de estructuración legal y financiera."
-            align="center"
-            className="mb-12"
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {generalFeatures.map((feat) => (
-              <div
-                key={feat.label}
-                className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-subtle space-y-2"
-              >
-                <div className="text-[11px] uppercase tracking-wider text-neutral-400 font-semibold">
-                  {feat.label}
-                </div>
-                <div className="text-xl font-bold text-[#111111]">
-                  {feat.value}
-                </div>
-                <div className="text-xs text-neutral-600 pt-1">
-                  {feat.detail}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Aviso preventivo obligatorio */}
-          <div className="mt-10 p-5 rounded-2xl bg-white border-l-4 border-l-[#C6A15B] border-neutral-200 text-xs sm:text-sm text-neutral-700 space-y-1.5 shadow-sm max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 font-bold text-[#111111] uppercase tracking-wider text-xs">
-              <AlertTriangle className="w-4 h-4 text-[#C6A15B]" />
-              Aviso de Cumplimiento Normativo
+                ))}
+              </dl>
             </div>
-            <p>
-              BREICORP CAPITAL no publica rentabilidades fijas ni garantiza retornos. Las condiciones de cada operación se acuerdan y documentan contractualmente en Escritura Pública según la naturaleza de cada financiamiento.
-            </p>
+            <EditorialImage photo={photos.documents} />
           </div>
+          <aside className="mt-8 rounded-xl border border-[#97897A] bg-white p-5">
+            <h3 className="mb-2 flex items-center gap-2 font-semibold"><AlertTriangle className="size-5" aria-hidden="true" /> Riesgos y condiciones</h3>
+            <p>BREICORP CAPITAL no publica rentabilidades fijas ni garantiza retornos. Las condiciones de cada operación se acuerdan y documentan contractualmente en Escritura Pública según la naturaleza de cada financiamiento.</p>
+          </aside>
         </div>
       </section>
 
-      {/* 4. Formulario visible de inversionistas */}
-      <section id="formulario" className="py-16 lg:py-20 bg-white scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Contacto Privado"
-            title="SOLICITAR INFORMACIÓN PARA INVERTIR"
-            description="Completa tus datos y prepara una consulta por WhatsApp para que el equipo pueda atenderte."
-            align="center"
-            className="mb-10"
-          />
-
+      <section id="formulario" className="editorial-section tone-sand" aria-labelledby="consulta-inversion">
+        <div className="site-shell editorial-split items-start">
+          <div>
+            <SectionHeading
+              id="consulta-inversion"
+              title="Solicitar información para invertir"
+              description="Completa tus datos para preparar una consulta por WhatsApp."
+              align="left"
+            />
+            <EditorialImage photo={photos.property} className="mt-5" />
+          </div>
           <InvestorForm />
         </div>
       </section>
 
-      {/* 5. Preguntas frecuentes breves */}
-      <section className="py-16 lg:py-20 bg-[#F5F5F5] border-t border-neutral-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            kicker="Preguntas para Inversionistas"
-            title="DUDAS HABITUALES SOBRE PARTICIPACIÓN"
-            description="Aspectos clave sobre formalidad notarial, garantías y tiempos."
-            align="center"
-            className="mb-10"
-          />
-
+      <section className="editorial-section" aria-labelledby="faq-inversion">
+        <div className="site-shell editorial-split items-start">
+          <div>
+            <SectionHeading id="faq-inversion" title="Preguntas de inversionistas" align="left" />
+            <EditorialImage photo={photos.city} className="mt-5" />
+          </div>
           <Accordion items={investorFaqs} defaultOpenId="inv-faq-1" />
         </div>
       </section>
-    </div>
+    </>
   );
 }

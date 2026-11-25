@@ -18,7 +18,7 @@ export default function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer className="bg-[#111111] text-neutral-300 border-t border-neutral-800">
+    <footer className="bg-brand-black text-neutral-300 border-t border-neutral-800 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
       {/* Sección principal del Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
@@ -33,11 +33,11 @@ export default function Footer() {
 
             <div className="space-y-3 pt-2 text-xs text-neutral-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#EE3C06] shrink-0" />
+                <MapPin className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>Atención en {siteConfig.locations.map((location) => location.city).join(" y ")}, Perú</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#C6A15B] shrink-0" />
+                <Clock className="w-4 h-4 text-brand-orange shrink-0" />
                 <span>{siteConfig.contact.schedule}</span>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
               >
                 <span className="text-neutral-400 group-hover:text-neutral-300">Conoce</span>
                 <strong className="text-white font-semibold">BREICORP E.I.R.L.</strong>
-                <ExternalLink className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#EE3C06] transition-colors shrink-0" />
+                <ExternalLink className="w-3.5 h-3.5 text-neutral-400 group-hover:text-brand-orange transition-colors shrink-0" />
               </a>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
                   href="/#inicio"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> Inicio
+                  <span className="text-brand-orange">›</span> Inicio
                 </Link>
               </li>
               <li>
@@ -80,22 +80,22 @@ export default function Footer() {
                   href="/#soluciones"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> Soluciones de crédito
+                  <span className="text-brand-orange">›</span> Soluciones de crédito
                 </Link>
               </li>
               <li>
                 <Link href="/prestamos-garantia-hipotecaria" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#EE3C06]">›</span> Préstamos con garantía hipotecaria
+                  <span className="text-brand-orange">›</span> Préstamos con garantía hipotecaria
                 </Link>
               </li>
               <li>
                 <Link href="/prestamos-garantia-hipotecaria-tingo-maria" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#EE3C06]">›</span> Tingo María (Leoncio Prado)
+                  <span className="text-brand-orange">›</span> Tingo María (Leoncio Prado)
                 </Link>
               </li>
               <li>
                 <Link href="/financiamiento-empresarial" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#EE3C06]">›</span> Financiamiento empresarial
+                  <span className="text-brand-orange">›</span> Financiamiento empresarial
                 </Link>
               </li>
               <li>
@@ -103,7 +103,7 @@ export default function Footer() {
                   href="/#como-funciona"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> ¿Cómo funciona?
+                  <span className="text-brand-orange">›</span> ¿Cómo funciona?
                 </Link>
               </li>
               <li>
@@ -111,7 +111,7 @@ export default function Footer() {
                   href="/#por-que-nosotros"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> ¿Por qué nosotros?
+                  <span className="text-brand-orange">›</span> ¿Por qué nosotros?
                 </Link>
               </li>
               <li>
@@ -119,13 +119,13 @@ export default function Footer() {
                   href="/#quienes-somos"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> Quiénes somos
+                  <span className="text-brand-orange">›</span> Quiénes somos
                 </Link>
               </li>
               <li>
                 <Link
                   href="/inversionistas"
-                  className="text-[#C6A15B] hover:text-[#B5904A] font-medium transition-colors flex items-center gap-1.5"
+                  className="text-brand-orange hover:text-[#B5904A] font-medium transition-colors flex items-center gap-1.5"
                 >
                   <ArrowRight className="w-3.5 h-3.5" /> Red de Inversionistas
                 </Link>
@@ -133,9 +133,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/guias"
-                  className="text-neutral-300 hover:text-[#EE3C06] font-medium transition-colors flex items-center gap-1.5"
+                  className="text-neutral-300 hover:text-brand-orange font-medium transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> Guías Financieras
+                  <span className="text-brand-orange">›</span> Guías Financieras
                 </Link>
               </li>
               <li>
@@ -143,7 +143,7 @@ export default function Footer() {
                   href="/#preguntas-frecuentes"
                   className="hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-[#EE3C06]">›</span> Preguntas frecuentes
+                  <span className="text-brand-orange">›</span> Preguntas frecuentes
                 </Link>
               </li>
             </ul>
@@ -183,7 +183,7 @@ export default function Footer() {
                 href={`mailto:${siteConfig.contact.email}`}
                 className="flex items-center gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#C6A15B] transition-colors group"
               >
-                <div className="w-8 h-8 rounded-md bg-[#C6A15B]/10 flex items-center justify-center text-[#C6A15B] group-hover:bg-[#C6A15B] group-hover:text-white transition-colors">
+                <div className="w-8 h-8 rounded-md bg-[#C6A15B]/10 flex items-center justify-center text-brand-orange group-hover:bg-[#C6A15B] group-hover:text-white transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -198,7 +198,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 pt-2 text-[11px] text-neutral-400">
-              <ShieldCheck className="w-4 h-4 text-[#C6A15B]" />
+              <ShieldCheck className="w-4 h-4 text-brand-orange" />
               <span>Garantías sujetas a evaluación y formalización contractual</span>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function Footer() {
         {/* Nota legal explícita y obligatoria */}
         <div className="bg-neutral-900/90 rounded-xl p-5 border border-neutral-800 text-xs leading-relaxed text-neutral-400 space-y-2">
           <div className="flex items-center gap-2 text-white font-semibold uppercase tracking-wider text-[11px]">
-            <FileCheck2 className="w-4 h-4 text-[#EE3C06]" />
+            <FileCheck2 className="w-4 h-4 text-brand-orange" />
             Aviso Legal e Institucional
           </div>
           <p>{siteConfig.legalDisclaimer}</p>
@@ -224,7 +224,7 @@ export default function Footer() {
               href="https://breicorp.com.pe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-medium hover:text-[#EE3C06] underline underline-offset-4 decoration-neutral-700 hover:decoration-[#EE3C06] transition-colors"
+              className="text-white font-medium hover:text-brand-orange underline underline-offset-4 decoration-neutral-700 hover:decoration-[#EE3C06] transition-colors"
             >
               BREICORP E.I.R.L.
             </a>

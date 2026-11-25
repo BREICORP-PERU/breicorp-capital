@@ -65,13 +65,13 @@ export default function InvestorForm() {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-xl border border-neutral-300 text-sm text-[#111111] bg-white focus:outline-none focus:border-[#C6A15B] focus:ring-2 focus:ring-amber-50";
+  const inputClass = "w-full px-4 py-3 rounded-xl border border-neutral-300 text-sm text-brand-black bg-white focus:outline-none focus:border-[#C6A15B] focus:ring-2 focus:ring-amber-50";
 
   return (
-    <div className="rounded-3xl bg-white border border-neutral-200 shadow-card p-6 sm:p-10">
+    <div className="rounded-2xl bg-white border border-[#D9CEC2] p-5 sm:p-8">
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
         <div className="space-y-1">
-          <h3 className="text-xl font-bold text-[#111111]">Prepara tu consulta</h3>
+          <h3 className="text-xl font-bold text-brand-black">Prepara tu consulta</h3>
           <p className="text-sm text-neutral-600">Los campos marcados con * son obligatorios.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -120,7 +120,7 @@ export default function InvestorForm() {
           Al continuar, el texto se incluirá en un enlace a WhatsApp y podrá llegar a ese servicio aunque no pulses Enviar. Podrás revisarlo antes de enviarlo a BREICORP CAPITAL. Consulta nuestra{" "}
           <Link href="/politica-de-privacidad" target="_blank" rel="noopener noreferrer" className="text-[#8F6B25] font-semibold underline">Política de Privacidad</Link>.
         </p>
-        <Button type="submit" variant="gold" size="lg" fullWidth icon={<WhatsAppIcon className="w-6 h-6 rounded-full bg-white p-0.5 text-[#25D366]" />} iconPosition="left" className="min-h-12">
+        <Button type="submit" size="lg" fullWidth icon={<WhatsAppIcon className="size-5" />} iconPosition="left" className="min-h-12">
           Abrir consulta en WhatsApp
         </Button>
         {preparedUrl && (

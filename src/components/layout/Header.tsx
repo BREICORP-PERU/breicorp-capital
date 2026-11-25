@@ -1,171 +1,76 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import BrandLogo from "@/components/ui/BrandLogo";
 import Button from "@/components/ui/Button";
-import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   const creditWhatsAppUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navItems = siteConfig.navLinks;
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-neutral-200/80 py-3"
-          : "bg-white/90 backdrop-blur-sm border-b border-neutral-100 py-4"
-      }`}
+      className="site-header"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && mobileMenuOpen) {
+          setMobileMenuOpen(false);
+          toggleRef.current?.focus();
+        }
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logotipo institucional */}
-          <div className="flex-shrink-0">
-            <BrandLogo size="md" />
-          </div>
-
-          {/* Menú de navegación escritorio */}
-          <nav
-            aria-label="Navegación principal"
-            className="hidden lg:flex items-center space-x-1 xl:space-x-2"
+      <div className="site-shell header-row">
+        <BrandLogo size="md" />
+        <nav aria-label="Navegación principal" className="header-desktop-nav">
+          {siteConfig.navLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={item.href === pathname ? "page" : undefined}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        <div className="header-actions">
+          <Button href={creditWhatsAppUrl} isExternal size="sm" icon={<ArrowUpRight className="size-4" />}>
+            Evaluación
+          </Button>
+          <button
+            ref={toggleRef}
+            type="button"
+            className="header-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú de navegación"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {navItems.map((item) => {
-              const isInvestors = item.href === "/inversionistas";
-              const isActive =
-                item.href === pathname ||
-                (isInvestors && pathname === "/inversionistas");
-
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                    isInvestors
-                      ? "text-[#8F6B25] font-semibold hover:text-[#72551B] hover:bg-[#FAF6ED]"
-                      : isActive
-                      ? "text-[#B83208] font-semibold"
-                      : "text-neutral-700 hover:text-[#111111] hover:bg-neutral-50"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Botones de acción escritorio */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={creditWhatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-neutral-700 hover:text-[#111111] transition-colors"
-              aria-label="Hablar por WhatsApp con un asesor"
-            >
-              <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
-              <span>{siteConfig.contact.whatsappDisplay}</span>
-            </a>
-
-            <Button
-              href={creditWhatsAppUrl}
-              isExternal
-              variant="primary"
-              size="md"
-              icon={<ArrowUpRight className="w-4 h-4" />}
-            >
-              SOLICITAR CRÉDITO
-            </Button>
-          </div>
-
-          {/* Botón rápido móvil */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <Button
-              href={creditWhatsAppUrl}
-              isExternal
-              variant="primary"
-              size="sm"
-              className="text-xs px-3 min-h-11"
-            >
-              CRÉDITO
-            </Button>
-
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-neutral-700 hover:text-[#111111] hover:bg-neutral-100 transition-colors cursor-pointer"
-              aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú de navegación"}
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
+            {mobileMenuOpen ? <X size={23} /> : <Menu size={23} />}
+          </button>
         </div>
       </div>
-
-      {/* Menú desplegable móvil */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-neutral-200 bg-white shadow-xl animate-fadeIn">
-          <div className="px-4 pt-4 pb-6 space-y-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
-                  item.href === "/inversionistas"
-                    ? "text-[#8F6B25] font-semibold bg-[#FAF6ED]"
-                    : "text-neutral-800 hover:bg-neutral-50 hover:text-[#B83208]"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-
-            <div className="pt-4 mt-2 border-t border-neutral-100 space-y-3">
-              <a
-                href={creditWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full min-h-11 inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#EE3C06] text-white text-sm font-semibold"
-              >
-                SOLICITAR INFORMACIÓN DE CRÉDITO
-              </a>
-
-              <a
-                href={creditWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-neutral-300 text-sm font-semibold text-neutral-800 hover:bg-neutral-50 transition-colors"
-              >
-                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
-                <span>WhatsApp: {siteConfig.contact.whatsappDisplay}</span>
-              </a>
-            </div>
-          </div>
+      <nav id="mobile-menu" aria-label="Menú móvil" className="header-mobile-nav" hidden={!mobileMenuOpen}>
+        <div className="site-shell">
+          {siteConfig.navLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMobileMenuOpen(false)}
+              aria-current={item.href === pathname ? "page" : undefined}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <a href={creditWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+            WhatsApp {siteConfig.contact.whatsappDisplay}
+          </a>
         </div>
-      )}
+      </nav>
     </header>
   );
 }
-

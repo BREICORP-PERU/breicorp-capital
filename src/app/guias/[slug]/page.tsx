@@ -1,3 +1,6 @@
+import EditorialImage from "@/components/ui/EditorialImage";
+import ReadingIndex from "@/components/ui/ReadingIndex";
+import GuideCard from "@/components/ui/GuideCard";
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -131,7 +134,7 @@ export default async function GuideDetailPage({ params }: Props) {
   const otherGuides = guides.filter((g) => g.slug !== guide.slug);
 
   return (
-    <article className="pt-24 pb-20 bg-white">
+    <article className="pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -141,7 +144,7 @@ export default async function GuideDetailPage({ params }: Props) {
       <FAQStructuredData items={guide.faqs} />
 
       {/* Migas de pan */}
-      <div className="border-b border-neutral-200 bg-neutral-50 py-3">
+      <div className="breadcrumb">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <nav
             aria-label="Ruta de navegación"
@@ -155,7 +158,7 @@ export default async function GuideDetailPage({ params }: Props) {
               Guías
             </Link>
             <span>/</span>
-            <span className="text-[#EE3C06] font-semibold truncate max-w-xs sm:max-w-sm">
+            <span className="font-semibold break-words min-w-0">
               {guide.title}
             </span>
           </nav>
@@ -166,7 +169,7 @@ export default async function GuideDetailPage({ params }: Props) {
         {/* Encabezado del artículo */}
         <header className="space-y-4">
           <div className="flex flex-wrap items-center gap-3 text-xs">
-            <span className="px-3 py-1 rounded-full bg-[#EE3C06]/10 text-[#EE3C06] font-bold uppercase tracking-wider">
+            <span className="rounded-full bg-[#F3E7DC] px-3 py-1 font-semibold text-brand-black">
               {guide.category}
             </span>
             <span className="inline-flex items-center gap-1.5 text-neutral-500">
@@ -180,7 +183,7 @@ export default async function GuideDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-[#111111] leading-tight">
+          <h1 className="page-headline">
             {guide.title}
           </h1>
 
@@ -191,12 +194,15 @@ export default async function GuideDetailPage({ params }: Props) {
           <div className="text-xs text-neutral-500 pt-1 border-b border-neutral-200 pb-6">
             Por <span className="font-semibold text-neutral-800">{guide.author}</span>
           </div>
+          <EditorialImage photo={guide.photo} className="reading-cover" sizes="(min-width: 896px) 848px, 100vw" preload />
         </header>
+
+        <ReadingIndex items={guide.sections.map((section, index) => ({ id: `tema-${index + 1}`, label: section.title }))} />
 
         {/* Puntos clave / Key takeaways */}
         {guide.keyTakeaways && guide.keyTakeaways.length > 0 && (
           <div className="p-6 rounded-2xl bg-neutral-50 border border-neutral-200/90 space-y-3">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-[#EE3C06] flex items-center gap-2">
+            <h2 className="flex items-center gap-2 text-lg font-semibold text-brand-black">
               <CheckCircle2 className="w-4 h-4" />
               Puntos clave que debes conocer
             </h2>
@@ -212,9 +218,9 @@ export default async function GuideDetailPage({ params }: Props) {
         )}
 
         {/* Secciones del artículo */}
-        <div className="space-y-10 text-neutral-800 leading-relaxed">
+        <div className="max-w-[70ch] space-y-10 text-brand-black leading-relaxed">
           {guide.sections.map((sec, idx) => (
-            <section key={idx} className="space-y-4">
+            <section key={idx} id={`tema-${idx + 1}`} className="space-y-4">
               <h2 className="text-2xl font-bold text-[#111111] tracking-tight">
                 {sec.title}
               </h2>
@@ -247,7 +253,7 @@ export default async function GuideDetailPage({ params }: Props) {
         {/* CTA Intermedio de Conversión a WhatsApp */}
         <div className="my-12 p-8 rounded-3xl bg-[#111111] text-white space-y-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:gap-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#EE3C06]">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black">
               <ShieldCheck className="w-4 h-4" />
               Evaluación Gratuita
             </div>
@@ -294,23 +300,7 @@ export default async function GuideDetailPage({ params }: Props) {
               Otras guías recomendadas
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {otherGuides.map((g) => (
-                <Link
-                  key={g.slug}
-                  href={`/guias/${g.slug}`}
-                  className="p-5 rounded-2xl border border-neutral-200 hover:border-neutral-300 hover:shadow-subtle transition-all space-y-2 group"
-                >
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#EE3C06]">
-                    {g.category}
-                  </span>
-                  <h3 className="text-sm font-bold text-[#111111] group-hover:text-[#EE3C06] transition-colors leading-snug">
-                    {g.title}
-                  </h3>
-                  <p className="text-xs text-neutral-500 line-clamp-2">
-                    {g.summary}
-                  </p>
-                </Link>
-              ))}
+              {otherGuides.map((g) => <GuideCard key={g.slug} guide={g} />)}
             </div>
           </section>
         )}
@@ -319,7 +309,7 @@ export default async function GuideDetailPage({ params }: Props) {
         <div className="pt-6">
           <Link
             href="/guias"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#EE3C06] hover:text-[#D63404] transition-colors"
+            className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-brand-black underline underline-offset-4"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Volver a todas las guías</span>

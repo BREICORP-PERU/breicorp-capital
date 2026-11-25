@@ -1,234 +1,42 @@
-"use client";
-
-import React, { useState } from "react";
-import {
-  MessageSquareText,
-  SearchCheck,
-  FileSignature,
-  AlertCircle,
-  Clock,
-  CheckCircle2,
-  ArrowRight,
-} from "lucide-react";
-import SectionHeading from "@/components/ui/SectionHeading";
-import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import Button from "@/components/ui/Button";
+import { photos } from "@/data/photos";
+import VisualSelector from "@/components/ui/VisualSelector";
 import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function HowItWorksSection() {
-  const [activeStep, setActiveStep] = useState<number>(0);
-  const whatsappUrl = whatsappHref(siteConfig.contact.whatsappDefaultMessage);
-
-  const steps = [
-    {
-      number: "01",
-      title: "CONTACTO & PRE-CALIFICACIÓN",
-      subtitle: "Respuesta preliminar ágil",
-      time: "Consulta inicial por WhatsApp",
-      description:
-        "Nos cuentas qué financiamiento buscas. El equipo te indicará qué información necesita para revisar la viabilidad preliminar de tu caso.",
-      icon: MessageSquareText,
-      tag: "Paso Inicial",
-      metrics: ["Consulta inicial", "Atención personalizada"],
-    },
-    {
-      number: "02",
-      title: "EVALUACIÓN & TASACIÓN TÉCNICA",
-      subtitle: "Análisis jurídico e inmobiliario",
-      time: "Plazo según cada caso",
-      description:
-        "Se revisan los títulos registrales y, cuando corresponda, la situación legal y el valor comercial del inmueble antes de estructurar una propuesta.",
-      icon: SearchCheck,
-      tag: "Fase Técnica",
-      metrics: ["Revisión registral", "Valoración según la operación"],
-    },
-    {
-      number: "03",
-      title: "ESCRITURA PÚBLICA & DESEMBOLSO",
-      subtitle: "Formalización notarial con validez legal",
-      time: "Firma notarial",
-      description:
-        "Si ambas partes aceptan las condiciones y se cumplen los requisitos, se formalizan los instrumentos contractuales y notariales aplicables antes del desembolso acordado.",
-      icon: FileSignature,
-      tag: "Cierre Formal",
-      metrics: ["Documentación contractual", "Inscripción cuando corresponda"],
-    },
-  ];
-
   return (
-    <section
-      id="como-funciona"
-      className="py-24 lg:py-32 bg-[#0B0B0E] text-white border-t border-white/10 scroll-mt-20 relative overflow-hidden"
-    >
-      {/* Luces y ambientación técnica de fondo */}
-      <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-[#EE3C06]/8 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-[#C6A15B]/8 rounded-full blur-[140px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionHeading
-          kicker="Proceso Operativo y Formal"
-          title="¿CÓMO FUNCIONA EL FINANCIAMIENTO?"
-          description="Una ruta transparente de tres fases que une agilidad en la evaluación comercial y total rigor jurídico notarial."
-          align="center"
-          className="mb-16 [&_h2]:text-white [&_p]:text-neutral-400"
-        />
-
-        {/* Barra de progreso secuencial animada en Desktop */}
-        <div className="hidden lg:block relative mb-12">
-          {/* Línea base */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white/10 -translate-y-1/2" />
-          {/* Línea activa con gradiente de luz */}
-          <div
-            className="absolute top-1/2 left-0 h-0.5 bg-gradient-to-r from-[#EE3C06] via-[#FF6A2B] to-[#C6A15B] -translate-y-1/2 transition-all duration-500 ease-out"
-            style={{
-              width: activeStep === 0 ? "25%" : activeStep === 1 ? "60%" : "100%",
-            }}
-          />
-
-          <div className="grid grid-cols-3 relative">
-            {steps.map((step, idx) => (
-              <button
-                key={step.number}
-                type="button"
-                onClick={() => setActiveStep(idx)}
-                className="flex flex-col items-center group cursor-pointer text-center focus:outline-none"
-              >
-                <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center font-mono font-bold text-sm transition-all duration-300 relative z-10 ${
-                    activeStep === idx
-                      ? "bg-[#EE3C06] text-white shadow-orange-glow scale-110 ring-4 ring-[#EE3C06]/20"
-                      : "bg-[#18181D] text-neutral-400 border border-white/10 group-hover:border-white/30"
-                  }`}
-                >
-                  {step.number}
-                </div>
-                <span
-                  className={`text-xs uppercase font-bold tracking-wider mt-3 transition-colors ${
-                    activeStep === idx ? "text-[#EE3C06]" : "text-neutral-400 group-hover:text-white"
-                  }`}
-                >
-                  {step.tag}
-                </span>
-              </button>
-            ))}
-          </div>
+    <section id="como-funciona" className="editorial-section tone-white">
+      <div className="site-shell">
+        <div className="section-intro">
+          <h2>¿Cómo funciona?</h2>
+          <p>Explora las etapas desde la primera consulta hasta la formalización.</p>
         </div>
-
-        {/* 3 Pasos Visuales en Tarjetas Cinematográficas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {steps.map((item, index) => {
-            const Icon = item.icon;
-            const isSelected = activeStep === index;
-
-            return (
-              <div
-                key={item.number}
-                role="button"
-                tabIndex={0}
-                onClick={() => setActiveStep(index)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    setActiveStep(index);
-                  }
-                }}
-                aria-pressed={isSelected}
-                aria-label={`Ver detalles de ${item.title.toLowerCase()}`}
-                className={`group relative p-7 sm:p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between cursor-pointer border text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EE3C06] ${
-                  isSelected
-                    ? "glass-dark border-[#EE3C06]/80 shadow-[0_12px_40px_rgba(238,60,6,0.15)] ring-1 ring-[#EE3C06]/30 -translate-y-1.5"
-                    : "glass-dark-card border-white/10 hover:border-white/20 hover:bg-[#18181F]/70"
-                }`}
-              >
-                {/* Indicador de fase activa */}
-                {isSelected && (
-                  <div className="absolute -top-3 left-8 px-3 py-0.5 rounded-full bg-[#EE3C06] text-[10px] font-black uppercase tracking-wider text-white shadow-sm">
-                    Fase Activa
-                  </div>
-                )}
-
-                <div className="space-y-5">
-                  <div className="flex items-center justify-between">
-                    <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all ${
-                        isSelected
-                          ? "bg-[#EE3C06] text-white shadow-orange-glow"
-                          : "bg-white/10 text-neutral-300 group-hover:text-white group-hover:bg-white/15"
-                      }`}
-                    >
-                      <Icon className="w-6 h-6" />
-                    </div>
-
-                    <span className="text-3xl font-black font-mono text-white/20 group-hover:text-white/40 transition-colors">
-                      {item.number}
-                    </span>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <div className="flex items-center gap-2 text-[11px] text-[#C6A15B] font-semibold uppercase tracking-wider">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{item.time}</span>
-                    </div>
-
-                    <h3 className="text-lg sm:text-xl font-bold text-white uppercase tracking-tight">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed pt-1">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Micro-indicadores de cumplimiento */}
-                  <div className="pt-4 border-t border-white/10 space-y-2">
-                    {item.metrics.map((metric) => (
-                      <div
-                        key={metric}
-                        className="flex items-center gap-2 text-xs text-neutral-300"
-                      >
-                        <CheckCircle2
-                          className={`w-3.5 h-3.5 shrink-0 ${
-                            isSelected ? "text-[#EE3C06]" : "text-neutral-500"
-                          }`}
-                        />
-                        <span>{metric}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400">
-                  <span className="font-mono text-[11px]">Etapa {item.number} de 03</span>
-                  <span
-                    className={`inline-flex items-center gap-1 font-bold text-[11px] uppercase tracking-wider transition-colors ${
-                      isSelected ? "text-[#EE3C06]" : "text-neutral-400"
-                    }`}
-                  >
-                    Detalles <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Aclaración legal e invitación directa */}
-        <div className="mt-12 p-5 rounded-2xl glass-dark border border-white/10 text-xs text-neutral-300 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto shadow-lg">
-          <div className="flex items-center gap-3">
-            <AlertCircle className="w-5 h-5 text-[#EE3C06] shrink-0" />
-            <span className="leading-relaxed">
-              La aprobación definitiva y las condiciones específicas quedan sujetas a la evaluación del título registral en SUNARP y la formalización notarial respectiva.
-            </span>
-          </div>
-
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-10 shrink-0 items-center gap-2 px-4 py-2 rounded-xl bg-[#EE3C06] hover:bg-[#D63404] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
-          >
-            <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
-            <span>Consultar mi caso</span>
-          </a>
+        <VisualSelector label="Etapas del financiamiento" sequence options={[
+          {
+            label: "Consulta inicial",
+            title: "Cuéntanos qué financiamiento buscas",
+            description: "El equipo te indicará qué información necesita para revisar la viabilidad preliminar de tu caso.",
+            detail: "Primer contacto por WhatsApp",
+            photo: photos.investment,
+          },
+          {
+            label: "Evaluación y tasación",
+            title: "Revisamos el inmueble y tu solicitud",
+            description: "Se revisan los títulos registrales y, cuando corresponda, la situación legal y el valor comercial del inmueble antes de estructurar una propuesta.",
+            detail: "El plazo depende de cada caso",
+            photo: photos.property,
+          },
+          {
+            label: "Formalización y desembolso",
+            title: "Revisa y formaliza las condiciones",
+            description: "Si ambas partes aceptan las condiciones y se cumplen los requisitos, se formalizan los documentos contractuales y notariales aplicables antes del desembolso acordado.",
+            detail: "Inscripción registral cuando corresponda",
+            photo: photos.documents,
+          },
+        ]} />
+        <div className="section-action">
+          <p>La consulta inicial está sujeta a evaluación.</p>
+          <Button href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)} isExternal>Iniciar consulta</Button>
         </div>
       </div>
     </section>

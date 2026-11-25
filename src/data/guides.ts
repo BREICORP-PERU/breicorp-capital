@@ -1,3 +1,5 @@
+import { photos, type Photo } from "./photos";
+
 export interface GuideSection {
   title: string;
   paragraphs: string[];
@@ -12,6 +14,7 @@ export interface GuideFaq {
 
 export interface Guide {
   slug: string;
+  photo: Photo;
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -30,6 +33,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: "requisitos-prestamo-garantia-hipotecaria-peru-sunarp",
+    photo: photos.documents,
     title: "Requisitos para un Préstamo con Garantía Hipotecaria en Perú (Guía SUNARP)",
     metaTitle: "Requisitos Préstamo Garantía Hipotecaria en Perú | SUNARP",
     metaDescription:
@@ -126,6 +130,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "prestamo-con-garantia-hipotecaria-estando-en-infocorp",
+    photo: photos.conversation,
     title: "¿Se puede solicitar un préstamo con garantía hipotecaria estando en Infocorp?",
     metaTitle: "Préstamo con Garantía Hipotecaria en Infocorp Perú | Guía",
     metaDescription:
@@ -193,6 +198,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "prestamo-bancario-vs-financiamiento-privado-garantia-peru",
+    photo: photos.city,
     title: "Préstamo Bancario vs. Financiamiento Privado con Garantía en Perú: Comparativa",
     metaTitle: "Bancos vs Financiamiento Privado con Garantía en Perú",
     metaDescription:

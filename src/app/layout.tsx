@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
@@ -8,14 +8,11 @@ import CookieConsent from "@/components/analytics/CookieConsent";
 import { siteConfig } from "@/config/siteConfig";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "./fonts/geist-latin.woff2",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "100 900",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -141,9 +138,9 @@ export default function RootLayout({
   return (
     <html
       lang="es-PE"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased h-full`}
+      className={`${geistSans.variable} antialiased h-full`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#111111]">
+      <body className="min-h-full flex flex-col bg-brand-paper text-brand-black">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -154,7 +151,7 @@ export default function RootLayout({
         <Header />
 
         {/* Contenido principal con espacio inferior reservado para la barra móvil */}
-        <main className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0">
+        <main className="flex-1">
           {children}
         </main>
 

@@ -67,7 +67,7 @@ export default function MobileBottomNav() {
   return (
     <nav
       aria-label="Navegación móvil inferior"
-      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden w-full bg-white border-t border-neutral-200/90 shadow-[0_-2px_12px_rgba(0,0,0,0.05)] pb-[max(env(safe-area-inset-bottom,0px),0.5rem)] pt-0 select-none"
+      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden w-full bg-brand-paper border-t border-[#D9CEC2] shadow-[0_-2px_12px_rgba(0,0,0,0.05)] pb-[max(env(safe-area-inset-bottom,0px),0.5rem)] pt-0 select-none"
     >
       <div className="grid grid-cols-3 w-full max-w-lg mx-auto h-16 items-stretch">
         {/* 1. INICIO */}
@@ -76,14 +76,14 @@ export default function MobileBottomNav() {
           onClick={(e) => handleNavClick("inicio", e)}
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isInicioActive
-              ? "text-[#B83208]"
+              ? "text-brand-black"
               : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isInicioActive ? "page" : undefined}
         >
           {/* Indicador horizontal naranja sobre la opción activa */}
           {isInicioActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-brand-orange rounded-b-md" />
           )}
           <Home
             className={`w-6 h-6 mb-1 transition-transform ${
@@ -92,7 +92,7 @@ export default function MobileBottomNav() {
           />
           <span
             className={`text-[10px] tracking-wider uppercase font-sans ${
-              isInicioActive ? "font-bold text-[#EE3C06]" : "font-medium"
+              isInicioActive ? "font-bold text-brand-black" : "font-medium"
             }`}
           >
             INICIO
@@ -105,14 +105,14 @@ export default function MobileBottomNav() {
           onClick={(e) => handleNavClick("soluciones", e)}
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isCreditosActive
-              ? "text-[#B83208]"
+              ? "text-brand-black"
               : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isCreditosActive ? "page" : undefined}
         >
           {/* Indicador horizontal naranja sobre la opción activa */}
           {isCreditosActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-brand-orange rounded-b-md" />
           )}
           <Coins
             className={`w-6 h-6 mb-1 transition-transform ${
@@ -121,7 +121,7 @@ export default function MobileBottomNav() {
           />
           <span
             className={`text-[10px] tracking-wider uppercase font-sans ${
-              isCreditosActive ? "font-bold text-[#EE3C06]" : "font-medium"
+              isCreditosActive ? "font-bold text-brand-black" : "font-medium"
             }`}
           >
             CRÉDITOS
@@ -133,14 +133,14 @@ export default function MobileBottomNav() {
           href="/inversionistas"
           className={`relative flex flex-col items-center justify-center py-2 px-2 transition-colors group ${
             isInvertirActive
-              ? "text-[#B83208]"
+              ? "text-brand-black"
               : "text-neutral-600 hover:text-neutral-800"
           }`}
           aria-current={isInvertirActive ? "page" : undefined}
         >
           {/* Indicador horizontal naranja sobre la opción activa */}
           {isInvertirActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-[#EE3C06] rounded-b-md" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-1 bg-brand-orange rounded-b-md" />
           )}
           <TrendingUp
             className={`w-6 h-6 mb-1 transition-transform ${
@@ -149,7 +149,7 @@ export default function MobileBottomNav() {
           />
           <span
             className={`text-[10px] tracking-wider uppercase font-sans ${
-              isInvertirActive ? "font-bold text-[#EE3C06]" : "font-medium"
+              isInvertirActive ? "font-bold text-brand-black" : "font-medium"
             }`}
           >
             INVERTIR

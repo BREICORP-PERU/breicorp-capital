@@ -53,7 +53,7 @@ export default function BrandLogo({
           className="block h-auto w-full object-contain"
         />
         {!hideText && (
-          <span className={`font-bold font-sans uppercase text-[#111111] ${config.subText} mt-0.5`}>
+          <span className={`font-bold font-sans uppercase text-brand-black ${config.subText} mt-0.5`}>
             CAPITAL
           </span>
         )}

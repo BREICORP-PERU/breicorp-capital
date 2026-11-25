@@ -124,7 +124,7 @@ export default function CookieConsent() {
       aria-modal="false"
       aria-labelledby="cookie-consent-title"
       aria-describedby="cookie-consent-description"
-      className="fixed inset-x-4 bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-h-[calc(100dvh-7rem)] max-w-2xl overflow-y-auto rounded-2xl border border-neutral-300 bg-white p-5 text-[#111111] shadow-2xl sm:p-6 lg:bottom-6"
+      className="fixed inset-x-4 bottom-[calc(5.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-h-[calc(100dvh-7rem)] max-w-2xl overflow-y-auto rounded-2xl border border-[#97897A] bg-brand-paper p-5 text-brand-black shadow-xl sm:p-6 lg:bottom-6"
     >
       <h2 id="cookie-consent-title" className="text-lg font-bold">Medición del sitio</h2>
       <p id="cookie-consent-description" className="mt-2 text-sm leading-relaxed text-neutral-700">
@@ -135,7 +135,7 @@ export default function CookieConsent() {
         <button type="button" onClick={() => saveChoice("rejected")} className="min-h-11 rounded-lg border border-neutral-400 px-5 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B83208]">
           Rechazar medición
         </button>
-        <button type="button" onClick={() => saveChoice("accepted")} className="min-h-11 rounded-lg bg-[#B83208] px-5 py-2 text-sm font-semibold text-white hover:bg-[#9C2B08] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B83208]">
+        <button type="button" onClick={() => saveChoice("accepted")} className="min-h-11 rounded-lg bg-brand-orange px-5 py-2 text-sm font-semibold text-brand-black hover:bg-[#F45C2C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B83208]">
           Aceptar medición
         </button>
       </div>
