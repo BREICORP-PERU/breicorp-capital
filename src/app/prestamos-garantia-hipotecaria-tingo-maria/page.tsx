@@ -195,7 +195,7 @@ const steps = [
   {
     label: "Consulta por WhatsApp",
     title: "Consulta por WhatsApp",
-    photo: photos.conversation,
+    photo: photos.initialConsultation,
     description: `Escríbenos al ${siteConfig.contact.whatsappDisplay} desde Tingo María o cualquier distrito de Leoncio Prado. Te respondemos en el horario de atención.`,
   },
   {
@@ -234,7 +234,7 @@ export default function TingoMariaPage() {
         </div>
       </nav>
 
-      <section className="site-shell inner-hero editorial-split">
+      <section id="inicio-tingo-maria" className="site-shell inner-hero editorial-split">
         <div className="section-intro section-intro-inline">
           <h1 className="page-headline">Préstamos con garantía hipotecaria en Tingo María</h1>
           <p>Financiamiento privado para empresarios y comerciantes de Leoncio Prado. Evaluamos tu solicitud con el respaldo de un inmueble inscrito en SUNARP.</p>
@@ -249,7 +249,7 @@ export default function TingoMariaPage() {
         <EditorialImage photo={photos.tingoMaria} preload />
       </section>
 
-      <section className="editorial-section tone-white" aria-labelledby="coverage-heading">
+      <section className="editorial-section tone-sand" aria-labelledby="coverage-heading">
         <div className="site-shell editorial-split">
           <EditorialImage photo={photos.house} decorative />
           <div>
@@ -290,7 +290,7 @@ export default function TingoMariaPage() {
         </div>
       </section>
 
-      <section className="editorial-section tone-white" aria-labelledby="process-heading">
+      <section className="editorial-section tone-sand" aria-labelledby="process-heading">
         <div className="site-shell">
           <SectionHeading id="process-heading" title="El proceso en cuatro pasos" align="left" className="mb-8" />
           <VisualSelector label="Pasos para solicitar financiamiento en Tingo María" options={steps} sequence />
@@ -302,7 +302,7 @@ export default function TingoMariaPage() {
         <div className="site-shell editorial-split items-start">
           <div>
             <SectionHeading id="faq-heading" title="Preguntas sobre la atención en Tingo María" align="left" />
-            <EditorialImage photo={photos.conversation} className="mt-5" />
+            <EditorialImage photo={photos.tingoMariaTeam} className="mt-5 aspect-[3/2]" />
           </div>
           <Accordion items={faqItems} defaultOpenId="oficina" />
         </div>
@@ -314,7 +314,7 @@ export default function TingoMariaPage() {
             <h2 id="contacto-tingo">Conversemos sobre tu propiedad.</h2>
             <p>Atención presencial y virtual. Si la operación avanza, la escritura pública se formaliza ante notaría.</p>
             <div className="action-row">
-              <Button href={whatsappUrl} isExternal variant="secondary" size="lg">Solicitar evaluación gratuita</Button>
+              <Button href={whatsappUrl} isExternal size="lg">Solicitar evaluación gratuita</Button>
               <Button href="/prestamos-garantia-hipotecaria" variant="outline" size="lg">Ver requisitos generales</Button>
             </div>
             <p className="contact-note">{siteConfig.address} · {siteConfig.contact.schedule}</p>

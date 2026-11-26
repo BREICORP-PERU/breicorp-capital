@@ -16,6 +16,7 @@
   --ink-muted: #52504D;
   --line: #D9CEC2;
   --line-strong: #97897A;
+  --paper-warm: #FAF0E6;
   --paper-deep: #F3E7DC;
 }
 
@@ -115,7 +116,7 @@ body {
 
   .header-mobile-nav a + a { border-top: 1px solid var(--line); }
 
-  .home-hero { padding-block: clamp(2.6rem, 6vw, 5.5rem) 0; }
+  .home-hero { padding-block: clamp(2.25rem, 5vw, 4.75rem) 0; }
 
   .hero-grid,
   .editorial-split {
@@ -177,7 +178,7 @@ body {
   .trust-strip {
     display: grid;
     gap: .7rem;
-    margin-top: clamp(2rem, 4vw, 3.5rem);
+    margin-top: clamp(1.75rem, 3.2vw, 2.75rem);
     padding-block: 1.05rem;
     border-block: 1px solid var(--line);
     font-size: .9rem;
@@ -187,9 +188,8 @@ body {
   .trust-strip li { display: flex; gap: .65rem; align-items: center; }
   .trust-strip svg { color: var(--color-brand-orange); flex: none; }
 
-  .editorial-section { padding-block: clamp(3.5rem, 7vw, 7.5rem); }
-  .tone-white { background: #fff; }
-  .tone-sand { background: var(--paper-deep); }
+  .editorial-section { padding-block: clamp(3.25rem, 6vw, 6.5rem); }
+  .tone-sand { background: var(--paper-warm); }
 
   .section-intro { max-width: 53rem; margin-bottom: clamp(1.5rem, 3vw, 2.75rem); }
   .section-intro-inline { margin-bottom: 0; }
@@ -292,10 +292,8 @@ body {
   .values-block dt { font-weight: 680; }
   .values-block dd { color: var(--ink-muted); margin-top: .35rem; font-size: .9rem; }
 
-  .contact-band { padding-block: clamp(3rem, 6vw, 6rem); background: var(--color-brand-orange); color: var(--foreground); }
-  .contact-band .section-intro > p { color: var(--foreground); }
+  .contact-band { padding-block: clamp(3rem, 6vw, 6rem); background: var(--paper-warm); }
   .contact-band .section-intro .contact-note { font-size: .85rem; margin-top: 1rem; }
-  .contact-band .action-row > a + a { background: var(--background); }
 
   .inner-hero { padding-block: clamp(2.7rem, 5vw, 5rem); }
   .inner-hero .editorial-image { aspect-ratio: 5 / 4; }
@@ -355,6 +353,26 @@ body {
   .hero-copy h1 { font-size: clamp(2.3rem, 10.6vw, 2.75rem); }
   .action-row > a { width: 100%; }
   .reading-cover { aspect-ratio: 2 / 1; }
+}
+
+@media (width < 768px) and (prefers-reduced-motion: no-preference) {
+  .floating-whatsapp-link { position: relative; }
+
+  .floating-whatsapp-link::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border: 2px solid #25D366;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    animation: whatsapp-halo 500ms cubic-bezier(.23, 1, .32, 1) 700ms 2;
+  }
+
+  @keyframes whatsapp-halo {
+    from { opacity: .65; transform: scale(.97); }
+    to { opacity: 0; transform: scale(1.18); }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

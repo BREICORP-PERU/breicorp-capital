@@ -13,7 +13,7 @@ const values = [
 
 export default function AboutUsSection() {
   return (
-    <section id="quienes-somos" className="editorial-section tone-white">
+    <section id="quienes-somos" className="editorial-section tone-sand">
       <div className="site-shell">
         <div className="editorial-split">
           <EditorialImage photo={photos.conversation} className="feature-photo" />

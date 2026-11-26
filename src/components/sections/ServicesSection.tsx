@@ -10,7 +10,7 @@ const services = [
     title: "Préstamos con garantía hipotecaria",
     description: "Usa un inmueble inscrito en SUNARP como respaldo para solicitar financiamiento. El monto y las condiciones dependen de la evaluación.",
     href: "/prestamos-garantia-hipotecaria",
-    photo: photos.property,
+    photo: photos.mortgageHome,
     message: "Hola BREICORP CAPITAL, deseo consultar sobre un Crédito con Garantía Hipotecaria.",
   },
   {

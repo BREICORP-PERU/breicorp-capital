@@ -16,7 +16,6 @@ export default function FinalCtaSection() {
             <Button
               href={whatsappHref(siteConfig.contact.whatsappDefaultMessage)}
               isExternal
-              variant="secondary"
               icon={<WhatsAppIcon className="size-5" />}
               iconPosition="left"
               size="lg"

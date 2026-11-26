@@ -135,7 +135,7 @@ export default function InversionistasPage() {
         <EditorialImage photo={photos.investment} preload />
       </section>
 
-      <section className="editorial-section tone-white" aria-labelledby="modelo-inversion">
+      <section className="editorial-section tone-sand" aria-labelledby="modelo-inversion">
         <div className="site-shell editorial-split">
           <EditorialImage photo={photos.conversation} />
           <div>

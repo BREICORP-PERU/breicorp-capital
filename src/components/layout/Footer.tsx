@@ -89,9 +89,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/prestamos-garantia-hipotecaria-tingo-maria" className="hover:text-white transition-colors flex items-center gap-1.5">
+                <a href="/prestamos-garantia-hipotecaria-tingo-maria#inicio-tingo-maria" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span className="text-brand-orange">›</span> Tingo María (Leoncio Prado)
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href="/financiamiento-empresarial" className="hover:text-white transition-colors flex items-center gap-1.5">

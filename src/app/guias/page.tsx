@@ -79,7 +79,7 @@ export default function GuiasIndexPage() {
         <EditorialImage photo={photos.property} preload />
       </header>
 
-      <section id="guias-destacadas" className="editorial-section tone-white">
+      <section id="guias-destacadas" className="editorial-section tone-sand">
         <div className="site-shell">
           <div className="section-intro"><h2>Guías destacadas</h2></div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -88,7 +88,7 @@ export default function GuiasIndexPage() {
         </div>
       </section>
 
-      <section className="editorial-section tone-sand">
+      <section className="editorial-section">
         <div className="site-shell editorial-split">
           <div className="section-intro section-intro-inline">
             <h2>¿Tienes una propiedad inscrita en SUNARP?</h2>

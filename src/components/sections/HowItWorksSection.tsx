@@ -5,7 +5,7 @@ import { siteConfig, whatsappHref } from "@/config/siteConfig";
 
 export default function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="editorial-section tone-white">
+    <section id="como-funciona" className="editorial-section tone-sand">
       <div className="site-shell">
         <div className="section-intro">
           <h2>¿Cómo funciona?</h2>
@@ -17,7 +17,7 @@ export default function HowItWorksSection() {
             title: "Cuéntanos qué financiamiento buscas",
             description: "El equipo te indicará qué información necesita para revisar la viabilidad preliminar de tu caso.",
             detail: "Primer contacto por WhatsApp",
-            photo: photos.investment,
+            photo: photos.initialConsultation,
           },
           {
             label: "Evaluación y tasación",

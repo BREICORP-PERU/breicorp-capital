@@ -16,7 +16,7 @@ export default function WhyChooseUsSection() {
             label: "Atención directa",
             title: "Conversa con el equipo comercial",
             description: "Puedes consultar tu caso directamente y conocer los pasos de la evaluación.",
-            photo: photos.investment,
+            photo: photos.directAdvice,
           },
           {
             label: "Evaluación de cada caso",
